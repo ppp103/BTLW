@@ -1,0 +1,35 @@
+﻿@model QuanLyBanSach.Models.BanSaoSach
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<h1>Chỉnh sửa bản sao</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MaBanSao" />
+            <div class="form-group">
+                <label asp-for="TinhTrangBs" class="control-label"></label>
+                <input asp-for="TinhTrangBs" class="form-control" />
+                <span asp-validation-for="TinhTrangBs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaSach" class="control-label"></label>
+                <select asp-for="MaSach" class="form-control" asp-items="ViewBag.MaSach"></select>
+                <span asp-validation-for="MaSach" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-primary" asp-action="DanhSachBanSao">Back to List</a>
+</div>
+

@@ -1,0 +1,58 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@*@model IEnumerable<QuanLyBanSach.Models.BanSaoSach>*@
+@using X.PagedList.Mvc.Core
+@using QuanLyBanSach.Models
+@model X.PagedList.IPagedList<BanSaoSach>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Danh sách bản sao</h1>
+
+<p>
+    <a asp-action="Create"></a>
+</p>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                Mã bản sao
+            </th>
+            <th>
+                Mã Sách
+            </th>
+            <th>
+                Tình trạng bản sao
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaBanSao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaSach)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TinhTrangBs)
+                </td>
+                <td>
+                    <a class="btn btn-info btn-tone m-r-5" asp-action="Edit" asp-route-id="@item.MaBanSao">Edit</a>
+                    <a class="btn btn-primary btn-tone m-r-5" asp-action="Details" asp-route-id="@item.MaBanSao">Details</a>
+                    <a class="btn btn-secondary btn-tone m-r-5" asp-action="Delete" asp-route-id="@item.MaBanSao">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="container" style="display:flex; justify-content:center">
+    @Html.PagedListPager(Model,page => Url.Action("Index", new {page=page}),new X.PagedList.Web.Common.PagedListRenderOptions(){
+    LiElementClasses = new List<String> {"page-item"},
+    PageClasses = new List<String> {"page-link"}
+    })
+</div>
