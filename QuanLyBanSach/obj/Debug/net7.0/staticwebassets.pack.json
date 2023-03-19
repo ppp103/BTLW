@@ -1,0 +1,1333 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\QuanLyBanSach.bundle.scp.css",
+      "PackagePath": "staticwebassets\\QuanLyBanSach.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\css\\app.min.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\css\\app.min.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\anticon.eot",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\anticon.eot"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\anticon.svg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\anticon.svg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\anticon.ttf",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\anticon.ttf"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\anticon.woff",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\anticon.woff"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\anticond41d.eot",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\anticond41d.eot"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-brands-400d41d.eot",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-brands-400d41d.eot"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-regular-400d41d.eot",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-regular-400d41d.eot"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\fonts\\fa-solid-900d41d.eot",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\fa-solid-900d41d.eot"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\avatars\\thumb-1.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\avatars\\thumb-1.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\avatars\\thumb-10.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\avatars\\thumb-10.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\avatars\\thumb-11.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\avatars\\thumb-11.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\avatars\\thumb-2.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\avatars\\thumb-2.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\avatars\\thumb-3.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\avatars\\thumb-3.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\avatars\\thumb-4.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\avatars\\thumb-4.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\avatars\\thumb-5.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\avatars\\thumb-5.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\avatars\\thumb-6.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\avatars\\thumb-6.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\avatars\\thumb-7.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\avatars\\thumb-7.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\avatars\\thumb-8.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\avatars\\thumb-8.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\avatars\\thumb-9.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\avatars\\thumb-9.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\logo\\favicon.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\logo\\favicon.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\logo\\logo-fold-white.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\logo\\logo-fold-white.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\logo\\logo-fold.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\logo\\logo-fold.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\logo\\logo-white.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\logo\\logo-white.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\logo\\logo.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\logo\\logo.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\adobe-thumb.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\adobe-thumb.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\amazon-thumb.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\amazon-thumb.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\cambridge-thumb.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\cambridge-thumb.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\coffee-app-thumb.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\coffee-app-thumb.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\error-1.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\error-1.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\error-2.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\error-2.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\file-manager.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\file-manager.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\img-1.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\img-1.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\img-11.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\img-11.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\img-12.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\img-12.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\img-13.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\img-13.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\img-14.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\img-14.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\img-2.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\img-2.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\img-3.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\img-3.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\img-4.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\img-4.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\img-5.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\img-5.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\img-6.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\img-6.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\img-7.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\img-7.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\img-8.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\img-8.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\login-1.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\login-1.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\login-2.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\login-2.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\login-3.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\login-3.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\music-app-thumb.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\music-app-thumb.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\nvidia-thumb.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\nvidia-thumb.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\phillips-academy-thumb.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\phillips-academy-thumb.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\product-1.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\product-1.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\product-2.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\product-2.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\product-3.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\product-3.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\sign-up-1.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\sign-up-1.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\sign-up-2.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\sign-up-2.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\thumb-1.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\thumb-1.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\thumb-10.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\thumb-10.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\thumb-11.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\thumb-11.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\thumb-12.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\thumb-12.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\thumb-13.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\thumb-13.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\thumb-14.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\thumb-14.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\thumb-15.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\thumb-15.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\thumb-16.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\thumb-16.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\thumb-2.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\thumb-2.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\thumb-3.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\thumb-3.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\thumb-4.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\thumb-4.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\thumb-5.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\thumb-5.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\thumb-6.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\thumb-6.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\thumb-7.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\thumb-7.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\thumb-8.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\thumb-8.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\thumb-9.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\thumb-9.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\images\\others\\weather-app-thumb.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\images\\others\\weather-app-thumb.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\app.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\app.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\chartist.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\chartist.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\chartjs.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\chartjs.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\chat.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\chat.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\dashboard-crm.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\dashboard-crm.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\dashboard-default.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\dashboard-default.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\dashboard-e-commerce.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\dashboard-e-commerce.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\dashboard-project.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\dashboard-project.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\datatables.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\datatables.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\e-commerce-order-list.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\e-commerce-order-list.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\e-commerce-product-edit.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\e-commerce-product-edit.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\file-manager.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\file-manager.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\form-elements.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\form-elements.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\form-validation.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\form-validation.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\icon.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\icon.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\mail.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\mail.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\pricing.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\pricing.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\profile.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\profile.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\project-list.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\project-list.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\pages\\slider.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\pages\\slider.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\js\\vendors.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\vendors.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\vendors\\bootstrap-datepicker\\bootstrap-datepicker.min.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\vendors\\bootstrap-datepicker\\bootstrap-datepicker.min.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\vendors\\bootstrap-datepicker\\bootstrap-datepicker.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\vendors\\bootstrap-datepicker\\bootstrap-datepicker.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\vendors\\chartist\\chartist.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\vendors\\chartist\\chartist.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\vendors\\chartjs\\Chart.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\vendors\\chartjs\\Chart.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\vendors\\datatables\\dataTables.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\vendors\\datatables\\dataTables.bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\vendors\\datatables\\dataTables.bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\vendors\\datatables\\dataTables.bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\vendors\\datatables\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\vendors\\datatables\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\vendors\\jquery-validation\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\vendors\\jquery-validation\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\vendors\\nouislider\\nouislider.min.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\vendors\\nouislider\\nouislider.min.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\vendors\\nouislider\\nouislider.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\vendors\\nouislider\\nouislider.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\vendors\\quill\\quill.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\vendors\\quill\\quill.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\vendors\\select2\\select2-spinner.gif",
+      "PackagePath": "staticwebassets\\Admin\\assets\\vendors\\select2\\select2-spinner.gif"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\vendors\\select2\\select2.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\vendors\\select2\\select2.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\vendors\\select2\\select2.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\vendors\\select2\\select2.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\vendors\\select2\\select2.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\vendors\\select2\\select2.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\Admin\\assets\\vendors\\select2\\select2x2.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\vendors\\select2\\select2x2.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\User\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\css\\color-purple.css",
+      "PackagePath": "staticwebassets\\User\\css\\color-purple.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\css\\color.css",
+      "PackagePath": "staticwebassets\\User\\css\\color.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\User\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\css\\icomoon.css",
+      "PackagePath": "staticwebassets\\User\\css\\icomoon.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\css\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\User\\css\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\css\\main.css",
+      "PackagePath": "staticwebassets\\User\\css\\main.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\css\\normalize.css",
+      "PackagePath": "staticwebassets\\User\\css\\normalize.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\css\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\User\\css\\owl.carousel.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\User\\css\\responsive.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\css\\transitions.css",
+      "PackagePath": "staticwebassets\\User\\css\\transitions.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\fonts\\fontawesome-webfont3e6e.eot",
+      "PackagePath": "staticwebassets\\User\\fonts\\fontawesome-webfont3e6e.eot"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\fonts\\fontawesome-webfont3e6e.svg",
+      "PackagePath": "staticwebassets\\User\\fonts\\fontawesome-webfont3e6e.svg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\fonts\\fontawesome-webfont3e6e.ttf",
+      "PackagePath": "staticwebassets\\User\\fonts\\fontawesome-webfont3e6e.ttf"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\fonts\\fontawesome-webfont3e6e.woff",
+      "PackagePath": "staticwebassets\\User\\fonts\\fontawesome-webfont3e6e.woff"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\fonts\\fontawesome-webfont3e6e.woff2",
+      "PackagePath": "staticwebassets\\User\\fonts\\fontawesome-webfont3e6e.woff2"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\fonts\\fontawesome-webfontd41d.eot",
+      "PackagePath": "staticwebassets\\User\\fonts\\fontawesome-webfontd41d.eot"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\User\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\fonts\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\User\\fonts\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\User\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\User\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\fonts\\glyphicons-halflings-regular.woff2",
+      "PackagePath": "staticwebassets\\User\\fonts\\glyphicons-halflings-regular.woff2"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\fonts\\glyphicons-halflings-regulard41d.eot",
+      "PackagePath": "staticwebassets\\User\\fonts\\glyphicons-halflings-regulard41d.eot"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\fonts\\icomoonbd7d.eot",
+      "PackagePath": "staticwebassets\\User\\fonts\\icomoonbd7d.eot"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\fonts\\icomoonbd7d.svg",
+      "PackagePath": "staticwebassets\\User\\fonts\\icomoonbd7d.svg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\fonts\\icomoonbd7d.ttf",
+      "PackagePath": "staticwebassets\\User\\fonts\\icomoonbd7d.ttf"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\fonts\\icomoonbd7d.woff",
+      "PackagePath": "staticwebassets\\User\\fonts\\icomoonbd7d.woff"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-01.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-01.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-02.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-02.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-03.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-03.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-04.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-04.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-05.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-05.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-06.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-06.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-07.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-07.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-08.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-08.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-09.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-09.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-10.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-10.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-11.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-11.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-14.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-14.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-15.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-15.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-16.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-16.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-17.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-17.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-18.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-18.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-19.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-19.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-20.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-20.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-21.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-21.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-22.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-22.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-23.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-23.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-24.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-24.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-25.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-25.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\author\\imag-26.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\author\\imag-26.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\blog\\img-01.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\blog\\img-01.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\blog\\img-02.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\blog\\img-02.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\blog\\img-03.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\blog\\img-03.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\blog\\img-04.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\blog\\img-04.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\blog\\img-05.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\blog\\img-05.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\blog\\img-06.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\blog\\img-06.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\blog\\img-07.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\blog\\img-07.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\blog\\img-08.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\blog\\img-08.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\blog\\img-09.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\blog\\img-09.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\blog\\img-10.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\blog\\img-10.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\blog\\img-11.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\blog\\img-11.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\blog\\img-12.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\blog\\img-12.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\blog\\img-13.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\blog\\img-13.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\blog\\img-14.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\blog\\img-14.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\blog\\img-15.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\blog\\img-15.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\books\\bookpattren.png",
+      "PackagePath": "staticwebassets\\User\\images\\books\\bookpattren.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\books\\img-01.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\books\\img-01.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\books\\img-02.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\books\\img-02.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\books\\img-03.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\books\\img-03.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\books\\img-04.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\books\\img-04.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\books\\img-05.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\books\\img-05.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\books\\img-06.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\books\\img-06.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\books\\img-07.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\books\\img-07.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\books\\img-08.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\books\\img-08.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\books\\img-09.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\books\\img-09.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\books\\img-10.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\books\\img-10.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\books\\img-11.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\books\\img-11.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\books\\img-12.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\books\\img-12.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\comingsoon-bg.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\comingsoon-bg.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\flogo.png",
+      "PackagePath": "staticwebassets\\User\\images\\flogo.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\img-01.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\img-01.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\img-01.png",
+      "PackagePath": "staticwebassets\\User\\images\\img-01.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\img-02.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\img-02.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\img-02.png",
+      "PackagePath": "staticwebassets\\User\\images\\img-02.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\img-03.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\img-03.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\img-03.png",
+      "PackagePath": "staticwebassets\\User\\images\\img-03.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\img-04.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\img-04.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\img-04.png",
+      "PackagePath": "staticwebassets\\User\\images\\img-04.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\img-05.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\img-05.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\instagram\\img-01.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\instagram\\img-01.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\instagram\\img-02.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\instagram\\img-02.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\instagram\\img-03.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\instagram\\img-03.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\instagram\\img-04.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\instagram\\img-04.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\instagram\\img-05.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\instagram\\img-05.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\instagram\\img-06.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\instagram\\img-06.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\instagram\\img-07.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\instagram\\img-07.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\instagram\\img-08.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\instagram\\img-08.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\instagram\\img-09.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\instagram\\img-09.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\logo-02.png",
+      "PackagePath": "staticwebassets\\User\\images\\logo-02.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\logo.png",
+      "PackagePath": "staticwebassets\\User\\images\\logo.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\User\\images\\owl.video.play.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\parallax\\bgparallax-01.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\parallax\\bgparallax-01.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\parallax\\bgparallax-02.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\parallax\\bgparallax-02.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\parallax\\bgparallax-03.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\parallax\\bgparallax-03.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\parallax\\bgparallax-04.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\parallax\\bgparallax-04.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\parallax\\bgparallax-05.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\parallax\\bgparallax-05.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\parallax\\bgparallax-06.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\parallax\\bgparallax-06.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\parallax\\bgparallax-07.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\parallax\\bgparallax-07.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\paymenticon.png",
+      "PackagePath": "staticwebassets\\User\\images\\paymenticon.png"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\placeholder.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\placeholder.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\placeholdervtwo.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\placeholdervtwo.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\products\\img-01.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\products\\img-01.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\products\\img-02.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\products\\img-02.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\products\\img-03.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\products\\img-03.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\products\\img-04.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\products\\img-04.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\products\\img-05.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\products\\img-05.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\products\\img-06.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\products\\img-06.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\products\\img-07.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\products\\img-07.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\team\\img-01.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\team\\img-01.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\team\\img-02.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\team\\img-02.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\team\\img-03.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\team\\img-03.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\team\\img-04.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\team\\img-04.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\team\\img-05.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\team\\img-05.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\ui-icons_444444_256x240.html",
+      "PackagePath": "staticwebassets\\User\\images\\ui-icons_444444_256x240.html"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\ui-icons_555555_256x240.html",
+      "PackagePath": "staticwebassets\\User\\images\\ui-icons_555555_256x240.html"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\ui-icons_777620_256x240.html",
+      "PackagePath": "staticwebassets\\User\\images\\ui-icons_777620_256x240.html"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\ui-icons_777777_256x240.html",
+      "PackagePath": "staticwebassets\\User\\images\\ui-icons_777777_256x240.html"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\ui-icons_cc0000_256x240.html",
+      "PackagePath": "staticwebassets\\User\\images\\ui-icons_cc0000_256x240.html"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\ui-icons_ffffff_256x240.html",
+      "PackagePath": "staticwebassets\\User\\images\\ui-icons_ffffff_256x240.html"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\images\\users\\img-01.jpg",
+      "PackagePath": "staticwebassets\\User\\images\\users\\img-01.jpg"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\js\\appear.js",
+      "PackagePath": "staticwebassets\\User\\js\\appear.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\js\\countTo.js",
+      "PackagePath": "staticwebassets\\User\\js\\countTo.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\js\\countdown.js",
+      "PackagePath": "staticwebassets\\User\\js\\countdown.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\js\\gmap3.js",
+      "PackagePath": "staticwebassets\\User\\js\\gmap3.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\js\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\User\\js\\jquery-ui.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\js\\jquery.vide.min.js",
+      "PackagePath": "staticwebassets\\User\\js\\jquery.vide.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\js\\main.js",
+      "PackagePath": "staticwebassets\\User\\js\\main.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\User\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\js\\parallax.js",
+      "PackagePath": "staticwebassets\\User\\js\\parallax.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\js\\vendor\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\User\\js\\vendor\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\js\\vendor\\jquery-library.js",
+      "PackagePath": "staticwebassets\\User\\js\\vendor\\jquery-library.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\User\\js\\vendor\\modernizr-2.8.3-respond-1.4.2.min.js",
+      "PackagePath": "staticwebassets\\User\\js\\vendor\\modernizr-2.8.3-respond-1.4.2.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\HocHanh(Ki6)\\Lập trình web\\BTL\\QuanLyBanSach\\QuanLyBanSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.QuanLyBanSach.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.QuanLyBanSach.props",
+      "PackagePath": "build\\QuanLyBanSach.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.QuanLyBanSach.props",
+      "PackagePath": "buildMultiTargeting\\QuanLyBanSach.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.QuanLyBanSach.props",
+      "PackagePath": "buildTransitive\\QuanLyBanSach.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
