@@ -8,6 +8,7 @@ namespace QuanLyBanSach.Controllers
 	{
 		private readonly ILogger<HomeController> _logger;
 
+		QlbanSachContext db = new QlbanSachContext();
 		public HomeController(ILogger<HomeController> logger)
 		{
 			_logger = logger;
@@ -15,9 +16,14 @@ namespace QuanLyBanSach.Controllers
 
 		public IActionResult Index()
 		{
-			return View();
+			var tensach = db.Saches.ToList();
+			var tacgia = db.TacGia.ToList();
+			ViewBag.tacgia = tacgia;
+			var nxb = db.NhaXuatBans.ToList();
+			ViewBag.nxb = nxb;
+			return View(tensach);
 		}
-
+	
 		public IActionResult Privacy()
 		{
 			return View();
