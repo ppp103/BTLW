@@ -10,87 +10,87 @@ using QuanLyBanSach.Models;
 namespace QuanLyBanSach.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class AdminsController : Controller
+    public class DanhMucSachesController : Controller
     {
         private readonly QlbanSachContext _context;
 
-        public AdminsController(QlbanSachContext context)
+        public DanhMucSachesController(QlbanSachContext context)
         {
             _context = context;
         }
 
-        // GET: Admin/Admins
+        // GET: Admin/DanhMucSaches
         public async Task<IActionResult> Index()
         {
-              return _context.Admins != null ? 
-                          View(await _context.Admins.ToListAsync()) :
-                          Problem("Entity set 'QlbanSachContext.Admins'  is null.");
+              return _context.DanhMucSaches != null ? 
+                          View(await _context.DanhMucSaches.ToListAsync()) :
+                          Problem("Entity set 'QlbanSachContext.DanhMucSaches'  is null.");
         }
 
-        // GET: Admin/Admins/Details/5
+        // GET: Admin/DanhMucSaches/Details/5
         public async Task<IActionResult> Details(string id)
         {
-            if (id == null || _context.Admins == null)
+            if (id == null || _context.DanhMucSaches == null)
             {
                 return NotFound();
             }
 
-            var admins = await _context.Admins
-                .FirstOrDefaultAsync(m => m.MaAd == id);
-            if (admins == null)
+            var danhMucSach = await _context.DanhMucSaches
+                .FirstOrDefaultAsync(m => m.MaDm == id);
+            if (danhMucSach == null)
             {
                 return NotFound();
             }
 
-            return View(admins);
+            return View(danhMucSach);
         }
 
-        // GET: Admin/Admins/Create
+        // GET: Admin/DanhMucSaches/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/Admins/Create
+        // POST: Admin/DanhMucSaches/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaAd,MatKhau,TenDangNhap,HoTenAd")] Admins admins)
+        public async Task<IActionResult> Create([Bind("MaDm,TenDm")] DanhMucSach danhMucSach)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(admins);
+                _context.Add(danhMucSach);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(admins);
+            return View(danhMucSach);
         }
 
-        // GET: Admin/Admins/Edit/5
+        // GET: Admin/DanhMucSaches/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
-            if (id == null || _context.Admins == null)
+            if (id == null || _context.DanhMucSaches == null)
             {
                 return NotFound();
             }
 
-            var admins = await _context.Admins.FindAsync(id);
-            if (admins == null)
+            var danhMucSach = await _context.DanhMucSaches.FindAsync(id);
+            if (danhMucSach == null)
             {
                 return NotFound();
             }
-            return View(admins);
+            return View(danhMucSach);
         }
 
-        // POST: Admin/Admins/Edit/5
+        // POST: Admin/DanhMucSaches/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MaAd,MatKhau,TenDangNhap,HoTenAd")] Admins admins)
+        public async Task<IActionResult> Edit(string id, [Bind("MaDm,TenDm")] DanhMucSach danhMucSach)
         {
-            if (id != admins.MaAd)
+            if (id != danhMucSach.MaDm)
             {
                 return NotFound();
             }
@@ -99,12 +99,12 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             {
                 try
                 {
-                    _context.Update(admins);
+                    _context.Update(danhMucSach);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!AdminsExists(admins.MaAd))
+                    if (!DanhMucSachExists(danhMucSach.MaDm))
                     {
                         return NotFound();
                     }
@@ -115,49 +115,49 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(admins);
+            return View(danhMucSach);
         }
 
-        // GET: Admin/Admins/Delete/5
+        // GET: Admin/DanhMucSaches/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
-            if (id == null || _context.Admins == null)
+            if (id == null || _context.DanhMucSaches == null)
             {
                 return NotFound();
             }
 
-            var admins = await _context.Admins
-                .FirstOrDefaultAsync(m => m.MaAd == id);
-            if (admins == null)
+            var danhMucSach = await _context.DanhMucSaches
+                .FirstOrDefaultAsync(m => m.MaDm == id);
+            if (danhMucSach == null)
             {
                 return NotFound();
             }
 
-            return View(admins);
+            return View(danhMucSach);
         }
 
-        // POST: Admin/Admins/Delete/5
+        // POST: Admin/DanhMucSaches/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            if (_context.Admins == null)
+            if (_context.DanhMucSaches == null)
             {
-                return Problem("Entity set 'QlbanSachContext.Admins'  is null.");
+                return Problem("Entity set 'QlbanSachContext.DanhMucSaches'  is null.");
             }
-            var admins = await _context.Admins.FindAsync(id);
-            if (admins != null)
+            var danhMucSach = await _context.DanhMucSaches.FindAsync(id);
+            if (danhMucSach != null)
             {
-                _context.Admins.Remove(admins);
+                _context.DanhMucSaches.Remove(danhMucSach);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool AdminsExists(string id)
+        private bool DanhMucSachExists(string id)
         {
-          return (_context.Admins?.Any(e => e.MaAd == id)).GetValueOrDefault();
+          return (_context.DanhMucSaches?.Any(e => e.MaDm == id)).GetValueOrDefault();
         }
     }
 }
