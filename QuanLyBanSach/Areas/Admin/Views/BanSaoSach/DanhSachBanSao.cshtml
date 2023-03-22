@@ -51,7 +51,7 @@
 </table>
 
 <div class="container" style="display:flex; justify-content:center">
-    @Html.PagedListPager(Model,page => Url.Action("Index", new {page=page}),new X.PagedList.Web.Common.PagedListRenderOptions(){
+    @Html.PagedListPager(Model,page => Url.Action("DanhSachBanSao", new {page=page}),new X.PagedList.Web.Common.PagedListRenderOptions(){
     LiElementClasses = new List<String> {"page-item"},
     PageClasses = new List<String> {"page-link"}
     })

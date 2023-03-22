@@ -1,0 +1,167 @@
+﻿@model IEnumerable<QuanLyBanSach.Models.Sach>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+                <div class="main-content p-t-20">
+                    <div class="page-header">
+                        <h2 class="header-title">Products List</h2>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row m-b-30">
+                                <div class="col-lg-8">
+                                    <div class="d-md-flex">
+                                        <div class="m-b-10 m-r-15">
+                                            <select class="custom-select" style="min-width: 180px;">
+                                                <option selected>Catergory</option>
+                                                <option value="all">All</option>
+                                                <option value="homeDeco">Home Decoration</option>
+                                                <option value="eletronic">Eletronic</option>
+                                                <option value="jewellery">Jewellery</option>
+                                            </select>
+                                        </div>
+                                        <div class="m-b-10">
+                                            <select class="custom-select" style="min-width: 180px;">
+                                                <option selected>Status</option>
+                                                <option value="all">All</option>
+                                                <option value="inStock">In Stock </option>
+                                                <option value="outOfStock">Out of Stock</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 text-right">
+                                    <a asp-action="Create" class="btn btn-primary">
+                                        <i class="anticon anticon-plus-circle m-r-5"></i>
+                                        <span>Add Product</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover e-commerce-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Mã sách</th>
+                                            <th>Sách</th>
+                                            <th>Danh mục</th>
+                                            <th>Giá (VND)</th>
+                                            <th>Số lượng</th>
+                                            <th>Mô tả</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach(var sach in Model)
+                                    {
+                                    <tr>
+                                            <td>
+                                                @sach.MaSach
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img class="img-fluid rounded" src="@Url.Content("../User/images/books/" + @sach.Anh + ".jpg")" style="max-width: 60px" alt="">
+                                                    <h6 class="m-b-0 m-l-10">@sach.TenSach</h6>
+                                                </div>
+                                            </td>
+                                            <td>@sach.MaDmNavigation.TenDm</td>
+                                            <td>@String.Format("{0:0.##}",@sach.GiaBan)</td>
+                                            <td>@sach.SoLuongCon</td>
+                                            <td>
+                                                @sach.MoTa
+                                            </td>
+                                            <td class="text-right">
+                                                <a asp-action="Edit" asp-route-id="@sach.MaSach" class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
+                                                    <i class="anticon anticon-edit"></i>
+                                                </a>
+                                                <a asp-action="Delete" asp-route-id="@sach.MaSach" class="btn btn-icon btn-hover btn-sm btn-rounded">
+                                                    <i class="anticon anticon-delete"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content Wrapper END -->
+
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tên sách
+            </th>
+            <th>
+                Giá Bán
+            </th>
+            <th>
+                Mô tả
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Anh)
+            </th
+            <th>
+                Số lượng
+            </th>
+            <th>
+                Danh mục
+            </th>
+            <th>
+                NXB
+            </th>
+            <th>
+                Tác giả
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenSach)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaBan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoTa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongBs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Anh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayCapNhat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongCon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaDmNavigation.MaDm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaNxbNavigation.MaNxb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaTgNavigation.MaTg)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MaSach">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MaSach">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MaSach">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+*@
