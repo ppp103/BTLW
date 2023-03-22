@@ -8,66 +8,66 @@
 <h1>Details</h1>
 
 <div>
-    <h4>NguoiDung</h4>
+    <h4>Người dùng</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HoTenNd)
+        <dt class="col-sm-2">
+            Họ tên người dùng
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.HoTenNd)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
+        <dt class="col-sm-2">
+            Email
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Email)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MatKhau)
+        <dt class="col-sm-2">
+            Mật khẩu
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.MatKhau)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DienThoai)
+        <dt class="col-sm-2">
+            Điện thoại
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.DienThoai)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TaiKhoan)
+        <dt class="col-sm-2">
+            Tài khoản
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.TaiKhoan)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TrangThaiNd)
+        <dt class="col-sm-2">
+            Trạng thái người dùng
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.TrangThaiNd)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Anh)
+        <dt class="col-sm-2">
+            Ảnh
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Anh)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NgayTao)
+        <dt class="col-sm-2">
+            Ngày tạo
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.NgayTao)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DiaChi)
+        <dt class="col-sm-2">
+            Địa chỉ
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.DiaChi)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.MaNd">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-info btn-tone m-r-5" asp-action="Edit" asp-route-id="@Model?.MaNd">Edit</a>
+    <a class="btn btn-primary btn-tone m-r-5" asp-action="Index">Back to List</a>
 </div>

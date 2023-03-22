@@ -12,7 +12,7 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TenNxb)
+           Tên nhà xuất bản
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.TenNxb)
@@ -20,6 +20,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.MaNxb">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-info btn-tone m-r-5" asp-action="Edit" asp-route-id="@Model?.MaNxb">Edit</a>
+    <a class="btn btn-primary btn-tone m-r-5" asp-action="Index">Back to List</a>
 </div>

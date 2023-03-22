@@ -5,16 +5,16 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Danh sách nhà xuất bản</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-sm btn-outline-info" asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.TenNxb)
+               Tên nhà xuất bản
             </th>
             <th></th>
         </tr>
@@ -26,9 +26,9 @@
                 @Html.DisplayFor(modelItem => item.TenNxb)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.MaNxb">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaNxb">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaNxb">Delete</a>
+                    <a class="btn btn-info btn-tone m-r-5" asp-action="Edit" asp-route-id="@item.MaNxb">Edit</a>
+                    <a class="btn btn-primary btn-tone m-r-5" asp-action="Details" asp-route-id="@item.MaNxb">Details</a>
+                    <a class="btn btn-secondary btn-tone m-r-5" asp-action="Delete" asp-route-id="@item.MaNxb">Delete</a>
             </td>
         </tr>
 }
