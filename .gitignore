@@ -352,3 +352,5 @@ MigrationBackup/
 /.vs/
 /.gitignore
 /QuanLyBanSach/appsettings.json
+/QuanLyBanSach/Models/QlbanSachContext.cs
+/QuanLyBanSach/Models/QlbanSachContext.cs

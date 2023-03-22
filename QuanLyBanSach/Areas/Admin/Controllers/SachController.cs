@@ -18,7 +18,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         {
             _context = context;
         }
-
+        //NamAIDS
         // GET: Admin/Sach
         public async Task<IActionResult> Index()
         {
