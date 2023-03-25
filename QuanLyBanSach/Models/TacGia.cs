@@ -9,5 +9,7 @@ public partial class TacGia
 
     public string? TenTg { get; set; }
 
+
     public virtual ICollection<Sach> Saches { get; } = new List<Sach>();
+	
 }
