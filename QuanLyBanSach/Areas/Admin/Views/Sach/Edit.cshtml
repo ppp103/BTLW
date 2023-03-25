@@ -5,13 +5,13 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Edit</h1>
+@*<h1>Edit</h1>
 
 <h4>Sách</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Edit" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="MaSach" />
             <div class="form-group">
@@ -75,3 +75,76 @@
     <a class="btn btn-info btn-tone m-r-5" asp-action="Index">Back to List</a>
 </div>
 
+*@
+                
+<form asp-controller="Sach" asp-action="Edit" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="page-header no-gutters">
+        <div class="d-md-flex m-b-15 align-items-center justify-content-between">
+            <div class="media align-items-center m-b-15">
+                <div class="avatar avatar-image rounded" style="height: 85px; width: 60px">
+                    <img src= "@Url.Content("~/images/books/" + @Model.Anh + ".jpg")" alt="">
+                </div>
+                <div class="m-l-15">
+                    <p class="text-muted m-b-0">@Model.Anh</p>
+                    <input name="fThumb" type="file" class="form-control-file" asp-for="Anh" accept="image/*"></input>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary btn-tone m-r-5" />
+            </div>
+        </div>
+    </div>
+    <div class="tab-content m-t-15">
+        <div id="product-edit-basic">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="form-group col col-lg-4">
+                            <label class="control-label">Mã sách</label>
+                            <input asp-for="MaSach" class="form-control" />
+                            <span asp-validation-for="MaSach" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col col-lg-4">
+                            <label class="font-weight-semibold" for="productName">Tên sách</label>
+                            <input type="text" class="form-control" asp-for="TenSach">
+                            <span asp-validation-for="TenSach" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col col-lg-4">
+                            <label class="font-weight-semibold" for="productPrice">Giá bán</label>
+                            <input type="number" class="form-control" asp-for="GiaBan">
+                            <span asp-validation-for="GiaBan" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="form-group col col-lg-4">
+                            <label class="font-weight-semibold" for="productCategory">Danh mục sản phẩm</label>
+                            <select class="custom-select" asp-for="MaDm" asp-items="ViewBag.MaDm" style="min-width: 180px;">
+                                <option selected>Chọn danh mục</option>
+                            </select>
+                        </div>
+                        <div class="form-group col col-lg-4">
+                            <labelclass="font-weight-semibold" for="productBrand">Tác giả</label>
+                            <select class="custom-select" asp-for="MaTg" asp-items="ViewBag.MaTg" style="min-width: 180px;">
+                                <option selected>Chọn tác giả</option>
+                            </select>
+                        </div>
+                        <div class="form-group col col-lg-4">
+                            <label class="font-weight-semibold" for="productStatus">Số lượng</label>
+                            <input type="number" class="form-control" asp-for="SoLuongCon">
+                            <span asp-validation-for="SoLuongCon" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>Mô tả<p/>
+        <textarea id="tiny" asp-for="MoTa"></textarea>
+    </div>
+</form>
+
+<div>
+    <a class="btn btn-info btn-tone m-r-5" asp-action="Index">Back to List</a>
+</div>

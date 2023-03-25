@@ -38,7 +38,9 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Anh)
+					<div class="d-flex align-items-center">
+                        <img class="img-fluid rounded" src="@Url.Content("../User/images/team/" + @item.Anh + ".jpg")" style="max-width: 60px" alt="">
+                    </div>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.HoTenNd)
