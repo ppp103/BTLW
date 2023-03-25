@@ -39,8 +39,8 @@ public partial class QlbanSachContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-
         => optionsBuilder.UseSqlServer("Data Source=DESKTOP-NT1V579\\SQLSEVER;Initial Catalog=QLBanSach;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Admin>(entity =>
@@ -63,7 +63,6 @@ public partial class QlbanSachContext : DbContext
         {
             entity.HasKey(e => e.MaBanSao).HasName("PK__BanSaoSa__488BCC426041348B");
 
-
             entity.ToTable("BanSaoSach");
 
             entity.Property(e => e.MaBanSao).HasMaxLength(50);
@@ -80,7 +79,6 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<ChiTietDonHang>(entity =>
         {
-
             entity.HasKey(e => new { e.MaDonHang, e.MaSach }).HasName("PK__ChiTietD__D9B6D3EF3BDBD785");
 
             entity.ToTable("ChiTietDonHang");
@@ -102,7 +100,6 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<DanhMucSach>(entity =>
         {
-
             entity.HasKey(e => e.MaDm).HasName("PK__DanhMucS__2725866E6C403792");
 
             entity.ToTable("DanhMucSach");
@@ -118,7 +115,6 @@ public partial class QlbanSachContext : DbContext
         modelBuilder.Entity<DonHang>(entity =>
         {
             entity.HasKey(e => e.MaDonHang).HasName("PK__DonHang__129584ADD8A8EEC5");
-
 
             entity.ToTable("DonHang");
 
@@ -186,6 +182,7 @@ public partial class QlbanSachContext : DbContext
         modelBuilder.Entity<Sach>(entity =>
         {
             entity.HasKey(e => e.MaSach).HasName("PK__Sach__B235742D4E11486C");
+
             entity.ToTable("Sach");
 
             entity.Property(e => e.MaSach).HasMaxLength(50);
@@ -221,6 +218,7 @@ public partial class QlbanSachContext : DbContext
         modelBuilder.Entity<TacGium>(entity =>
         {
             entity.HasKey(e => e.MaTg).HasName("PK__TacGia__27250074C2AE451B");
+
             entity.Property(e => e.MaTg)
                 .HasMaxLength(50)
                 .HasColumnName("MaTG");
