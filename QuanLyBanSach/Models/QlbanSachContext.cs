@@ -15,7 +15,7 @@ public partial class QlbanSachContext : DbContext
     {
     }
 
-    public virtual DbSet<Admin> Admins { get; set; }
+    public virtual DbSet<Admins> Admins { get; set; }
 
     public virtual DbSet<BanSaoSach> BanSaoSaches { get; set; }
 
@@ -43,7 +43,7 @@ public partial class QlbanSachContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Admin>(entity =>
+        modelBuilder.Entity<Admins>(entity =>
         {
             entity.HasKey(e => e.MaAd).HasName("PK__Admin__27247E4648D22A2A");
 
@@ -61,8 +61,7 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<BanSaoSach>(entity =>
         {
-            entity.HasKey(e => e.MaBanSao).HasName("PK__BanSaoSa__488BCC426041348B");
-
+          entity.HasKey(e => e.MaBanSao).HasName("PK__BanSaoSa__488BCC426041348B");
             entity.ToTable("BanSaoSach");
 
             entity.Property(e => e.MaBanSao).HasMaxLength(50);
@@ -79,7 +78,9 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<ChiTietDonHang>(entity =>
         {
+
             entity.HasKey(e => new { e.MaDonHang, e.MaSach }).HasName("PK__ChiTietD__D9B6D3EF3BDBD785");
+
 
             entity.ToTable("ChiTietDonHang");
 
@@ -100,6 +101,7 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<DanhMucSach>(entity =>
         {
+
             entity.HasKey(e => e.MaDm).HasName("PK__DanhMucS__2725866E6C403792");
 
             entity.ToTable("DanhMucSach");
@@ -114,7 +116,9 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<DonHang>(entity =>
         {
+
             entity.HasKey(e => e.MaDonHang).HasName("PK__DonHang__129584ADD8A8EEC5");
+
 
             entity.ToTable("DonHang");
 
@@ -143,7 +147,9 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<NguoiDung>(entity =>
         {
+
             entity.HasKey(e => e.MaNd).HasName("PK__NguoiDun__2725D724C247B02E");
+
 
             entity.ToTable("NguoiDung");
 
@@ -167,7 +173,9 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<NhaXuatBan>(entity =>
         {
+
             entity.HasKey(e => e.MaNxb).HasName("PK__NhaXuatB__3A19482CC982A078");
+
 
             entity.ToTable("NhaXuatBan");
 
@@ -181,7 +189,9 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<Sach>(entity =>
         {
+
             entity.HasKey(e => e.MaSach).HasName("PK__Sach__B235742D4E11486C");
+
 
             entity.ToTable("Sach");
 
@@ -217,6 +227,7 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<TacGium>(entity =>
         {
+
             entity.HasKey(e => e.MaTg).HasName("PK__TacGia__27250074C2AE451B");
 
             entity.Property(e => e.MaTg)
@@ -229,7 +240,9 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<ThanhToan>(entity =>
         {
+
             entity.HasKey(e => e.MaTt).HasName("PK__ThanhToa__27250079C7E2E648");
+
 
             entity.ToTable("ThanhToan");
 

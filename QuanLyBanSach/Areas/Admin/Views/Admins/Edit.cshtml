@@ -7,7 +7,7 @@
 
 <h1>Edit</h1>
 
-<h4>Admins</h4>
+<h4>Admin</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -15,9 +15,9 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="MaAd" />
             <div class="form-group">
-                <label asp-for="MatKhau" class="control-label"></label>
-                <input asp-for="MatKhau" class="form-control" />
-                <span asp-validation-for="MatKhau" class="text-danger"></span>
+                <label asp-for="HoTenAd" class="control-label"></label>
+                <input asp-for="HoTenAd" class="form-control" />
+                <span asp-validation-for="HoTenAd" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="TenDangNhap" class="control-label"></label>
@@ -25,18 +25,19 @@
                 <span asp-validation-for="TenDangNhap" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="HoTenAd" class="control-label"></label>
-                <input asp-for="HoTenAd" class="form-control" />
-                <span asp-validation-for="HoTenAd" class="text-danger"></span>
+                <label asp-for="MatKhau" class="control-label"></label>
+                <input asp-for="MatKhau" class="form-control" />
+                <span asp-validation-for="MatKhau" class="text-danger"></span>
             </div>
+            
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary btn-tone m-r-5" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-info btn-tone m-r-5" asp-action="Index">Back to List</a>
 </div>
 

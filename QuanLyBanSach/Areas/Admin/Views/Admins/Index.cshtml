@@ -5,22 +5,19 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Danh sách Admin</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-sm btn-outline-info" asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.MatKhau)
+                Họ tên Admin
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TenDangNhap)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoTenAd)
+                Tên đăng nhập
             </th>
             <th></th>
         </tr>
@@ -29,18 +26,16 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.MatKhau)
+                @Html.DisplayFor(modelItem => item.HoTenAd)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TenDangNhap)
             </td>
+            
             <td>
-                @Html.DisplayFor(modelItem => item.HoTenAd)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.MaAd">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaAd">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaAd">Delete</a>
+                    <a class="btn btn-info btn-tone m-r-5" asp-action="Edit" asp-route-id="@item.MaAd">Edit</a>
+                    <a class="btn btn-primary btn-tone m-r-5" asp-action="Details" asp-route-id="@item.MaAd">Details</a>
+                    <a class="btn btn-secondary btn-tone m-r-5" asp-action="Delete" asp-route-id="@item.MaAd">Delete</a>
             </td>
         </tr>
 }

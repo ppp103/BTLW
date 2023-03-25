@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Enlink - Admin Dashboard Template</title>
+    <title>Admin</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="~/Admin/assets/images/logo/favicon.png">
@@ -14,14 +14,15 @@
     <!-- page css -->
     <link href="~/Admin/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" 
+
     <!-- Core css -->
     <link href="~/Admin/assets/css/app.min.css" rel="stylesheet">
-
 </head>
 
 <body>
     <div class="app">
-        <div class="layout">
+        <div class="layout">                                                                  
             <!-- Header START -->
             @await Html.PartialAsync("_AdminHeaderPartialView")
             <!-- Header END -->
@@ -209,16 +210,36 @@
 
 
     <!-- Core Vendors JS -->
-    <script src="../Admin/assets/js/vendors.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/Admin/assets/js/vendors.min.js"></script>
     <!-- page js -->
-    <script src="../Admin/assets/vendors/chartjs/Chart.min.js"></script>
-    <script src="../Admin/assets/js/pages/dashboard-e-commerce.js"></script>
+    <script src="~/Admin/assets/vendors/chartjs/Chart.min.js"></script>
+    <script src="~/Admin/assets/js/pages/dashboard-e-commerce.js"></script>
 
+    @*<script src="~/Admin/assets/vendors/select2/select2.min.js"></script>
+    <script src="~/Admin/assets/js/pages/e-commerce-product-edit.js"></script>
+*@
+    
     <!-- Core JS -->
-    <script src="../Admin/assets/js/app.min.js"></script>
+    <script src="~/Admin/assets/js/app.min.js"></script>
+    <script src="~/Admin/js/site.js" asp-append-version="true"></script>
     @await Component.InvokeAsync("Notyf")
-    @await RenderSectionAsync("Scripts",required: false)
+    @RenderSection("Scripts", required: false)
+
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    
+    <script>
+        tinymce.init({
+            selector: 'textarea#tiny',
+            plugins: [
+                'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
+                'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
+                'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help', 'wordcount'
+            ],
+            toolbar: 'undo redo | a11ycheck casechange blocks | bold italic backcolor | alignleft aligncenter alignright alignjustify |' +
+                'bullist numlist checklist outdent indent | removeformat | code table help'
+        })
+    </script>
 
 </body>
 
