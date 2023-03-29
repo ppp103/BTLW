@@ -1,0 +1,9 @@
+﻿@model List<QuanLyBanSach.ModelViews.CartItem>
+@if(Model != null && Model.Count() > 0)
+{
+	<span id="numberCart" class="tg-themebadge">@Model.Count()</span>
+}
+else
+{
+	<span class="tg-themebadge">0</span>
+}

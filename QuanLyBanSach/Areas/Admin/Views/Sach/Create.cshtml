@@ -79,13 +79,12 @@
                     <img src="~/Admin/assets/images/others/thumb-16.jpg" alt="">
                 </div>
                 <div class="m-l-15">
-                    <h4 class="m-b-0">Skinny Men Blazer</h4>
-                    <p class="text-muted m-b-0">Code: #5325</p>
+                    <h4 class="m-b-0">Thêm sách</h4>
                     <input name="fThumb" type="file" class="form-control-file" asp-for="Anh" accept="image/*"></input>
                 </div>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary btn-tone m-r-5" />
+                <input type="submit" value="Thêm" class="btn btn-primary btn-tone m-r-5" />
             </div>
         </div>
     </div>
@@ -95,7 +94,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="form-group col col-lg-4">
-                            <label class="control-label">Mã sách</label>
+                            <label class="control-label font-weight-semibold">Mã sách</label>
                             <input asp-for="MaSach" class="form-control" />
                             <span asp-validation-for="MaSach" class="text-danger"></span>
                         </div>
@@ -112,35 +111,40 @@
 
                     </div>
                     <div class="row">
-                        <div class="form-group col col-lg-4">
+                        <div class="form-group col col-lg-3">
                             <label class="font-weight-semibold" for="productCategory">Danh mục sản phẩm</label>
                             <select class="custom-select" asp-for="MaDm" asp-items="ViewBag.MaDm" style="min-width: 180px;">
                                 <option selected>Chọn danh mục</option>
                             </select>
                         </div>
-                        <div class="form-group col col-lg-4">
-                            <labelclass="font-weight-semibold" for="productBrand">Tác giả</label>
+                        <div class="form-group col col-lg-3">
+                            <label class="font-weight-semibold" for="productBrand">Tác giả</label>
                             <select class="custom-select" asp-for="MaTg" asp-items="ViewBag.MaTg" style="min-width: 180px;">
                                 <option selected>Chọn tác giả</option>
                             </select>
                         </div>
-                        <div class="form-group col col-lg-4">
+                        <div class="form-group col col-lg-3">
+                            <label asp-for="MaNxb" class="control-label font-weight-semibold">Nhà xuất bản</label>
+                            <select asp-for="MaNxb" class="form-control" asp-items="ViewBag.MaNxb">
+                                <option selected>Chọn nhà xuất bản</option>
+                            </select>
+                        </div>
+                        <div class="form-group col col-lg-3">
                             <label class="font-weight-semibold" for="productStatus">Số lượng</label>
                             <input type="number" class="form-control" asp-for="SoLuongCon">
                             <span asp-validation-for="SoLuongCon" class="text-danger"></span>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <p>Mô tả<p/>
+        <p class="font-weight-semibold">Mô tả<p />
         <textarea id="tiny" asp-for="MoTa"></textarea>
     </div>
 </form>
 
 <div>
-    <a class="btn btn-info btn-tone m-r-5" asp-action="Index">Back to List</a>
+    <a class="btn btn-info btn-tone m-r-5" asp-action="Index">Quay lại</a>
 </div>
 
 

@@ -1,0 +1,36 @@
+﻿@model List<QuanLyBanSach.ModelViews.CartItem>
+<div class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-minicart">
+	@if (Model != null && Model.Count() > 0)
+	{
+		<div id="numberCart" class="tg-minicartbody">
+			@foreach(var item in Model)
+			{
+				<div class="tg-minicarproduct">
+				<figure>
+					<img src="@Url.Content("~/images/books/" + @item.sach.Anh + ".jpg")" alt="image description">
+				</figure>
+				<div class="tg-minicarproductdata">
+					<h5><a href="javascript:void(0);">@item.sach.TenSach</a></h5>
+						<h6><a href="javascript:void(0);">@item.soLuong x @item.sach.GiaBan.Value.ToString("#,##0") VNĐ</a></h6>
+				</div>
+			</div>
+			}
+		</div>
+		<div class="tg-minicartfoot">
+		<a class="tg-btnemptycart" href="javascript:void(0);">
+			<i class="fa fa-trash-o"></i>
+			<span>Xóa tất cả sản phẩm</span>
+		</a>
+		<span class="tg-subtotal">Tổng: <strong>@Model.Sum(x => x.tongTien).ToString("#,##0") VNĐ</strong></span>
+		<div class="tg-btns">
+			<a class="tg-btn tg-active" asp-controller="ShoppingCart" asp-action="Index">Xem</a>
+			<a class="tg-btn" href="javascript:void(0);">Thanh Toán</a>
+		</div>
+	</div>
+	}
+	else
+	{
+	<p style="text-align: center;">Giỏ hàng trống</p>
+	}
+</div>
+

@@ -12,13 +12,12 @@
 					<div class="tg-slidercontent">
 							<figure class="tg-authorimg"><a href="javascript:void(0);"><img src="@Url.Content("../User/images/team/" + @x.Anh + ".jpg")" alt="image description"></a></figure>
 						<h1>@x.MaTgNavigation.TenTg</h1>
-						<h2>Latest 2017 Release</h2>
 						<div class="tg-description">
 							<p>Dưới thiên nhân ta vô địch.</p>
 						</div>
 						<div class="tg-btns">
-							<a class="tg-btn" href="javascript:void(0);">buy now</a>
-							<a class="tg-btn" href="javascript:void(0);">read more</a>
+							<a class="tg-btn" href="javascript:void(0);">Mua ngay</a>
+							<a class="tg-btn" href="javascript:void(0);">Đọc thêm</a>
 						</div>
 					</div>
 				</div>
@@ -40,7 +39,7 @@
 							<div class="tg-status">
 								<div class="tg-statuscontent">
 									<span class="tg-statusicon"><i class="icon-book"></i></span>
-									<h2>Books we have<span>24,179,213</span></h2>
+									<h2>Số sách chúng tôi có<span>24,179,213</span></h2>
 								</div>
 							</div>
 						</div>
@@ -50,7 +49,7 @@
 							<div class="tg-status">
 								<div class="tg-statuscontent">
 									<span class="tg-statusicon"><i class="icon-user"></i></span>
-									<h2>Total members<span>15,179,213</span></h2>
+									<h2>Số thành viên<span>15,179,213</span></h2>
 								</div>
 							</div>
 						</div>
@@ -60,7 +59,7 @@
 							<div class="tg-status">
 								<div class="tg-statuscontent">
 									<span class="tg-statusicon"><i class="icon-heart"></i></span>
-									<h2>Happy users<span>1,267,539</span></h2>
+									<h2>Số khách hàng hài lòng<span>1,267,539</span></h2>
 								</div>
 							</div>
 						</div>
@@ -80,8 +79,7 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<div class="tg-sectionhead">
-						<h2><span>People’s Choice</span>Bestselling Books</h2>
-						<a class="tg-btn" href="javascript:void(0);">View All</a>
+						<h2><span></span>Sách bán chạy</h2>
 					</div>
 				</div>
 			
@@ -97,7 +95,7 @@
 									</div>
 									<a class="tg-btnaddtowishlist" href="javascript:void(0);">
 										<i class="icon-heart"></i>
-										<span>add to wishlist</span>
+										<span>Yêu thích</span>
 									</a>
 								</figure>
 								<div class="tg-postbookcontent">
@@ -116,7 +114,7 @@
 									</span>
 									<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
 										<i class="fa fa-shopping-basket"></i>
-										<em>Add To Basket</em>
+										<em>Thêm vào giỏ</em>
 									</a>
 								</div>
 							</div>
@@ -155,7 +153,7 @@
 								</span>
 								<a class="tg-btn tg-btnstyletwo tg-active" href="javascript:void(0);">
 									<i class="fa fa-shopping-basket"></i>
-									<em>Add To Basket</em>
+									<em>Thêm vào giỏ</em>
 								</a>
 							</div>
 						</div>
@@ -183,7 +181,7 @@
 						</div>
 						<div class="tg-btns">
 							<a class="tg-btn tg-active" href="javascript:void(0);">View All</a>
-							<a class="tg-btn" href="javascript:void(0);">Read More</a>
+							<a class="tg-btn" href="javascript:void(0);">Đọc thêm</a>
 						</div>
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -301,11 +299,11 @@
 								</div>
 								<div class="tg-hovercontent">
 									<div class="tg-description">
-										<p>@sp.MoTa</p>
+										<p>@Html.Raw(@sp.MoTa)</p>
 									</div>
-									<strong class="tg-bookpage">Book Pages: 206</strong>
-									<strong class="tg-bookcategory">Category: Adventure, Fun</strong>
-									<strong class="tg-bookprice">Price: $23.18</strong>
+									<strong class="tg-bookpage">Số trang: 206</strong>
+									<strong class="tg-bookcategory">Thể loại: Phiêu lưu</strong>
+									<strong class="tg-bookprice">Giá: @sp.GiaBan.Value.ToString("#,##0")</strong>
 									<div class="tg-ratingbox"><span class="tg-stars"><span></span></span></div>
 								</div>
 							</figure>
@@ -316,7 +314,7 @@
 									<span class="tg-bookwriter">By: <a href="javascript:void(0);">@sp.MaTgNavigation.TenTg</a></span>
 								<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
 									<i class="fa fa-shopping-basket"></i>
-									<em>Add To Basket</em>
+									<em>Thêm vào giỏ</em>
 								</a>
 							</div>
 						</div>
@@ -331,9 +329,9 @@
 									<div class="tg-description">
 										<p>Consectetur adipisicing elit sed do eiusmod tempor incididunt labore toloregna aliqua enim adia minim veniam, quis nostrud.</p>
 									</div>
-									<strong class="tg-bookpage">Book Pages: 206</strong>
-									<strong class="tg-bookcategory">Category: Adventure, Fun</strong>
-									<strong class="tg-bookprice">Price: $23.18</strong>
+									<strong class="tg-bookpage">Số trang: 206</strong>
+									<strong class="tg-bookcategory">Thể loại: Hài</strong>
+									<strong class="tg-bookprice">Giá: $23.18</strong>
 									<div class="tg-ratingbox"><span class="tg-stars"><span></span></span></div>
 								</div>
 							</figure>
@@ -344,7 +342,7 @@
 								<span class="tg-bookwriter">By: <a href="javascript:void(0);">Drusilla Glandon</a></span>
 								<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
 									<i class="fa fa-shopping-basket"></i>
-									<em>Add To Basket</em>
+									<em>Thêm vào giỏ</em>
 								</a>
 							</div>
 						</div>
@@ -370,7 +368,8 @@
 									<figure><img src="@Url.Content("../User/images/blog/" + @nxb.Anh + ".jpg")" alt="image description"></figure>
 									<blockquote><q>Kì thực trên mặt đất vốn làm gì có đường, người ta đi mãi thì thành đường thôi.</q></blockquote>
 								<div class="tg-testimonialauthor">
-									<h3>@nxb.MaNxbNavigation.TenNxb</h3>
+									@*<h3>@nxb.MaNxbNavigation.TenNxb</h3>*@
+										<h3>@nxb.MaNxbNavigation.TenNxb</h3>
 									<span>Manager CIFP</span>
 								</div>
 							</div>
@@ -431,7 +430,7 @@
 						<div class="tg-calltoaction">
 							<h2>Open Discount For All</h2>
 							<h3>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore.</h3>
-							<a class="tg-btn tg-active" href="javascript:void(0);">Read More</a>
+							<a class="tg-btn tg-active" href="javascript:void(0);">Đọc thêm</a>
 						</div>
 					</div>
 				</div>

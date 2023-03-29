@@ -64,7 +64,8 @@ h4 a,
 h5 a,
 h6 a { color: #484848;}
 p a,
-p a:hover { text-decoration:underline; }
+p a:hover { text-decoration: none;
+}
 p {
 	margin: 0 0 20px;
 	line-height: 20px;
@@ -73,7 +74,8 @@ p {
 a { text-decoration: none; }
 a:hover, a:focus, a:active {
 	outline: none;
-	text- ecoration: none;
+	text-decoration: none;
+	cursor:pointer;
 }
 ul { margin: 0; }
 figure {
@@ -971,6 +973,8 @@ body.tg-comingsoonpage .tg-wrapper{overflow:visible;}
 .tg-minicarproduct figure img {
 	z-index: 1;
 	display: block;
+	width:82px;
+	height: 115px;
 	position: relative;
 }
 .tg-minicarproductdata {

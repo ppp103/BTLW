@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using QuanLyBanSach.Extension;
 using QuanLyBanSach.Models;
+using QuanLyBanSach.ModelViews;
 using System.Diagnostics;
 using System.Linq;
 using X.PagedList;
@@ -92,7 +94,8 @@ namespace QuanLyBanSach.Controllers
 
 		public IActionResult Cart()
 		{
-			return View();
+			var cart = HttpContext.Session.Get<List<CartItem>>("GioHang");
+			return View(cart);
 		}
 	}
 }

@@ -11,11 +11,11 @@
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="tg-innerbannercontent">
-					<h1>All Products</h1>
+					<h1>Sách</h1>
 					<ol class="tg-breadcrumb">
-						<li><a href="javascript:void(0);">home</a></li>
-						<li><a href="javascript:void(0);">Products</a></li>
-						<li class="tg-active">Product Title Here</li>
+						<li><a href="javascript:void(0);">Trang chủ</a></li>
+						<li><a href="javascript:void(0);">Sách</a></li>
+						<li class="tg-active">@Model.TenSach</li>
 					</ol>
 				</div>
 			</div>
@@ -57,10 +57,10 @@
 												<span class="tg-stars"><span></span></span>
 												<div class="tg-priceandbtn">
 													<span class="tg-bookprice">
-														<ins>$23.18</ins>
-														<del>$30.20</del>
+														<ins>230.000 VNĐ</ins>
+														<del>302.000 VNĐ</del>
 													</span>
-													<a class="tg-btn tg-btnstyletwo tg-active" href="javascript:void(0);">
+													<a class="tg-btn tg-btnstyletwo tg-active">
 														<i class="fa fa-shopping-basket"></i>
 														<em>Add To Basket</em>
 													</a>
@@ -91,7 +91,8 @@
 													<input type="text" class="result" value="0" id="quantity1" name="quantity">
 													<em class="plus">+</em>
 												</div>
-												<a class="tg-btn tg-active tg-btn-lg" href="javascript:void(0);">Add To Basket</a>
+												<a class="tg-btn tg-active tg-btn-lg add-to-cart">Add To Basket</a>
+												<input asp-for="MaSach" type="hidden"/>
 												<a class="tg-btnaddtowishlist" href="javascript:void(0);">
 													<span>add to wishlist</span>
 												</a>
@@ -321,7 +322,7 @@
 									<ul>
 										@foreach (var dm in ViewBag.madm)
 										{
-												<li><a asp-controller="Home" asp-action="HienThiTheoDanhMuc" asp-route-madm="@dm.MaDm"><span>@dm.TenDm</span>@*<em>28245</em>*@</a></li>
+											<li><a asp-controller="Home" asp-action="HienThiTheoDanhMuc" asp-route-madm="@dm.MaDm"><span>@dm.TenDm</span>@*<em>28245</em>*@</a></li>
 										}
 									</ul>
 								</div>
@@ -497,3 +498,61 @@
 			News Grid End
 	*************************************-->
 </main>
+@section Scripts{
+<script>
+    $(document).ready(function () {
+        $(function () {
+            $(".add-to-cart").click(function () {
+                var maSach = $('#MaSach').val();
+                var soLuong = $('#quantity1').val();
+				if(soLuong == 0) return;
+                $.ajax({
+                    url: '/api/cart/add',
+                    type: "POST",
+                    dataType: "JSON",
+                    data: {
+                        maSach: maSach,
+                        soLuong: soLuong
+                    },
+                    success: function (response) {
+                        if (response.result == 'Redirect') {
+                            window.location = response.url;
+                        }
+                        else {
+                            loadHeaderCart(); //Add Product success
+                            location.reload();
+                        }
+                        console.log(response); // log to the console to see whether it worked
+                    },
+                    error: function (error) {
+                        alert("There was an error posting the data to the server: " + error.responseText);
+                    }
+                });
+            });
+
+            @*$(".removecart").click(function () {
+                var productid = $(this).attr("data-productid");
+                $.ajax({
+                    url: "api/cart/remove",
+                    type: "POST",
+                    dataType: "JSON",
+                    data: { productID: productid },
+                    success: function (result) {
+                        if (result.success) {
+                            loadHeaderCart();Reload lai gio hang
+                            location.reload();
+                        }
+                    },
+                    error: function (rs) {
+                        alert("Remove Cart Error !")
+                    }
+                });
+            });*@
+        });
+        function loadHeaderCart() {
+            $('#miniCart').load("/Ajax/HeaderCart");
+            $('#numberCart').load("/Ajax/NumberCart");
+        }
+    });
+</script>
+}

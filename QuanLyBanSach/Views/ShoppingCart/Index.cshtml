@@ -1,7 +1,7 @@
 ﻿@model List<QuanLyBanSach.ModelViews.CartItem>
 @{
-    ViewData["Title"] = "Cart";
-    Layout = "~/Views/Shared/_UserLayout.cshtml";
+	ViewData["Title"] = "Cart";
+	Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 
 <!--************************************
@@ -14,7 +14,7 @@
 				<div class="tg-innerbannercontent">
 					<h1>Cart</h1>
 					<ol class="tg-breadcrumb">
-						<li><a href="javascript:void(0);">home</a></li>
+						<li><a href="javascript:void(0);">Home</a></li>
 						<li class="tg-active">Cart</li>
 					</ol>
 				</div>
@@ -29,7 +29,9 @@
 <div class="colorlib-product">
 	<div class="container">
 		<div class="row row-pb-lg">
-			<div class="col-md-12">
+			@if(@Model != null && Model.Count > 0)
+			{
+				<div class="col-md-12">
 				<div class="product-name d-flex">
 					<div class="one-forth text-left px-4" style="padding-left:20px;">
 						<span>Sách</span>
@@ -47,56 +49,61 @@
 						<span>Xóa</span>
 					</div>
 				</div>
-				@foreach(var item in Model)
+				@foreach (var item in Model)
 				{
 					<div class="product-cart d-flex">
-					<div class="one-forth">
-						<div class="product-img" style="background-image: url(@Url.Content("../User/images/books/img-01.jpg")); background-repeat: no-repeat; background-position: center; background-size: cover;">
+						<div class="one-forth">
+							<div class="product-img" style="background-image: url(@Url.Content("~/images/books/" + @item.sach.Anh + ".jpg")); background-repeat: no-repeat; background-position: center; background-size: cover;">
+							</div>
+							<div class="display-tc">
+								<h3>@item.sach.TenSach</h3>
+							</div>
 						</div>
-						<div class="display-tc">
-							<h3>@item.sach.TenSach</h3>
+						<div class="one-eight text-center">
+							<div class="display-tc">
+								<span class="price">@item.sach.GiaBan.Value.ToString("#,##0") VNĐ</span>
+							</div>
+						</div>
+						<div class="one-eight text-center">
+							<div class="display-tc">
+								<input type="text" id="quantity" name="quantity" class="form-control input-number text-center" value="1" min="1" max="100">
+							</div>
+						</div>
+						<div class="one-eight text-center">
+							<div class="display-tc">
+								<span class="price">@item.tongTien.ToString("#,##0") VNĐ</span>
+							</div>
+						</div>
+						<div class="one-eight text-center">
+							<div class="display-tc">
+								<a data-maSach="@item.sach.MaSach" class="closed remove-cart"></a>
+							</div>
 						</div>
 					</div>
-					<div class="one-eight text-center">
-						<div class="display-tc">
-							<span class="price">@item.sach.GiaBan.Value.ToString("#,##0") VNĐ</span>
-						</div>
-					</div>
-					<div class="one-eight text-center">
-						<div class="display-tc">
-							<input type="text" id="quantity" name="quantity" class="form-control input-number text-center" value="1" min="1" max="100">
-						</div>
-					</div>
-					<div class="one-eight text-center">
-						<div class="display-tc">
-							<span class="price">@item.tongTien.ToString("#,##0") VNĐ</span>
-						</div>
-					</div>
-					<div class="one-eight text-center">
-						<div class="display-tc">
-							<a data-maSach ="@item.sach.MaSach" class="closed remove-cart"></a>
-						</div>
-					</div>
-				</div>
 				}
 			</div>
-		</div>
-		<div class="row row-pb-lg">
-			<div class="col-md-12">
-				<div class="total-wrap">
-					<div class="row">
-						<div class="col-sm-8">
-						</div>
-						<div class="col-sm-4 text-center">
-							<div class="total">
-								<div class="grand-total">
-									<p><span><strong>Tổng:</strong></span> <span>@Model.Sum(x => x.tongTien).ToString("#,##0") VNĐ</span></p>
+				<div class="row row-pb-lg">
+					<div class="col-md-12">
+						<div class="total-wrap">
+							<div class="row">
+								<div class="col-sm-8">
+								</div>
+								<div class="col-sm-4 text-center">
+									<div class="total">
+										<div class="grand-total">
+											<p><span><strong>Tổng:</strong></span> <span>@Model.Sum(x => x.tongTien).ToString("#,##0") VNĐ</span></p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			}
+			else
+			{
+				<p style="text-align:center; font-size:2.4rem">Giỏ hàng trống! <a asp-controller="Home" asp-action="HienThiSanPham">Mua ngay</a></p>
+			}
 		</div>
 	</div>
 </div>
@@ -104,14 +111,14 @@
 @section Scripts{
 	<script>
 		$(document).ready(function () {
-			$(function (){
+			$(function () {
 				$(".remove-cart").click(function () {
 					var maSach = $(this).attr("data-maSach");
 					$.ajax({
 						url: "api/cart/remove",
 						type: "POST",
 						dataType: "JSON",
-						data: { maSach: maSach},
+						data: { maSach: maSach },
 						success: function (result) {
 							if (result.success) {
 								loadHeaderCart(); // Reload lai gio hang

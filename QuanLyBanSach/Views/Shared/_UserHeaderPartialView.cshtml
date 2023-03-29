@@ -7,32 +7,32 @@
 						<li>
 							<a href="javascript:void(0);">
 								<i class="icon-envelope"></i>
-								<em>Contact</em>
+								<em>Liên lạc</em>
 							</a>
 						</li>
 						<li>
 							<a href="javascript:void(0);">
 								<i class="icon-question-circle"></i>
-								<em>Help</em>
+								<em>Trợ giúp</em>
 							</a>
 						</li>
 					</ul>
 					<div class="dropdown tg-themedropdown tg-currencydropdown">
 						<a href="javascript:void(0);" id="tg-currenty" class="tg-btnthemedropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="icon-earth"></i>
-							<span>Currency</span>
+							<span>Đơn vị tiền</span>
 						</a>
 						<ul class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-currenty">
 							<li>
 								<a href="javascript:void(0);">
 									<i>£</i>
-									<span>British Pound</span>
+									<span>Pound</span>
 								</a>
 							</li>
 							<li>
 								<a href="javascript:void(0);">
 									<i>$</i>
-									<span>Us Dollar</span>
+									<span>Dollar</span>
 								</a>
 							</li>
 							<li>
@@ -44,8 +44,6 @@
 						</ul>
 					</div>
 					<div class="tg-userlogin">
-			@*			<figure><a href="javascript:void(0);"><img src="../User/images/users/img-01.jpg" alt="image description"></a></figure>
-						<span>Hi, Melonie</span>*@
 						<a asp-controller="Home" asp-action="Login">Đăng nhập |</a>
 						<a asp-action="SignUp">Đăng ký</a>
 					</div>
@@ -57,78 +55,31 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<strong class="tg-logo"><a href="index.html"><img src="../User/images/logo.png" alt="company name here"></a></strong>
+					<strong class="tg-logo"><a asp-controller="Home" asp-action="Index"><img src="../User/images/logo.png" alt="Nhóm 7"></a></strong>
 					<div class="tg-wishlistandcart">
 						<div class="dropdown tg-themedropdown tg-wishlistdropdown">
 							<a href="javascript:void(0);" id="tg-wishlisst" class="tg-btnthemedropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<span class="tg-themebadge">3</span>
 								<i class="icon-heart"></i>
-								<span>Wishlist</span>
 							</a>
 							<div class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-wishlisst">
-								<div class="tg-description"><p>No products were added to the wishlist!</p></div>
+								<div class="tg-description"><p>Danh sách rỗng</p></div>
 							</div>
 						</div>
 						<div class="dropdown tg-themedropdown tg-minicartdropdown">
 							<a " id="tg-minicart" class="tg-btnthemedropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<span class="tg-themebadge">3</span>
+								@await Component.InvokeAsync("NumberCart")
 								<i class="icon-cart"></i>
-								<span>$123.00</span>
+								<span>Giỏ hàng</span>
 							</a>
-							<div class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-minicart">
-								<div class="tg-minicartbody">
-									<div class="tg-minicarproduct">
-										<figure>
-											<img src="../User/images/products/img-01.jpg" alt="image description">
-
-										</figure>
-										<div class="tg-minicarproductdata">
-											<h5><a href="javascript:void(0);">Our State Fair Is A Great Function</a></h5>
-											<h6><a href="javascript:void(0);">$ 12.15</a></h6>
-										</div>
-									</div>
-									<div class="tg-minicarproduct">
-										<figure>
-											<img src="../User/images/products/img-02.jpg" alt="image description">
-
-										</figure>
-										<div class="tg-minicarproductdata">
-											<h5><a href="javascript:void(0);">Bring Me To Light</a></h5>
-											<h6><a href="javascript:void(0);">$ 12.15</a></h6>
-										</div>
-									</div>
-									<div class="tg-minicarproduct">
-										<figure>
-											<img src="../User/images/products/img-03.jpg" alt="image description">
-
-										</figure>
-										<div class="tg-minicarproductdata">
-											<h5><a href="javascript:void(0);">Have Faith In Your Soul</a></h5>
-											<h6><a href="javascript:void(0);">$ 12.15</a></h6>
-										</div>
-									</div>
-								</div>
-								<div class="tg-minicartfoot">
-									<a class="tg-btnemptycart" href="javascript:void(0);">
-										<i class="fa fa-trash-o"></i>
-										<span>Clear Your Cart</span>
-									</a>
-									<span class="tg-subtotal">Subtotal: <strong>35.78</strong></span>
-									<div class="tg-btns">
-										<a class="tg-btn tg-active" asp-controller="Home" asp-action="Cart">View Cart</a>
-										<a class="tg-btn" href="javascript:void(0);">Checkout</a>
-									</div>
-								</div>
-							</div>
+							@await Component.InvokeAsync("HeaderCart")
 						</div>
 					</div>
 					<div class="tg-searchbox">
 						<form class="tg-formtheme tg-formsearch">
 							<fieldset>
-								<input type="text" name="search" class="typeahead form-control" placeholder="Search by title, author, keyword, ISBN...">
+								<input type="text" name="search" class="typeahead form-control" placeholder="Tìm kiếm theo tên sách, tác giả, ...">
 								<button type="submit"><i class="icon-magnifier"></i></button>
 							</fieldset>
-							<a href="javascript:void(0);">+  Advanced Search</a>
 						</form>
 					</div>
 				</div>
@@ -151,16 +102,16 @@
 						<div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
 							<ul>
 								<li class="menu-item current-menu-item">
-									<a href="javascript:void(0);">Home</a>
+									<a asp-controller="Home" asp-action="Index">Trang chủ</a>
 								</li>
 								<li class="menu-item">
-									<a href="authors.html">Authors</a>
+									<a href="#">Tác giả</a>
 								</li>
-								<li class="menu-item"><a asp-controller="Home" asp-action="HienThiSanPham" >Products</a></li>
+								<li class="menu-item"><a asp-controller="HienThiSanPham">Sách</a></li>
 								<li class="menu-item">
-									<a href="newsgrid.html">Latest News</a>
+									<a href="#">Tin tức</a>
 								</li>
-								<li class="menu-item"><a href="contactus.html">Contact</a></li>
+								<li class="menu-item"><a href="#">Liên lạc</a></li>
 							</ul>
 						</div>
 					</nav>

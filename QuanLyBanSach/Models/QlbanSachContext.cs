@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using QuanLyBanSach.ModelViews;
 
 namespace QuanLyBanSach.Models;
 
@@ -275,4 +276,6 @@ public partial class QlbanSachContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+    public DbSet<QuanLyBanSach.ModelViews.CartItem> CartItem { get; set; } = default!;
 }
