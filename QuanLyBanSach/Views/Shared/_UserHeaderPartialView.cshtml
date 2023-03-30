@@ -1,4 +1,6 @@
-﻿<header id="tg-header" class="tg-header tg-haslayout">
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<header id="tg-header" class="tg-header tg-haslayout">
 	<div class="tg-topbar">
 		<div class="container">
 			<div class="row">
@@ -45,7 +47,7 @@
 					</div>
 					<div class="tg-userlogin">
 						<a asp-controller="Home" asp-action="Login">Đăng nhập |</a>
-						<a asp-action="SignUp">Đăng ký</a>
+						<a asp-controller="Home" asp-action="SignUp">Đăng ký</a>
 					</div>
 				</div>
 			</div>
@@ -67,7 +69,7 @@
 						</div>
 						<div class="dropdown tg-themedropdown tg-minicartdropdown">
 							<a " id="tg-minicart" class="tg-btnthemedropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								@await Component.InvokeAsync("NumberCart")
+							@await Component.InvokeAsync("NumberCart")
 								<i class="icon-cart"></i>
 								<span>Giỏ hàng</span>
 							</a>
@@ -102,12 +104,14 @@
 						<div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
 							<ul>
 								<li class="menu-item current-menu-item">
-									<a asp-controller="Home" asp-action="Index">Trang chủ</a>
+									@Html.ActionLink("Trang chủ", "Index", "Home")
 								</li>
 								<li class="menu-item">
 									<a href="#">Tác giả</a>
 								</li>
-								<li class="menu-item"><a asp-controller="HienThiSanPham">Sách</a></li>
+								<li class="menu-item">
+									@Html.ActionLink("Sách", "HienThiSanPham", "Home")
+								</li>
 								<li class="menu-item">
 									<a href="#">Tin tức</a>
 								</li>

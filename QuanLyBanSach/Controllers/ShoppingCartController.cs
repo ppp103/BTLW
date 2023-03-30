@@ -64,7 +64,7 @@ namespace QuanLyBanSach.Controllers
 
                 // update session
                 HttpContext.Session.Set<List<CartItem>>("GioHang", cart);
-                _notyfService.Success("Thêm sản phẩm thành công");
+                _notyfService.Success("Thêm thành công");
                 return Json(new { success = true });
             }
             catch
@@ -88,8 +88,8 @@ namespace QuanLyBanSach.Controllers
                     {
                         item.soLuong = soLuong.Value;
                     }
-                    //Luu lai session
-                    HttpContext.Session.Set<List<CartItem>>("GioHang", cart);
+					//Luu lai session
+					HttpContext.Session.Set<List<CartItem>>("GioHang", cart);
                 }
                 return Json(new { success = true });
             }

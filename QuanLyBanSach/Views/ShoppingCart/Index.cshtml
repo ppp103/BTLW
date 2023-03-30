@@ -12,10 +12,10 @@
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="tg-innerbannercontent">
-					<h1>Cart</h1>
+					<h1>Giỏ hàng</h1>
 					<ol class="tg-breadcrumb">
-						<li><a href="javascript:void(0);">Home</a></li>
-						<li class="tg-active">Cart</li>
+						<li><a href="javascript:void(0);">Trang chủ</a></li>
+						<li class="tg-active">Giỏ hàng</li>
 					</ol>
 				</div>
 			</div>
@@ -66,12 +66,12 @@
 						</div>
 						<div class="one-eight text-center">
 							<div class="display-tc">
-								<input type="text" id="quantity" name="quantity" class="form-control input-number text-center" value="1" min="1" max="100">
+									<input type="number" name="quantity" data-price="@item.sach.GiaBan" asp-for="@item.sach.MaSach" class="form-control input-number text-center quantity" value="@item.soLuong" min="1" max="100">
 							</div>
 						</div>
 						<div class="one-eight text-center">
 							<div class="display-tc">
-								<span class="price">@item.tongTien.ToString("#,##0") VNĐ</span>
+									<span class="price tong-tien-@item.sach.MaSach">@item.tongTien.ToString("#,##0") VNĐ</span>
 							</div>
 						</div>
 						<div class="one-eight text-center">
@@ -91,7 +91,7 @@
 								<div class="col-sm-4 text-center">
 									<div class="total">
 										<div class="grand-total">
-											<p><span><strong>Tổng:</strong></span> <span>@Model.Sum(x => x.tongTien).ToString("#,##0") VNĐ</span></p>
+											<p><span><strong>Tổng:</strong></span> <span class="tong-gio-hang">@Model.Sum(x => x.tongTien).ToString("#,##0") VNĐ</span></p>
 										</div>
 									</div>
 								</div>
@@ -111,24 +111,39 @@
 @section Scripts{
 	<script>
 		$(document).ready(function () {
+			$(".quantity").change(function(){
+				var gia = Number($(this).attr("data-price"));
+				var soLuong = Number($(this).val());
+				var thanhTien = gia * soLuong;
+				alert(thanhTien);
+
+				$(`.tong-tien-${MaSach}`).html(`<span class="tong-tien" class="price" data-price="${gia}">${new Intl.NumberFormat().format(thanhTien)} VNĐ</span>`)
+				
+			});
+			
 			$(function () {
 				$(".remove-cart").click(function () {
-					var maSach = $(this).attr("data-maSach");
-					$.ajax({
-						url: "api/cart/remove",
-						type: "POST",
-						dataType: "JSON",
-						data: { maSach: maSach },
-						success: function (result) {
-							if (result.success) {
-								loadHeaderCart(); // Reload lai gio hang
-								location.reload();
+					confirm("Bạn muốn xóa sản phẩm này không ?");
+					if(confirm){
+						var maSach = $(this).attr("data-maSach");
+						$.ajax({
+							url: "api/cart/remove",
+							type: "POST",
+							dataType: "JSON",
+							data: { maSach: maSach },
+							success: function (result) {
+								if (result.success) {
+									loadHeaderCart(); // Reload lai gio hang
+									location.reload();
+								}
+							},
+							error: function (rs) {
+								alert("Remove Cart Error !")
 							}
-						},
-						error: function (rs) {
-							alert("Remove Cart Error !")
-						}
-					});
+						});
+					}else{
+						return;
+					}
 				});
 			});
 			function loadHeaderCart() {

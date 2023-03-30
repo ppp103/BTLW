@@ -1,8 +1,10 @@
-﻿@{
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model List<Sach>
+@{
     ViewData["Title"] = "Home Page";
     Layout = "_UserLayout";
 }
-@model List<Sach>
+
 <div id="tg-homeslider" class="tg-homeslider tg-haslayout owl-carousel">
 	@foreach(var x in Model){
 	<div class="item" data-vide-bg="poster: ../User/images/slider/img-01.jpg" data-vide-options="position: 0% 50%">
