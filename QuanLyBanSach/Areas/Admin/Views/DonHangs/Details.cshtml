@@ -1,0 +1,67 @@
+﻿@model QuanLyBanSach.Models.DonHang
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Chi Tiết Đơn Hàng</h1>
+
+<div>
+    <h4>Đơn Hàng</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Địa Điểm Giao Hàng
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DiaDiemGh)
+        </dd>
+        <dt class = "col-sm-2">
+            Ngày Đặt
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NgayDat)
+        </dd>
+        <dt class = "col-sm-2">
+            Ngày Giao
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NgayGiao)
+        </dd>
+        <dt class = "col-sm-2">
+            Tổng Tiền
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TongTien)
+        </dd>
+        <dt class = "col-sm-2">
+            Ghi Chú
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GhiChu)
+        </dd>
+        <dt class = "col-sm-2">
+            Tên Khách Hàng
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TenKh)
+        </dd>
+        <dt class = "col-sm-2">
+            Trạng Thái Đơn Hàng
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrangThaiDh)
+        </dd>
+        <dt class = "col-sm-2">
+            Mã ND
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaNdNavigation.MaNd)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.MaDonHang">Chỉnh Sửa Đơn Hàng</a> |
+    <a asp-action="Index">Quay Lại Trang Danh Sách Đơn Hàng</a>
+</div>

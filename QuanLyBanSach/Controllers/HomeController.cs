@@ -48,6 +48,7 @@ namespace QuanLyBanSach.Controllers
             return View(lst);
 
         }
+		public IActionResult Contact() { return View(); }
 		
 		public IActionResult HienThiTheoDanhMuc(string madm)
 		{

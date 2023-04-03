@@ -100,44 +100,41 @@
 											</fieldset>
 										</form>
 									</div>
-
 									@foreach (var sp in Model)
 									{
-
-										<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-											<div class="tg-postbook">
-												<figure class="tg-featureimg">
-													<div class="tg-bookimg">
+									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+										<div class="tg-postbook">
+											<figure class="tg-featureimg">
+												<div class="tg-bookimg">
 														<div class="tg-frontcover"><img src="@Url.Content("../User/images/books/" + @sp.Anh + ".jpg")" alt="image description"></div>
-														<div class="tg-backcover"><img src="@Url.Content("../User/images/books/" + @sp.Anh+".jpg")" alt="image description"></div>
-													</div>
-													<a class="tg-btnaddtowishlist" href="javascript:void(0);">
-														<i class="icon-heart"></i>
-														<span>add to wishlist</span>
-													</a>
-												</figure>
-												<div class="tg-postbookcontent">
-													<ul class="tg-bookscategories">
-														<li><a asp-controller="Home">@sp.MaDmNavigation.TenDm</a></li>
-													</ul>
-													<div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-													<div class="tg-booktitle">
-														<h3><a asp-controller="Home" asp-action="ChiTietSanPham" asp-route-sac="@sp.MaSach">@sp.TenSach</a></h3>
-													</div>
-													<span class="tg-bookwriter">By: <a href="javascript:void(0);">@sp.MaTgNavigation.TenTg</a></span>
-													<span class="tg-stars"><span></span></span>
-													<span class="tg-bookprice">
-														<ins>$10.00</ins>
-														<del>$@sp.GiaBan</del>
-													</span>
-													<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-														<i class="fa fa-shopping-basket"></i>
-														<em>Add To Basket</em>
-													</a>
+														<div class="tg-backcover"><img src="@Url.Content("../User/images/books/" + @sp.Anh + ".jpg")" alt="image description"></div>
 												</div>
+												<a class="tg-btnaddtowishlist" href="javascript:void(0);">
+													<i class="icon-heart"></i>
+													<span>add to wishlist</span>
+												</a>
+											</figure>
+											<div class="tg-postbookcontent">
+												<ul class="tg-bookscategories">
+													<li><a asp-controller="Home" asp-action="HienThiTheoDanhMuc" asp-route-madm="@sp.MaDm">@sp.MaDmNavigation!.TenDm}</a></li>
+												</ul>
+												<div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
+												<div class="tg-booktitle">
+														<h3><a asp-controller="Home" asp-action="ChiTietSanPham" asp-route-sac="@sp.MaSach">@sp.TenSach</a></h3>
+												</div>
+												<span class="tg-bookwriter">By: <a href="javascript:void(0);">@sp.MaTgNavigation!.TenTg</a></span>
+												<span class="tg-stars"><span></span></span>
+												<span class="tg-bookprice">
+													<ins>$10.00</ins>
+													<del>@sp.GiaBan đồng</del>
+												</span>
+												<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
+													<i class="fa fa-shopping-basket"></i>
+													<em>Add To Basket</em>
+												</a>
 											</div>
 										</div>
-
+									</div>
 									}
 								</div>
 							</div>
@@ -161,7 +158,9 @@
 									<ul>
 										@foreach (var dm in ViewBag.madm)
 										{
-											<li><a asp-controller="Home" asp-action="HienThiTheoDanhMuc" asp-route-madm="@dm.MaDm"><span>@dm.TenDm</span>@*<em>28245</em>*@</a></li>
+											var getUrl = "https://localhost:7287/api/BooksApi/" + dm.MaDm;
+											<li><a style="cursor:pointer" onclick="showBooksbyCategory('@getUrl')"><span>@dm.TenDm</span></a></li>
+											@*<li><a asp-controller="Home" asp-action="HienThiTheoDanhMuc" asp-route-madm="@dm.MaDm"><span>@dm.TenDm</span><em>28245</em>*</a></li>*@
 										}
 									</ul>
 								</div>
