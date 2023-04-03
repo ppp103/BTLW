@@ -110,7 +110,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                         if (fThumb != null)
                         {
                             string extension = Path.GetExtension(fThumb.FileName);
-                            string image = Utilities.SEOUrl(sach.TenSach);
+                            string image = Utilities.SEOUrl(sach.TenSach) + ".jpg";
                             sach.Anh = await Utilities.UploadFile(fThumb, @"books", image.ToLower());
                         }
                         if (string.IsNullOrEmpty(sach.Anh)) sach.Anh = "default.jpg";
@@ -179,7 +179,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                     if (fThumb != null)
                     {
                         string extension = Path.GetExtension(fThumb.FileName);
-                        string image = Utilities.SEOUrl(sach.TenSach);
+                        string image = Utilities.SEOUrl(sach.TenSach) + ".jpg";
                         //string image = "img-01";
                         sach.Anh = await Utilities.UploadFile(fThumb, @"books", image.ToLower());
                     }

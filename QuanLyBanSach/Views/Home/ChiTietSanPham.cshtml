@@ -1,4 +1,5 @@
-﻿@model QuanLyBanSach.Models.Sach
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model QuanLyBanSach.Models.Sach
 
 @{
     ViewData["Title"] = "ChiTietSanPham";
@@ -53,7 +54,7 @@
 												<div class="tg-booktitle">
 													<h3><a href="javascript:void(0);">Things To Know About Green Flat Design</a></h3>
 												</div>
-												<span class="tg-bookwriter">By: <a href="javascript:void(0);">Farrah Whisenhunt</a></span>
+												<span class="tg-bookwriter">Bởi: <a href="javascript:void(0);">Farrah Whisenhunt</a></span>
 												<span class="tg-stars"><span></span></span>
 												<div class="tg-priceandbtn">
 													<span class="tg-bookprice">
@@ -62,7 +63,7 @@
 													</span>
 													<a class="tg-btn tg-btnstyletwo tg-active">
 														<i class="fa fa-shopping-basket"></i>
-														<em>Add To Basket</em>
+														<em>Thêm vào giỏ</em>
 													</a>
 												</div>
 											</div>
@@ -74,27 +75,31 @@
 								<div class="row">
 									<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 										<div class="tg-postbook">
-											<figure class="tg-featureimg"><img src="@Url.Content("../User/images/books/" + @Model.Anh+".jpg")" alt="image description"></figure>
+											<figure class="tg-featureimg"><img src="@Url.Content("../images/books/" + @Model.Anh)" alt="image description"></figure>
 											<div class="tg-postbookcontent">
 												<span class="tg-bookprice">
-													<ins>$10.00</ins>
-													<del>$@Model.GiaBan</del>
+													<ins>@Model.GiaBan.Value.ToString("#,##0") VNĐ</ins>
 												</span>
-												<span class="tg-bookwriter">You save $4.02</span>
 												<ul class="tg-delevrystock">
-													<li><i class="icon-rocket"></i><span>Free delivery worldwide</span></li>
-													<li><i class="icon-checkmark-circle"></i><span>Dispatch from the USA in 2 working days </span></li>
-													<li><i class="icon-store"></i><span>Status: <em>In Stock</em></span></li>
+													<li><i class="icon-rocket"></i><span>Freeship toàn cầu</span></li>
+													<li><i class="icon-checkmark-circle"></i><span>Xuất kho từ Mỹ sau 2 ngày</span></li>
+													@if(@Model.SoLuongCon > 0){
+														<li><i class="icon-store"></i><span>Trạng thái: <em>Còn hàng</em></span></li>
+													}
+													else
+													{
+														<li><i class="icon-store"></i><span>Status: <em>Hết hàng</em></span></li>
+													}
 												</ul>
 												<div class="tg-quantityholder">
 													<em class="minus">-</em>
 													<input type="text" class="result" value="0" id="quantity1" name="quantity">
 													<em class="plus">+</em>
 												</div>
-												<a class="tg-btn tg-active tg-btn-lg add-to-cart">Add To Basket</a>
+												<a class="tg-btn tg-active tg-btn-lg add-to-cart">Thêm vào giỏ</a>
 												<input asp-for="MaSach" type="hidden"/>
 												<a class="tg-btnaddtowishlist" href="javascript:void(0);">
-													<span>add to wishlist</span>
+													<span>Yêu thích</span>
 												</a>
 											</div>
 										</div>
@@ -108,11 +113,11 @@
 											<div class="tg-booktitle">
 												<h3>@Model.TenSach</h3>
 											</div>
-											<span class="tg-bookwriter">By: <a href="javascript:void(0);">@Model.MaTgNavigation.TenTg</a></span>
+											<span class="tg-bookwriter">Bởi: <a href="javascript:void(0);">@Model.MaTgNavigation.TenTg</a></span>
 											<span class="tg-stars"><span></span></span>
-											<span class="tg-addreviews"><a href="javascript:void(0);">Add Your Review</a></span>
+											<span class="tg-addreviews"><a href="javascript:void(0);">Nhận xét</a></span>
 											<div class="tg-share">
-												<span>Share:</span>
+												<span>Chia sẻ:</span>
 												<ul class="tg-socialicons">
 													<li class="tg-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
 													<li class="tg-twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
@@ -121,34 +126,26 @@
 													<li class="tg-rss"><a href="javascript:void(0);"><i class="fa fa-rss"></i></a></li>
 												</ul>
 											</div>
-											<div class="tg-description">
-												<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etdoloreat magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisi nisi ut aliquip ex ea commodo consequat aute.</p>
-												<p>Arure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat nulla aetur excepteur sint occaecat cupidatat non proident, sunt in culpa quistan officia serunt mollit anim id est laborum sed ut perspiciatis unde omnis iste natus... <a href="javascript:void(0);">More</a></p>
-											</div>
 											<div class="tg-sectionhead">
-												<h2>Product Details</h2>
+												<h2>Chi tiết sản phẩm</h2>
 											</div>
 											<ul class="tg-productinfo">
-												<li><span>Format:</span><span>Hardback</span></li>
-												<li><span>Pages:</span><span>528 pages</span></li>
-												<li><span>Dimensions:</span><span>153 x 234 x 43mm | 758g</span></li>
-												<li><span>Publication Date:</span><span>June 27, 2017</span></li>
-												<li><span>Publisher:</span><span>Sunshine Orlando</span></li>
-												<li><span>Language:</span><span>English</span></li>
-												<li><span>Illustrations note:</span><span>b&amp;w images thru-out; 1 x 16pp colour plates</span></li>
-												<li><span>ISBN10:</span><span>1234567890</span></li>
-												<li><span>ISBN13:</span><span>1234567890000</span></li>
-												<li><span>Other Fomate:</span><span>CD-Audio, Paperback, E-Book</span></li>
+												<li><span>Format:</span><span>Bìa cứng</span></li>
+												<li><span>Trang:</span><span>528 pages</span></li>
+												<li><span>Kích thước:</span><span>153 x 234 x 43mm | 758g</span></li>
+												<li><span>Ngày xuất bản:</span><span>@Model.NgayCapNhat</span></li>
+												<li><span>Tác giả:</span><span>@Model.MaTgNavigation.TenTg</span></li>
+												<li><span>Ngôn ngữ:</span><span>Tiếng việt</span></li>
 											</ul>
 											<div class="tg-alsoavailable">
 												<figure>
 													<img src="../User/Images/img-02.jpg" alt="image description">
 													<figcaption>
-														<h3>Also Available in:</h3>
+														<h3>Các bản khác:</h3>
 														<ul>
-															<li><span>CD-Audio $18.30</span></li>
-															<li><span>Paperback $20.10</span></li>
-															<li><span>E-Book $11.30</span></li>
+															<li><span>CD: 180,300 VNĐ</span></li>
+															<li><span>Khổ to: 190,300 VNĐ</span></li>
+															<li><span>E-Book 110,300 VNĐ</span></li>
 														</ul>
 													</figcaption>
 												</figure>
@@ -158,11 +155,11 @@
 									<div class="tg-productdescription">
 										<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 											<div class="tg-sectionhead">
-												<h2>Product Description</h2>
+												<h2>Mô tả sách</h2>
 											</div>
 											<ul class="tg-themetabs" role="tablist">
-												<li role="presentation" class="active"><a href="#description" data-toggle="tab">Description</a></li>
-												<li role="presentation"><a href="#review" data-toggle="tab">Reviews</a></li>
+												<li role="presentation" class="active"><a href="#description" data-toggle="tab">Mô tả</a></li>
+												<li role="presentation"><a href="#review" data-toggle="tab">Đánh giá</a></li>
 											</ul>
 											<div class="tg-tab-content tab-content">
 												<div role="tabpanel" class="tg-tab-pane tab-pane active" id="description">
@@ -221,18 +218,18 @@
 									<div class="tg-aboutauthor">
 										<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 											<div class="tg-sectionhead">
-												<h2>About Author</h2>
+												<h2>Giới thiệu tác giả</h2>
 											</div>
 											<div class="tg-authorbox">
 												<figure class="tg-authorimg">
-													<img src="../User/Images/author/imag-24.jpg" alt="image description">
+													<img src="@Url.Content("../User/Images/author/" + Model.MaTgNavigation.Anh)" alt="image description">
 												</figure>
 												<div class="tg-authorinfo">
 													<div class="tg-authorhead">
 														<div class="tg-leftarea">
 															<div class="tg-authorname">
-																<h2>Kathrine Culbertson</h2>
-																<span>Author Since: June 27, 2017</span>
+																<h2>@Model.MaTgNavigation.TenTg</h2>
+																<span>Tác giả từ: 27 - 6 - 2017</span>
 															</div>
 														</div>
 														<div class="tg-rightarea">
@@ -248,7 +245,7 @@
 													<div class="tg-description">
 														<p>Laborum sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis etation.</p>
 													</div>
-													<a class="tg-btn tg-active" href="javascript:void(0);">View All Books</a>
+													<a class="tg-btn tg-active" href="javascript:void(0);">Xem thêm sách</a>
 												</div>
 											</div>
 										</div>
@@ -256,8 +253,8 @@
 									<div class="tg-relatedproducts">
 										<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 											<div class="tg-sectionhead">
-												<h2><span>Related Products</span>You May Also Like</h2>
-												<a class="tg-btn" href="javascript:void(0);">View All</a>
+												<h2><span>Sách liên quan</span>Có thể bạn sẽ thích</h2>
+												<a class="tg-btn" href="javascript:void(0);">Xem thêm</a>
 											</div>
 										</div>
 										<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -267,12 +264,12 @@
 													<div class="tg-postbook">
 														<figure class="tg-featureimg">
 															<div class="tg-bookimg">
-																	<div class="tg-frontcover"><img src="@Url.Content("../User/images/books/" + @a.Anh+".jpg")" alt="image description"></div>
-																	<div class="tg-backcover"><img src="@Url.Content("../User/images/books/" + @a.Anh+".jpg")" alt="image description"></div>
+																	<div class="tg-frontcover"><img src="@Url.Content("../images/books/" + @a.Anh)" alt="image description"></div>
+																	<div class="tg-backcover"><img src="@Url.Content("../images/books/" + @a.Anh)" alt="image description"></div>
 															</div>
 															<a class="tg-btnaddtowishlist" href="javascript:void(0);">
 																<i class="icon-heart"></i>
-																<span>add to wishlist</span>
+																<span>Yêu thích</span>
 															</a>
 														</figure>
 														<div class="tg-postbookcontent">
@@ -283,15 +280,14 @@
 															<div class="tg-booktitle">
 																	<h3><a  asp-controller="Home" asp-action="ChiTietSanPham" asp-route-sac="@a.MaSach">@a.TenSach</a></h3>
 															</div>
-															<span class="tg-bookwriter">By: <a href="javascript:void(0);">@a.MaTgNavigation.TenTg</a></span>
+																<span class="tg-bookwriter">Bởi: <a href="javascript:void(0);">@a.MaTgNavigation.TenTg</a></span>
 															<span class="tg-stars"><span></span></span>
 															<span class="tg-bookprice">
-																<ins>$10.00</ins>
-																<del>$@a.GiaBan</del>
+																<ins>@a.GiaBan VNĐ</ins>
 															</span>
 															<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
 																<i class="fa fa-shopping-basket"></i>
-																<em>Add To Basket</em>
+																<em>Thêm vào giỏ</em>
 															</a>
 														</div>
 													</div>
@@ -310,7 +306,7 @@
 								<form class="tg-formtheme tg-formsearch">
 									<div class="form-group">
 										<button type="submit"><i class="icon-magnifier"></i></button>
-										<input type="search" name="search" class="form-group" placeholder="Search by title, author, key...">
+										<input type="search" name="search" class="form-group" placeholder="Search Bởi title, author, key...">
 									</div>
 								</form>
 							</div>
@@ -329,7 +325,7 @@
 							</div>
 							<div class="tg-widget tg-widgettrending">
 								<div class="tg-widgettitle">
-									<h3>Trending Products</h3>
+									<h3>Sách thịnh hành</h3>
 								</div>
 								<div class="tg-widgetcontent">
 									<ul>
@@ -340,7 +336,7 @@
 													<div class="tg-posttitle">
 														<h3><a href="javascript:void(0);">Where The Wild Things Are</a></h3>
 													</div>
-													<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
+													<span class="tg-bookwriter">Bởi: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
 												</div>
 											</article>
 										</li>
@@ -351,7 +347,7 @@
 													<div class="tg-posttitle">
 														<h3><a href="javascript:void(0);">Where The Wild Things Are</a></h3>
 													</div>
-													<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
+													<span class="tg-bookwriter">Bởi: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
 												</div>
 											</article>
 										</li>
@@ -362,7 +358,7 @@
 													<div class="tg-posttitle">
 														<h3><a href="javascript:void(0);">Where The Wild Things Are</a></h3>
 													</div>
-													<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
+													<span class="tg-bookwriter">Bởi: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
 												</div>
 											</article>
 										</li>
@@ -373,7 +369,7 @@
 													<div class="tg-posttitle">
 														<h3><a href="javascript:void(0);">Where The Wild Things Are</a></h3>
 													</div>
-													<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
+													<span class="tg-bookwriter">Bởi: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
 												</div>
 											</article>
 										</li>
@@ -454,7 +450,7 @@
 												<figure><a href="javascript:void(0);"><img src="../User/Images/author/imag-03.jpg" alt="image description"></a></figure>
 												<div class="tg-authorcontent">
 													<h2><a href="javascript:void(0);">Jude Morphew</a></h2>
-													<span>21,658 Published Books</span>
+													<span>21,658 Sách xuất bản</span>
 												</div>
 											</div>
 										</li>
@@ -463,7 +459,7 @@
 												<figure><a href="javascript:void(0);"><img src="../User/Images/author/imag-04.jpg" alt="image description"></a></figure>
 												<div class="tg-authorcontent">
 													<h2><a href="javascript:void(0);">Jude Morphew</a></h2>
-													<span>21,658 Published Books</span>
+													<span>21,658 Sách xuất bản</span>
 												</div>
 											</div>
 										</li>
@@ -472,7 +468,7 @@
 												<figure><a href="javascript:void(0);"><img src="../User/Images/author/imag-05.jpg" alt="image description"></a></figure>
 												<div class="tg-authorcontent">
 													<h2><a href="javascript:void(0);">Jude Morphew</a></h2>
-													<span>21,658 Published Books</span>
+													<span>21,658 Sách xuất bản</span>
 												</div>
 											</div>
 										</li>
@@ -481,7 +477,7 @@
 												<figure><a href="javascript:void(0);"><img src="../User/Images/author/imag-06.jpg" alt="image description"></a></figure>
 												<div class="tg-authorcontent">
 													<h2><a href="javascript:void(0);">Jude Morphew</a></h2>
-													<span>21,658 Published Books</span>
+													<span>21,658 Sách xuất bản</span>
 												</div>
 											</div>
 										</li>
