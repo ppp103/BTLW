@@ -1,8 +1,10 @@
-﻿@{
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model List<Sach>
+@{
     ViewData["Title"] = "Home Page";
     Layout = "_UserLayout";
 }
-@model List<Sach>
+
 <div id="tg-homeslider" class="tg-homeslider tg-haslayout owl-carousel">
 	@foreach(var x in Model){
 	<div class="item" data-vide-bg="poster: ../User/images/slider/img-01.jpg" data-vide-options="position: 0% 50%">
@@ -10,15 +12,14 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 					<div class="tg-slidercontent">
-							<figure class="tg-authorimg"><a href="javascript:void(0);"><img src="@Url.Content("../User/images/team/" + @x.Anh + ".jpg")" alt="image description"></a></figure>
+							<figure class="tg-authorimg"><a href="javascript:void(0);"><img src="@Url.Content("../User/images/team/" + @x.Anh)" alt="image description"></a></figure>
 						<h1>@x.MaTgNavigation.TenTg</h1>
-						<h2>Latest 2017 Release</h2>
 						<div class="tg-description">
 							<p>Dưới thiên nhân ta vô địch.</p>
 						</div>
 						<div class="tg-btns">
-							<a class="tg-btn" href="javascript:void(0);">buy now</a>
-							<a class="tg-btn" href="javascript:void(0);">read more</a>
+							<a class="tg-btn" href="javascript:void(0);">Mua ngay</a>
+							<a class="tg-btn" href="javascript:void(0);">Đọc thêm</a>
 						</div>
 					</div>
 				</div>
@@ -40,7 +41,7 @@
 							<div class="tg-status">
 								<div class="tg-statuscontent">
 									<span class="tg-statusicon"><i class="icon-book"></i></span>
-									<h2>Books we have<span>24,179,213</span></h2>
+									<h2>Số sách chúng tôi có<span>24,179,213</span></h2>
 								</div>
 							</div>
 						</div>
@@ -50,7 +51,7 @@
 							<div class="tg-status">
 								<div class="tg-statuscontent">
 									<span class="tg-statusicon"><i class="icon-user"></i></span>
-									<h2>Total members<span>15,179,213</span></h2>
+									<h2>Số thành viên<span>15,179,213</span></h2>
 								</div>
 							</div>
 						</div>
@@ -60,7 +61,7 @@
 							<div class="tg-status">
 								<div class="tg-statuscontent">
 									<span class="tg-statusicon"><i class="icon-heart"></i></span>
-									<h2>Happy users<span>1,267,539</span></h2>
+									<h2>Số khách hàng hài lòng<span>1,267,539</span></h2>
 								</div>
 							</div>
 						</div>
@@ -80,8 +81,7 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<div class="tg-sectionhead">
-						<h2><span>People’s Choice</span>Bestselling Books</h2>
-						<a class="tg-btn" href="javascript:void(0);">View All</a>
+						<h2><span></span>Sách bán chạy</h2>
 					</div>
 				</div>
 			
@@ -92,12 +92,12 @@
 							<div class="tg-postbook">
 								<figure class="tg-featureimg">
 										<div class="tg-bookimg">
-											<div class="tg-frontcover"><img src="@Url.Content("../User/images/books/" + @x.Anh + ".jpg")" alt="image description"></div>
-											<div class="tg-backcover"><img src="@Url.Content("../User/images/books/" + @x.Anh + ".jpg")" alt="image description"></div>
+											<div class="tg-frontcover"><img src="@Url.Content("../images/books/" + @x.Anh)" alt="image description"></div>
+											<div class="tg-backcover"><img src="@Url.Content("../images/books/" + @x.Anh)" alt="image description"></div>
 									</div>
 									<a class="tg-btnaddtowishlist" href="javascript:void(0);">
 										<i class="icon-heart"></i>
-										<span>add to wishlist</span>
+										<span>Yêu thích</span>
 									</a>
 								</figure>
 								<div class="tg-postbookcontent">
@@ -108,7 +108,7 @@
 									<div class="tg-booktitle">
 										<h3><a href="javascript:void(0);">@x.TenSach</a></h3>
 									</div>						
-									<span class="tg-bookwriter">By: <a href="javascript:void(0);">@x.MaTgNavigation.TenTg</a></span>
+									<span class="tg-bookwriter">Bởi: <a href="javascript:void(0);">@x.MaTgNavigation.TenTg</a></span>
 										<span class="tg-stars"><span></span></span>
 									<span class="tg-bookprice">
 										<ins>$10.00</ins>
@@ -116,7 +116,7 @@
 									</span>
 									<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
 										<i class="fa fa-shopping-basket"></i>
-										<em>Add To Basket</em>
+										<em>Thêm vào giỏ</em>
 									</a>
 								</div>
 							</div>
@@ -155,7 +155,7 @@
 								</span>
 								<a class="tg-btn tg-btnstyletwo tg-active" href="javascript:void(0);">
 									<i class="fa fa-shopping-basket"></i>
-									<em>Add To Basket</em>
+									<em>Thêm vào giỏ</em>
 								</a>
 							</div>
 						</div>
@@ -176,14 +176,14 @@
 				<div class="tg-newrelease">
 					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 						<div class="tg-sectionhead">
-							<h2><span>Taste The New Spice</span>New Release Books</h2>
+							<h2><span>Taste The New Spice</span>Sách mới phát hành</h2>
 						</div>
 						<div class="tg-description">
 							<p>Những bộ truyện mới hấp dẫn nhất được tổng hợp bởi hen.</p>
 						</div>
 						<div class="tg-btns">
-							<a class="tg-btn tg-active" href="javascript:void(0);">View All</a>
-							<a class="tg-btn" href="javascript:void(0);">Read More</a>
+							<a class="tg-btn tg-active" href="javascript:void(0);">Xem tất cả</a>
+							<a class="tg-btn" href="javascript:void(0);">Đọc thêm</a>
 						</div>
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -194,8 +194,8 @@
 									<div class="tg-postbook">
 										<figure class="tg-featureimg">
 											<div class="tg-bookimg">
-													<div class="tg-frontcover"><img src="@Url.Content("../User/images/books/" + @x.Anh + ".jpg")" alt="image description"></div>
-													<div class="tg-backcover"><img src="@Url.Content("../User/images/books/" + @x.Anh + ".jpg")" alt="image description"></div>
+													<div class="tg-frontcover"><img src="@Url.Content("../images/books/" + @x.Anh)" alt="image description"></div>
+													<div class="tg-backcover"><img src="@Url.Content("../images/books/" + @x.Anh)" alt="image description"></div>
 											</div>
 											<a class="tg-btnaddtowishlist" href="javascript:void(0);">
 												<i class="icon-heart"></i>
@@ -239,7 +239,7 @@
 								<i class="icon-bubble"></i>
 							</div>
 							<div class="tg-titlepluscounter">
-								<h2>Drama</h2>
+								<h2>Truyện</h2>
 								<h3 data-from="0" data-to="6179213" data-speed="8000" data-refresh-interval="50">6,179,213</h3>
 							</div>
 						</div>
@@ -248,7 +248,7 @@
 								<i class="icon-heart-pulse"></i>
 							</div>
 							<div class="tg-titlepluscounter">
-								<h2>Horror</h2>
+								<h2>Kinh dị</h2>
 								<h3 data-from="0" data-to="3121242" data-speed="8000" data-refresh-interval="50">3,121,242</h3>
 							</div>
 						</div>
@@ -257,7 +257,7 @@
 								<i class="icon-heart"></i>
 							</div>
 							<div class="tg-titlepluscounter">
-								<h2>Romance</h2>
+								<h2>Lãng mạn</h2>
 								<h3 data-from="0" data-to="2101012" data-speed="8000" data-refresh-interval="50">2,101,012</h3>
 							</div>
 						</div>
@@ -266,7 +266,7 @@
 								<i class="icon-star"></i>
 							</div>
 							<div class="tg-titlepluscounter">
-								<h2>Fashion</h2>
+								<h2>Thời trang</h2>
 								<h3 data-from="0" data-to="1158245" data-speed="8000" data-refresh-interval="50">1,158,245</h3>
 							</div>
 						</div>
@@ -286,8 +286,8 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<div class="tg-sectionhead">
-						<h2><span>Some Great Books</span>Picked By Authors</h2>
-						<a class="tg-btn" href="javascript:void(0);">View All</a>
+						<h2><span>Sách</span>được chọn bởi tác giả</h2>
+						<a class="tg-btn" href="javascript:void(0);">Xem tất cả</a>
 					</div>
 				</div>
 				<div id="tg-pickedbyauthorslider" class="tg-pickedbyauthor tg-pickedbyauthorslider owl-carousel">
@@ -297,15 +297,15 @@
 						<div class="tg-postbook">
 							<figure class="tg-featureimg">
 								<div class="tg-bookimg">
-										<div class="tg-frontcover"><img src="@Url.Content("../User/images/books/" + @sp.Anh+".jpg")" alt="image description"></div>
+										<div class="tg-frontcover"><img src="@Url.Content("../images/books/" + @sp.Anh)" alt="image description"></div>
 								</div>
 								<div class="tg-hovercontent">
 									<div class="tg-description">
-										<p>@sp.MoTa</p>
+										<p>@Html.Raw(@sp.MoTa)</p>
 									</div>
-									<strong class="tg-bookpage">Book Pages: 206</strong>
-									<strong class="tg-bookcategory">Category: Adventure, Fun</strong>
-									<strong class="tg-bookprice">Price: $23.18</strong>
+									<strong class="tg-bookpage">Số trang: 206</strong>
+									<strong class="tg-bookcategory">Thể loại: Phiêu lưu</strong>
+									<strong class="tg-bookprice">Giá: @sp.GiaBan.Value.ToString("#,##0")</strong>
 									<div class="tg-ratingbox"><span class="tg-stars"><span></span></span></div>
 								</div>
 							</figure>
@@ -316,7 +316,7 @@
 									<span class="tg-bookwriter">By: <a href="javascript:void(0);">@sp.MaTgNavigation.TenTg</a></span>
 								<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
 									<i class="fa fa-shopping-basket"></i>
-									<em>Add To Basket</em>
+									<em>Thêm vào giỏ</em>
 								</a>
 							</div>
 						</div>
@@ -325,15 +325,15 @@
 						<div class="tg-postbook">
 							<figure class="tg-featureimg">
 								<div class="tg-bookimg">
-									<div class="tg-frontcover"><img src="../User/images/books/img-11.jpg" alt="image description"></div>
+									<div class="tg-frontcover"><img src="../images/books/img-11.jpg" alt="image description"></div>
 								</div>
 								<div class="tg-hovercontent">
 									<div class="tg-description">
 										<p>Consectetur adipisicing elit sed do eiusmod tempor incididunt labore toloregna aliqua enim adia minim veniam, quis nostrud.</p>
 									</div>
-									<strong class="tg-bookpage">Book Pages: 206</strong>
-									<strong class="tg-bookcategory">Category: Adventure, Fun</strong>
-									<strong class="tg-bookprice">Price: $23.18</strong>
+									<strong class="tg-bookpage">Số trang: 206</strong>
+									<strong class="tg-bookcategory">Thể loại: Hài</strong>
+									<strong class="tg-bookprice">Giá: $23.18</strong>
 									<div class="tg-ratingbox"><span class="tg-stars"><span></span></span></div>
 								</div>
 							</figure>
@@ -344,7 +344,7 @@
 								<span class="tg-bookwriter">By: <a href="javascript:void(0);">Drusilla Glandon</a></span>
 								<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
 									<i class="fa fa-shopping-basket"></i>
-									<em>Add To Basket</em>
+									<em>Thêm vào giỏ</em>
 								</a>
 							</div>
 						</div>
@@ -367,10 +367,11 @@
 						<div id="tg-testimonialsslider" class="tg-testimonialsslider tg-testimonials owl-carousel">
 							@foreach(var nxb in Model){
 							<div class="item tg-testimonial">
-									<figure><img src="@Url.Content("../User/images/blog/" + @nxb.Anh + ".jpg")" alt="image description"></figure>
+									<figure><img src="@Url.Content("../User/images/blog/" + @nxb.Anh )" alt="image description"></figure>
 									<blockquote><q>Kì thực trên mặt đất vốn làm gì có đường, người ta đi mãi thì thành đường thôi.</q></blockquote>
 								<div class="tg-testimonialauthor">
-									<h3>@nxb.MaNxbNavigation.TenNxb</h3>
+									@*<h3>@nxb.MaNxbNavigation.TenNxb</h3>*@
+										<h3>@nxb.MaNxbNavigation.TenNxb</h3>
 									<span>Manager CIFP</span>
 								</div>
 							</div>
@@ -392,17 +393,17 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<div class="tg-sectionhead">
-						<h2><span>Strong Minds Behind Us</span>Most Popular Authors</h2>
+						<h2><span>Strong Minds Behind Us</span>Tác giả nổi tiếng</h2>
 						<a class="tg-btn" href="javascript:void(0);">View All</a>
 					</div>
 				</div>
 				<div id="tg-authorsslider" class="tg-authors tg-authorsslider owl-carousel">
 					@foreach(var tacgia in Model){
 						<div class="item tg-author">
-							<figure><a href="javascript:void(0);"><img src="@Url.Content("../User/images/team/" + @tacgia.Anh + ".jpg")" alt="image description"></a></figure>
+							<figure><a href="javascript:void(0);"><img src="@Url.Content("../User/images/team/" + @tacgia.Anh )" alt="image description"></a></figure>
 							<div class="tg-authorcontent">
 								<h2><a href="javascript:void(0);">@tacgia.MaTgNavigation.TenTg</a></h2>
-								<span>21,658 Published Books</span>
+								<span>21,658 Sách xuất bản</span>
 								<ul class="tg-socialicons">
 									<li class="tg-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
 									<li class="tg-twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
@@ -429,9 +430,9 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<div class="tg-calltoaction">
-							<h2>Open Discount For All</h2>
+							<h2>Giảm giá</h2>
 							<h3>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore.</h3>
-							<a class="tg-btn tg-active" href="javascript:void(0);">Read More</a>
+							<a class="tg-btn tg-active" href="javascript:void(0);">Đọc thêm</a>
 						</div>
 					</div>
 				</div>

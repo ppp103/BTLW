@@ -27,7 +27,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             _context = context;
             _notyfService = notyfService;
         }
-        //NamAIDS
+        
         // GET: Admin/Sach
         public async Task<IActionResult> Index(int page = 1, string MaDm = "")
         {
@@ -110,7 +110,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                         if (fThumb != null)
                         {
                             string extension = Path.GetExtension(fThumb.FileName);
-                            string image = Utilities.SEOUrl(sach.TenSach);
+                            string image = Utilities.SEOUrl(sach.TenSach) + ".jpg";
                             sach.Anh = await Utilities.UploadFile(fThumb, @"books", image.ToLower());
                         }
                         if (string.IsNullOrEmpty(sach.Anh)) sach.Anh = "default.jpg";
@@ -179,13 +179,14 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                     if (fThumb != null)
                     {
                         string extension = Path.GetExtension(fThumb.FileName);
-                        string image = Utilities.SEOUrl(sach.TenSach);
+                        string image = Utilities.SEOUrl(sach.TenSach) + ".jpg";
+                        //string image = "img-01";
                         sach.Anh = await Utilities.UploadFile(fThumb, @"books", image.ToLower());
                     }
 
                     sach.NgayCapNhat = DateTime.Now;
                     sach.SoLuongBs = sach.SoLuongCon;
-
+                    //sach.MaNxb = "NXB01";
 
                     _context.Update(sach);
                     await _context.SaveChangesAsync();
@@ -247,12 +248,19 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                 return Problem("Entity set 'QlbanSachContext.Saches'  is null.");
             }
             var sach = await _context.Saches.FindAsync(id);
-            if (sach != null)
+
+            try
             {
-                _context.Saches.Remove(sach);
-            }
+                if (sach != null)
+                {
+                    _context.Saches.Remove(sach);
+                }
             
-            await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
+            }catch (Exception ex)
+            {
+                _notyfService.Error("Không thể xóa sách này");
+            }
             return RedirectToAction(nameof(Index));
         }
 

@@ -103,6 +103,7 @@ Main Start
 											</fieldset>
 										</form>
 									</div>
+@*<<<<<<< HEAD@**@
 									<div id="displayBooks">
 										@foreach( var sp in Model){
 										<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
@@ -125,6 +126,32 @@ Main Start
 													<div class="tg-booktitle">
 															<h3><a asp-controller="Home" asp-action="ChiTietSanPham" asp-route-sac="@sp.MaSach">@sp.TenSach</a></h3>
 													</div>
+@*=======*@
+
+									@foreach (var sp in Model)
+									{
+										
+									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+										<div class="tg-postbook">
+											<figure class="tg-featureimg">
+												<div class="tg-bookimg">
+														<div class="tg-frontcover"><img src="@Url.Content("../images/books/" + @sp.Anh)" alt="image description"></div>
+														<div class="tg-backcover"><img src="@Url.Content("../images/books/" + @sp.Anh)" alt="image description"></div>
+												</div>
+												<a class="tg-btnaddtowishlist" href="javascript:void(0);">
+													<i class="icon-heart"></i>
+													<span>add to wishlist</span>
+												</a>
+											</figure>
+											<div class="tg-postbookcontent">
+												<ul class="tg-bookscategories">
+														<li><a asp-controller="Home" >@sp.MaDmNavigation!.TenDm</a></li>
+												</ul>
+												<div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
+												<div class="tg-booktitle">
+														<h3><a asp-controller="Home" asp-action="ChiTietSanPham" asp-route-sac="@sp.MaSach">@sp.TenSach</a></h3>
+												</div>
+>>>>>>> 1f9e0f565ced9ff6bcc8550257904a149b460814
 													<span class="tg-bookwriter">By: <a href="javascript:void(0);">@sp.MaTgNavigation!.TenTg</a></span>
 													<span class="tg-stars"><span></span></span>
 													<span class="tg-bookprice">
@@ -333,12 +360,12 @@ Main Start
 							</div>
 						</aside>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!--************************************
+</div>
+</div>
+</div>
+</div>
+
+<!--************************************
 			News Grid End
 	*************************************-->
 </main>
