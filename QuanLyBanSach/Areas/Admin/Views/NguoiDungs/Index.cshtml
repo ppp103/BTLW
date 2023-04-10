@@ -8,7 +8,7 @@
 <h1>Danh sách người dùng</h1>
 
 <p>
-    <a class = "btn btn-sm btn-outline-info" asp-action="Create">Create New</a>
+    <a class = "btn btn-sm btn-outline-info" asp-action="Create">Thêm người dùng</a>
 </p>
 <table class="table table-hover">
     <thead>
@@ -58,9 +58,9 @@
                 @Html.DisplayFor(modelItem => item.DiaChi)
             </td>
             <td>
-                    <a class="btn btn-info btn-tone m-r-5" asp-action="Edit" asp-route-id="@item.MaNd">Edit</a>
-                    <a class="btn btn-primary btn-tone m-r-5" asp-action="Details" asp-route-id="@item.MaNd">Details</a>
-                    <a class="btn btn-secondary btn-tone m-r-5" asp-action="Delete" asp-route-id="@item.MaNd">Delete</a>
+                    <a class="btn btn-info btn-tone m-r-5" asp-action="Edit" asp-route-id="@item.MaNd">Sửa</a>
+                    <a class="btn btn-primary btn-tone m-r-5" asp-action="Details" asp-route-id="@item.MaNd">Chi tiết</a>
+                    <a class="btn btn-secondary btn-tone m-r-5" asp-action="Delete" asp-route-id="@item.MaNd">Xóa</a>
             </td>
         </tr>
 }

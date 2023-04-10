@@ -6,7 +6,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Create</h1>
+<h1>Thêm mới</h1>
 
 <h4>Admin</h4>
 <hr />
@@ -15,33 +15,33 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="MaAd" class="control-label"></label>
+                <label asp-for="MaAd" class="control-label">Mã Admin</label>
                 <input asp-for="MaAd" class="form-control" />
                 <span asp-validation-for="MaAd" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MatKhau" class="control-label"></label>
+                <label asp-for="MatKhau" class="control-label">Mật Khẩu</label>
                 <input asp-for="MatKhau" class="form-control" />
                 <span asp-validation-for="MatKhau" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TenDangNhap" class="control-label"></label>
+                <label asp-for="TenDangNhap" class="control-label">Tên đăng nhập</label>
                 <input asp-for="TenDangNhap" class="form-control" />
                 <span asp-validation-for="TenDangNhap" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="HoTenAd" class="control-label"></label>
+                <label asp-for="HoTenAd" class="control-label">Họ và tên</label>
                 <input asp-for="HoTenAd" class="form-control" />
                 <span asp-validation-for="HoTenAd" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary btn-tone m-r-5" />
+                <input type="submit" value="Thêm" class="btn btn-primary btn-tone m-r-5" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a class="btn btn-info btn-tone m-r-5" asp-action="Index">Back to List</a>
+    <a class="btn btn-info btn-tone m-r-5" asp-action="Index">Quay lại</a>
 </div>
 

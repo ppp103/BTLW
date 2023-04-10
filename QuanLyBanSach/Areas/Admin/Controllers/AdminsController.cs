@@ -24,7 +24,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         {
               return _context.Admins != null ? 
                           View(await _context.Admins.ToListAsync()) :
-                          Problem("Entity set 'QlbanSachContext.Admins'  is null.");
+                          Problem("Entity set 'QlbanSachContext.Admins' is null.");
         }
 
         // GET: Admin/Admins/Details/5
@@ -143,7 +143,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         {
             if (_context.Admins == null)
             {
-                return Problem("Entity set 'QlbanSachContext.Admins'  is null.");
+                return Problem("Entity set 'QlbanSachContext.Admins' is null.");
             }
             var admins = await _context.Admins.FindAsync(id);
             if (admins != null)

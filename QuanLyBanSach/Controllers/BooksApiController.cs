@@ -50,8 +50,6 @@ namespace QuanLyBanSach.Controllers
 							   TenSach = p.TenSach,
 							   GiaBan = p.GiaBan,
 							   Anh = p.Anh,
-
-
 						   }).ToList();
 			return sanPham;
 		}

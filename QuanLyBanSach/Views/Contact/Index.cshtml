@@ -80,12 +80,12 @@
 					<div id="map" style="width: 600px; height: 750px"></div>
 
 					<div id="map"></div>
-@*					<ul id="buttons">
-						<li id="button-vi" class="button">Vietnamese</li>
-						<li id="button-ru" class="button">Russian</li>
-						<li id="button-de" class="button">German</li>
-						<li id="button-es" class="button">Spanish</li>
-					</ul>*@
+					<ul id="buttons">
+					<li id="button-vi" class="button">Tiếng Việt</li>
+					<li id="button-ru" class="button">Tiếng Nga</li>
+					<li id="button-de" class="button">Tiếng Đức</li>
+					<li id="button-es" class="button">Tiếng TBN</li>
+					</ul>
 					<script>
 						mapboxgl.accessToken = "pk.eyJ1IjoicGh1Y2ZhMiIsImEiOiJjbGZ2dGVhdGYwYXFsM2pwZnFuNHA4Z2Q2In0.Bbsw7rB-ua1Wrb8srhP3LQ";
 						const map = new mapboxgl.Map({
@@ -155,14 +155,14 @@
 							"bottom-left"
 						);
 
-						//document.getElementById("buttons").addEventListener("click", (event) => {
-						//	const language = event.target.id.substr("button-".length);
-						//	map.setLayoutProperty("country-label", "text-field", [
-						//		"get",
-						//		`name_${language}`,
-						//	]);
-						//});
-						//
+						document.getElementById("buttons").addEventListener("click", (event) => {
+							const language = event.target.id.substr("button-".length);
+							map.setLayoutProperty("country-label", "text-field", [
+								"get",
+								`name_${language}`,
+							]);
+						});
+						
 						map.on("load", function () {
 							geolocate.trigger(); // add this if you want to fire it by code instead of the button
 						});

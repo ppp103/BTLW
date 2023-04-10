@@ -3,10 +3,10 @@
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
-
 <!-- Main section starts -->
 <main>
     <div class="login-container">
+        <div class="m-b-100" style="height:300px"></div>
         <h1>Đăng Nhập</h1>
         <form>
             <div class="form-group">
@@ -23,7 +23,7 @@
             <div class="forget-password">
                 <a href="#">Quên mật khẩu ?</a>
             </div>
-            <a href="signup.html" class="button sign-up-button">Tạo tài khoản mới</a></p>
+            <a asp-controller="Home" asp-action="SignUp" class="button sign-up-button">Tạo tài khoản mới</a></p>
         </form>
     </div>
 </main>

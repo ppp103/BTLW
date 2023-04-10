@@ -26,13 +26,18 @@ namespace QuanLyBanSach.Controllers
 		{
 			var sachbanchay = db.Saches.Where(x => x.MaDm == "DM01").ToList();
 			ViewBag.sachbanchay = sachbanchay;
+
 			var sachsapra = db.Saches.Where(x => x.MaDm == "DM03").ToList();
 			ViewBag.sachsapra = sachsapra;
+
 			var tensach = db.Saches.ToList();
+
 			var tacgia = db.TacGia.ToList();
 			ViewBag.tacgia = tacgia;
+
 			var nxb = db.NhaXuatBans.ToList();
 			ViewBag.nxb = nxb;
+
 			return View(tensach);
 		}
 		public IActionResult HienThiSanPham(int? page)
