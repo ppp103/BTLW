@@ -31,7 +31,7 @@ public partial class QlbanSachContext : DbContext
 
     public virtual DbSet<Sach> Saches { get; set; }
 
-    public virtual DbSet<TacGium> TacGia { get; set; }
+    public virtual DbSet<TacGia> TacGia { get; set; }
 
     public virtual DbSet<ThanhToan> ThanhToans { get; set; }
 
@@ -45,13 +45,11 @@ public partial class QlbanSachContext : DbContext
     {
         modelBuilder.Entity<Admins>(entity =>
         {
-            entity.HasKey(e => e.MaAd).HasName("PK__Admin__27247E4619E2EA9D");
+            entity.HasKey(e => e.MaAd).HasName("PK__Admin__27247E46C73724D6");
 
             entity.ToTable("Admin");
 
-            entity.Property(e => e.MaAd)
-                .HasMaxLength(50)
-                .HasColumnName("MaAD");
+            entity.Property(e => e.MaAd).HasColumnName("MaAD");
             entity.Property(e => e.HoTenAd)
                 .HasMaxLength(50)
                 .HasColumnName("HoTenAD");
@@ -61,12 +59,10 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<BanSaoSach>(entity =>
         {
-            entity.HasKey(e => e.MaBanSao).HasName("PK__BanSaoSa__488BCC42375EB0A5");
+            entity.HasKey(e => e.MaBanSao).HasName("PK__BanSaoSa__488BCC429AB941B2");
 
             entity.ToTable("BanSaoSach");
 
-            entity.Property(e => e.MaBanSao).HasMaxLength(50);
-            entity.Property(e => e.MaSach).HasMaxLength(50);
             entity.Property(e => e.TinhTrangBs)
                 .HasMaxLength(50)
                 .HasColumnName("TinhTrangBS");
@@ -79,17 +75,17 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<ChiTietDonHang>(entity =>
         {
-            entity.HasKey(e => new { e.MaDonHang, e.MaSach }).HasName("PK__ChiTietD__D9B6D3EFC24F5D16");
+            entity.HasKey(e => new { e.MaCtdonHang, e.MaSach }).HasName("PK__ChiTietD__72D7FC2EE4800CB7");
 
             entity.ToTable("ChiTietDonHang");
 
-            entity.Property(e => e.MaDonHang).HasMaxLength(50);
-            entity.Property(e => e.MaSach).HasMaxLength(50);
+            entity.Property(e => e.MaCtdonHang)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("MaCTDonHang");
             entity.Property(e => e.ThanhTien).HasColumnType("money");
 
             entity.HasOne(d => d.MaDonHangNavigation).WithMany(p => p.ChiTietDonHangs)
                 .HasForeignKey(d => d.MaDonHang)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__ChiTietDo__MaDon__4E88ABD4");
 
             entity.HasOne(d => d.MaSachNavigation).WithMany(p => p.ChiTietDonHangs)
@@ -100,13 +96,11 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<DanhMucSach>(entity =>
         {
-            entity.HasKey(e => e.MaDm).HasName("PK__DanhMucS__2725866E2262D76B");
+            entity.HasKey(e => e.MaDm).HasName("PK__DanhMucS__2725866EC22A356E");
 
             entity.ToTable("DanhMucSach");
 
-            entity.Property(e => e.MaDm)
-                .HasMaxLength(50)
-                .HasColumnName("MaDM");
+            entity.Property(e => e.MaDm).HasColumnName("MaDM");
             entity.Property(e => e.TenDm)
                 .HasMaxLength(50)
                 .HasColumnName("TenDM");
@@ -114,18 +108,15 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<DonHang>(entity =>
         {
-            entity.HasKey(e => e.MaDonHang).HasName("PK__DonHang__129584ADA0842063");
+            entity.HasKey(e => e.MaDonHang).HasName("PK__DonHang__129584AD4A0E3FBF");
 
             entity.ToTable("DonHang");
 
-            entity.Property(e => e.MaDonHang).HasMaxLength(50);
             entity.Property(e => e.DiaDiemGh)
                 .HasMaxLength(200)
                 .HasColumnName("DiaDiemGH");
             entity.Property(e => e.GhiChu).HasMaxLength(200);
-            entity.Property(e => e.MaNd)
-                .HasMaxLength(50)
-                .HasColumnName("MaND");
+            entity.Property(e => e.MaNd).HasColumnName("MaND");
             entity.Property(e => e.NgayDat).HasColumnType("date");
             entity.Property(e => e.NgayGiao).HasColumnType("date");
             entity.Property(e => e.TenKh)
@@ -143,13 +134,11 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<NguoiDung>(entity =>
         {
-            entity.HasKey(e => e.MaNd).HasName("PK__NguoiDun__2725D724F71EDDE9");
+            entity.HasKey(e => e.MaNd).HasName("PK__NguoiDun__2725D724DC6BF8B4");
 
             entity.ToTable("NguoiDung");
 
-            entity.Property(e => e.MaNd)
-                .HasMaxLength(50)
-                .HasColumnName("MaND");
+            entity.Property(e => e.MaNd).HasColumnName("MaND");
             entity.Property(e => e.Anh).HasMaxLength(50);
             entity.Property(e => e.DiaChi).HasMaxLength(200);
             entity.Property(e => e.DienThoai).HasMaxLength(10);
@@ -167,13 +156,11 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<NhaXuatBan>(entity =>
         {
-            entity.HasKey(e => e.MaNxb).HasName("PK__NhaXuatB__3A19482C6691CA9B");
+            entity.HasKey(e => e.MaNxb).HasName("PK__NhaXuatB__3A19482C35D5C7C1");
 
             entity.ToTable("NhaXuatBan");
 
-            entity.Property(e => e.MaNxb)
-                .HasMaxLength(50)
-                .HasColumnName("MaNXB");
+            entity.Property(e => e.MaNxb).HasColumnName("MaNXB");
             entity.Property(e => e.TenNxb)
                 .HasMaxLength(50)
                 .HasColumnName("TenNXB");
@@ -181,22 +168,15 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<Sach>(entity =>
         {
-            entity.HasKey(e => e.MaSach).HasName("PK__Sach__B235742D9C950056");
+            entity.HasKey(e => e.MaSach).HasName("PK__Sach__B235742DB9D6755E");
 
             entity.ToTable("Sach");
 
-            entity.Property(e => e.MaSach).HasMaxLength(50);
             entity.Property(e => e.Anh).HasMaxLength(50);
             entity.Property(e => e.GiaBan).HasColumnType("money");
-            entity.Property(e => e.MaDm)
-                .HasMaxLength(50)
-                .HasColumnName("MaDM");
-            entity.Property(e => e.MaNxb)
-                .HasMaxLength(50)
-                .HasColumnName("MaNXB");
-            entity.Property(e => e.MaTg)
-                .HasMaxLength(50)
-                .HasColumnName("MaTG");
+            entity.Property(e => e.MaDm).HasColumnName("MaDM");
+            entity.Property(e => e.MaNxb).HasColumnName("MaNXB");
+            entity.Property(e => e.MaTg).HasColumnName("MaTG");
             entity.Property(e => e.MoTa).HasMaxLength(200);
             entity.Property(e => e.NgayCapNhat).HasColumnType("date");
             entity.Property(e => e.SoLuongBs).HasColumnName("SoLuongBS");
@@ -215,13 +195,11 @@ public partial class QlbanSachContext : DbContext
                 .HasConstraintName("FK__Sach__MaTG__47DBAE45");
         });
 
-        modelBuilder.Entity<TacGium>(entity =>
+        modelBuilder.Entity<TacGia>(entity =>
         {
-            entity.HasKey(e => e.MaTg).HasName("PK__TacGia__272500742BB82859");
+            entity.HasKey(e => e.MaTg).HasName("PK__TacGia__27250074052D0EF3");
 
-            entity.Property(e => e.MaTg)
-                .HasMaxLength(50)
-                .HasColumnName("MaTG");
+            entity.Property(e => e.MaTg).HasColumnName("MaTG");
             entity.Property(e => e.Anh).HasMaxLength(50);
             entity.Property(e => e.TenTg)
                 .HasMaxLength(50)
@@ -230,14 +208,11 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<ThanhToan>(entity =>
         {
-            entity.HasKey(e => e.MaTt).HasName("PK__ThanhToa__272500794580C3D1");
+            entity.HasKey(e => e.MaTt).HasName("PK__ThanhToa__27250079788467C6");
 
             entity.ToTable("ThanhToan");
 
-            entity.Property(e => e.MaTt)
-                .HasMaxLength(50)
-                .HasColumnName("MaTT");
-            entity.Property(e => e.MaDonHang).HasMaxLength(50);
+            entity.Property(e => e.MaTt).HasColumnName("MaTT");
             entity.Property(e => e.TenTt)
                 .HasMaxLength(50)
                 .HasColumnName("TenTT");
@@ -252,14 +227,11 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<VanChuyen>(entity =>
         {
-            entity.HasKey(e => e.MaVc).HasName("PK__VanChuye__2725102975120D72");
+            entity.HasKey(e => e.MaVc).HasName("PK__VanChuye__272510295BC21E35");
 
             entity.ToTable("VanChuyen");
 
-            entity.Property(e => e.MaVc)
-                .HasMaxLength(50)
-                .HasColumnName("MaVC");
-            entity.Property(e => e.MaDonHang).HasMaxLength(50);
+            entity.Property(e => e.MaVc).HasColumnName("MaVC");
             entity.Property(e => e.TenVc)
                 .HasMaxLength(50)
                 .HasColumnName("TenVC");

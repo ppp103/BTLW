@@ -28,7 +28,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         }
 
         // GET: Admin/DanhMucSaches/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(int id)
         {
             if (id == null || _context.DanhMucSaches == null)
             {
@@ -68,7 +68,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         }
 
         // GET: Admin/DanhMucSaches/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(int id)
         {
             if (id == null || _context.DanhMucSaches == null)
             {
@@ -88,7 +88,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MaDm,TenDm")] DanhMucSach danhMucSach)
+        public async Task<IActionResult> Edit(int id, [Bind("MaDm,TenDm")] DanhMucSach danhMucSach)
         {
             if (id != danhMucSach.MaDm)
             {
@@ -119,7 +119,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         }
 
         // GET: Admin/DanhMucSaches/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(int id)
         {
             if (id == null || _context.DanhMucSaches == null)
             {
@@ -139,7 +139,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         // POST: Admin/DanhMucSaches/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.DanhMucSaches == null)
             {
@@ -155,7 +155,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool DanhMucSachExists(string id)
+        private bool DanhMucSachExists(int id)
         {
           return (_context.DanhMucSaches?.Any(e => e.MaDm == id)).GetValueOrDefault();
         }

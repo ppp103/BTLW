@@ -5,11 +5,11 @@ namespace QuanLyBanSach.Models;
 
 public partial class TacGia
 {
-    public string MaTg { get; set; } = null!;
+    public int MaTg { get; set; }
 
     public string? TenTg { get; set; }
 
+    public string? Anh { get; set; }
 
     public virtual ICollection<Sach> Saches { get; } = new List<Sach>();
-	
 }

@@ -5,7 +5,7 @@ namespace QuanLyBanSach.Models;
 
 public partial class NhaXuatBan
 {
-    public string MaNxb { get; set; } = null!;
+    public int MaNxb { get; set; }
 
     public string? TenNxb { get; set; }
 

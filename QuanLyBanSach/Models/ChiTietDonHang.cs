@@ -5,9 +5,9 @@ namespace QuanLyBanSach.Models;
 
 public partial class ChiTietDonHang
 {
-    public string MaDonHang { get; set; } = null!;
+    public int MaCtdonHang { get; set; }
 
-    public string MaSach { get; set; } = null!;
+    public int MaSach { get; set; }
 
     public int? SoLuong { get; set; }
 
@@ -15,7 +15,9 @@ public partial class ChiTietDonHang
 
     public decimal? ThanhTien { get; set; }
 
-    public virtual DonHang MaDonHangNavigation { get; set; } = null!;
+    public int? MaDonHang { get; set; }
+
+    public virtual DonHang? MaDonHangNavigation { get; set; }
 
     public virtual Sach MaSachNavigation { get; set; } = null!;
 }

@@ -5,7 +5,7 @@ namespace QuanLyBanSach.Models;
 
 public partial class DonHang
 {
-    public string MaDonHang { get; set; } = null!;
+    public int MaDonHang { get; set; }
 
     public string? DiaDiemGh { get; set; }
 
@@ -21,7 +21,7 @@ public partial class DonHang
 
     public string? TrangThaiDh { get; set; }
 
-    public string? MaNd { get; set; }
+    public int? MaNd { get; set; }
 
     public virtual ICollection<ChiTietDonHang> ChiTietDonHangs { get; } = new List<ChiTietDonHang>();
 

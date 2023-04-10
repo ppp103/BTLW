@@ -5,11 +5,11 @@ namespace QuanLyBanSach.Models;
 
 public partial class BanSaoSach
 {
-    public string MaBanSao { get; set; } = null!;
+    public int MaBanSao { get; set; }
 
     public string? TinhTrangBs { get; set; }
 
-    public string MaSach { get; set; } = null!;
+    public int MaSach { get; set; }
 
     public virtual Sach MaSachNavigation { get; set; } = null!;
 }

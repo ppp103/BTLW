@@ -5,7 +5,7 @@ namespace QuanLyBanSach.Models;
 
 public partial class NguoiDung
 {
-    public string MaNd { get; set; } = null!;
+    public int MaNd { get; set; }
 
     public string? HoTenNd { get; set; }
 

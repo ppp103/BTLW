@@ -41,7 +41,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
 		}
 
 		[Route("Edit")]
-		public IActionResult Edit(string maBanSao)
+		public IActionResult Edit(int maBanSao)
 		{
 			var banSao = db.BanSaoSaches.Find(maBanSao);
             ViewBag.MaSach = new SelectList(db.Saches, "MaSach", "TenSach");

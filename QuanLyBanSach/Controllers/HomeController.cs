@@ -24,10 +24,10 @@ namespace QuanLyBanSach.Controllers
 
 		public IActionResult Index()
 		{
-			var sachbanchay = db.Saches.Where(x => x.MaDm == "DM01").ToList();
+			var sachbanchay = db.Saches.Where(x => x.MaDm == 1).ToList();
 			ViewBag.sachbanchay = sachbanchay;
 
-			var sachsapra = db.Saches.Where(x => x.MaDm == "DM03").ToList();
+			var sachsapra = db.Saches.Where(x => x.MaDm == 3).ToList();
 			ViewBag.sachsapra = sachsapra;
 
 			var tensach = db.Saches.ToList();
@@ -57,7 +57,7 @@ namespace QuanLyBanSach.Controllers
         }
 		public IActionResult Contact() { return View(); }
 		
-		public IActionResult HienThiTheoDanhMuc(string madm)
+		public IActionResult HienThiTheoDanhMuc(int madm)
 		{
 			var masach = db.Saches.Where(x => x.MaDm == madm).ToList();
 			var matg = db.TacGia.ToList();
@@ -66,7 +66,7 @@ namespace QuanLyBanSach.Controllers
 			ViewBag.madm = dm;
 			return View(masach);
         }
-		public IActionResult ChiTietSanPham(string sac)
+		public IActionResult ChiTietSanPham(int sac)
 		{
 			var ctsach = db.Saches.SingleOrDefault(x => x.MaSach == sac);
 			var matg = db.TacGia.ToList();

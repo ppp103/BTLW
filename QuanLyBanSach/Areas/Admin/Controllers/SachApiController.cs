@@ -52,7 +52,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         // PUT: api/SachApi/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSach(string id, Sach sach)
+        public async Task<IActionResult> PutSach(int id, Sach sach)
         {
             if (id != sach.MaSach)
             {
@@ -111,7 +111,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
 
         // DELETE: api/SachApi/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteSach(string id)
+        public async Task<IActionResult> DeleteSach(int id)
         {
             if (_context.Saches == null)
             {
@@ -129,7 +129,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             return NoContent();
         }
 
-        private bool SachExists(string id)
+        private bool SachExists(int id)
         {
             return (_context.Saches?.Any(e => e.MaSach == id)).GetValueOrDefault();
         }

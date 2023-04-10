@@ -33,7 +33,7 @@ namespace QuanLyBanSach.Controllers
 			return sanPham;
 		}
         [HttpGet("{madm}")]
-        public IEnumerable<Books> GetBooksByCategory(string madm)
+        public IEnumerable<Books> GetBooksByCategory(int madm)
         {
 
 			var sanPham = (from p in db.Saches

@@ -27,18 +27,18 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             _context = context;
             _notyfService = notyfService;
         }
-        
+
         // GET: Admin/Sach
-        public async Task<IActionResult> Index(int page = 1, string MaDm = "")
+        public async Task<IActionResult> Index(int page = 1, int MaDm = 0)
         {
             var pageNumber = page;
             var pageSize = 10;
 
             List<Sach> lst = new List<Sach>();
 
-            if(MaDm != "")
+            if (MaDm != 0)
             {
-                lst = _context.Saches.Where(x => x.MaDm == MaDm).OrderByDescending(x=>x.MaSach).Reverse().ToList();
+                lst = _context.Saches.Where(x => x.MaDm == MaDm).OrderByDescending(x => x.MaSach).Reverse().ToList();
             }
             else
             {
@@ -48,8 +48,8 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             PagedList<Sach> models = new PagedList<Sach>(lst.AsQueryable(), pageNumber, pageSize);
 
             ViewData["DanhMuc"] = new SelectList(_context.DanhMucSaches, "MaDm", "TenDm");
-            
-            ViewBag.MaDm = MaDm; 
+
+            ViewBag.MaDm = MaDm;
             ViewBag.page = pageNumber;
 
             return View(models);
@@ -59,15 +59,15 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         {
             var pageNumber = page == null || page < 0 ? 1 : page.Value;
             var url = $"/Admin/Sach?MaDm={MaDm}";
-            if(MaDm == 0.ToString())
+            if (MaDm == 0.ToString())
             {
                 url = $"/Admin/Sach";
             }
-            return Json(new {status = "success", redirectUrl = url});
+            return Json(new { status = "success", redirectUrl = url });
         }
 
         // GET: Admin/Sach/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(int id)
         {
             if (id == null || _context.Saches == null)
             {
@@ -103,30 +103,39 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("MaSach,TenSach,GiaBan,MoTa,SoLuongBs,Anh,NgayCapNhat,SoLuongCon,MaNxb,MaTg,MaDm")] Sach sach, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
-                if (ModelState.IsValid)
+            if (ModelState.IsValid)
+            {
+                try
                 {
-                    try{
-                        sach.TenSach = Utilities.ToTitleCase(sach.TenSach);
-                        if (fThumb != null)
-                        {
-                            string extension = Path.GetExtension(fThumb.FileName);
-                            string image = Utilities.SEOUrl(sach.TenSach) + ".jpg";
-                            sach.Anh = await Utilities.UploadFile(fThumb, @"books", image.ToLower());
-                        }
-                        if (string.IsNullOrEmpty(sach.Anh)) sach.Anh = "default.jpg";
-
-                        sach.NgayCapNhat = DateTime.Now;
-                        sach.SoLuongBs = sach.SoLuongCon;
-                        _context.Add(sach);
-                        await _context.SaveChangesAsync();
-                        _notyfService.Success("Tạo thành công");
-                        return RedirectToAction(nameof(Index));
-                    }catch(DbUpdateException ex)
+                    sach.TenSach = Utilities.ToTitleCase(sach.TenSach);
+                    if (fThumb != null)
                     {
-                        _notyfService.Error("Không được trùng mã sách");
-                        return View(sach);
+                        string extension = Path.GetExtension(fThumb.FileName);
+                        string image = Utilities.SEOUrl(sach.TenSach) + extension;
+                        sach.Anh = await Utilities.UploadFile(fThumb, @"books", image.ToLower());
                     }
+                    if (string.IsNullOrEmpty(sach.Anh)) sach.Anh = "default.jpg";
+                      
+                    sach.NgayCapNhat = DateTime.Now;
+                    sach.SoLuongBs = sach.SoLuongCon;
+
+                    _context.Add(sach);
+
+                    await _context.SaveChangesAsync();
+                    _notyfService.Success("Tạo thành công");
+                    return RedirectToAction(nameof(Index));
                 }
+                catch (DbUpdateException ex)
+                {
+                    _notyfService.Error("Không được trùng mã sách");
+
+                    ViewData["MaDm"] = new SelectList(_context.DanhMucSaches, "MaDm", "TenDm", sach.MaDm);
+                    ViewData["MaNxb"] = new SelectList(_context.NhaXuatBans, "MaNxb", "TenNxb", sach.MaNxb);
+                    ViewData["MaTg"] = new SelectList(_context.TacGia, "MaTg", "TenTg", sach.MaTg);
+
+                    return View(sach);
+                }
+            }
             ViewData["MaDm"] = new SelectList(_context.DanhMucSaches, "MaDm", "TenDm", sach.MaDm);
             ViewData["MaNxb"] = new SelectList(_context.NhaXuatBans, "MaNxb", "TenNxb", sach.MaNxb);
             ViewData["MaTg"] = new SelectList(_context.TacGia, "MaTg", "TenTg", sach.MaTg);
@@ -137,7 +146,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         }
 
         // GET: Admin/Sach/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(int id)
         {
             if (id == null || _context.Saches == null)
             {
@@ -162,7 +171,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MaSach,TenSach,GiaBan,MoTa,SoLuongBs,Anh,NgayCapNhat,SoLuongCon,MaNxb,MaTg,MaDm")] Sach sach, Microsoft.AspNetCore.Http.IFormFile fThumb)
+        public async Task<IActionResult> Edit(int id, [Bind("MaSach,TenSach,GiaBan,MoTa,SoLuongBs,Anh,NgayCapNhat,SoLuongCon,MaNxb,MaTg,MaDm")] Sach sach, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
             if (id != sach.MaSach)
             {
@@ -174,19 +183,18 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                 try
                 {
                     sach.TenSach = Utilities.ToTitleCase(sach.TenSach);
-                    if (string.IsNullOrEmpty(sach.Anh)) sach.Anh = "img-01";
+                    if (string.IsNullOrEmpty(sach.Anh)) sach.Anh = "img-01.jpg";
 
                     if (fThumb != null)
                     {
                         string extension = Path.GetExtension(fThumb.FileName);
-                        string image = Utilities.SEOUrl(sach.TenSach) + ".jpg";
+                        string image = Utilities.SEOUrl(sach.TenSach) + extension;
                         //string image = "img-01";
                         sach.Anh = await Utilities.UploadFile(fThumb, @"books", image.ToLower());
                     }
 
                     sach.NgayCapNhat = DateTime.Now;
                     sach.SoLuongBs = sach.SoLuongCon;
-                    //sach.MaNxb = "NXB01";
 
                     _context.Update(sach);
                     await _context.SaveChangesAsync();
@@ -207,18 +215,18 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaDm"] = new SelectList(_context.DanhMucSaches, "MaDm", "TenDm", sach.MaDm);
-            ViewData["MaNxb"] = new SelectList(_context.NhaXuatBans, "MaNxb", "TenNxb", sach.MaNxb);
-            ViewData["MaTg"] = new SelectList(_context.TacGia, "MaTg", "TenTg", sach.MaTg);
 
             _notyfService.Error("Vui lòng điền đủ thông tin");
 
+            ViewData["MaDm"] = new SelectList(_context.DanhMucSaches, "MaDm", "TenDm", sach.MaDm);
+            ViewData["MaNxb"] = new SelectList(_context.NhaXuatBans, "MaNxb", "TenNxb", sach.MaNxb);
+            ViewData["MaTg"] = new SelectList(_context.TacGia, "MaTg", "TenTg", sach.MaTg);
 
             return View(sach);
         }
 
         // GET: Admin/Sach/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(int id)
         {
             if (id == null || _context.Saches == null)
             {
@@ -241,7 +249,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         // POST: Admin/Sach/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.Saches == null)
             {
@@ -255,18 +263,19 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                 {
                     _context.Saches.Remove(sach);
                 }
-            
+
                 await _context.SaveChangesAsync();
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 _notyfService.Error("Không thể xóa sách này");
             }
             return RedirectToAction(nameof(Index));
         }
 
-        private bool SachExists(string id)
+        private bool SachExists(int id)
         {
-          return (_context.Saches?.Any(e => e.MaSach == id)).GetValueOrDefault();
+            return (_context.Saches?.Any(e => e.MaSach == id)).GetValueOrDefault();
         }
     }
 }

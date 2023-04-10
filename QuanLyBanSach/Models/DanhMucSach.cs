@@ -5,7 +5,7 @@ namespace QuanLyBanSach.Models;
 
 public partial class DanhMucSach
 {
-    public string MaDm { get; set; } = null!;
+    public int MaDm { get; set; }
 
     public string? TenDm { get; set; }
 

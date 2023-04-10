@@ -5,7 +5,7 @@ namespace QuanLyBanSach.Models;
 
 public partial class Admins
 {
-    public string MaAd { get; set; } = null!;
+    public int MaAd { get; set; }
 
     public string? MatKhau { get; set; }
 

@@ -33,7 +33,7 @@ namespace QuanLyBanSach.Controllers
 
         [HttpPost]
         [Route("api/cart/add")]
-        public IActionResult AddToCart(string maSach, int? soLuong)
+        public IActionResult AddToCart(int maSach, int? soLuong)
         {
             List<CartItem> cart = GioHang;
 
@@ -75,7 +75,7 @@ namespace QuanLyBanSach.Controllers
 
         [HttpPost]
         [Route("api/cart/update")]
-        public IActionResult UpdateCart(string maSach, int? soLuong)
+        public IActionResult UpdateCart(int maSach, int? soLuong)
         {
             //Lay gio hang ra de xu ly
             var cart = HttpContext.Session.Get<List<CartItem>>("GioHang");
@@ -101,7 +101,7 @@ namespace QuanLyBanSach.Controllers
 
         [HttpPost]
         [Route("api/cart/remove")]
-        public ActionResult Remove(string maSach)
+        public ActionResult Remove(int maSach)
         {
 
             try

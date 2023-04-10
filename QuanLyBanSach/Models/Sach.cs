@@ -5,7 +5,7 @@ namespace QuanLyBanSach.Models;
 
 public partial class Sach
 {
-    public string MaSach { get; set; } = null!;
+    public int MaSach { get; set; }
 
     public string? TenSach { get; set; }
 
@@ -21,11 +21,11 @@ public partial class Sach
 
     public int? SoLuongCon { get; set; }
 
-    public string? MaNxb { get; set; }
+    public int? MaNxb { get; set; }
 
-    public string? MaTg { get; set; }
+    public int? MaTg { get; set; }
 
-    public string? MaDm { get; set; }
+    public int? MaDm { get; set; }
 
     public virtual ICollection<BanSaoSach> BanSaoSaches { get; } = new List<BanSaoSach>();
 
@@ -35,5 +35,5 @@ public partial class Sach
 
     public virtual NhaXuatBan? MaNxbNavigation { get; set; }
 
-    public virtual TacGium? MaTgNavigation { get; set; }
+    public virtual TacGia? MaTgNavigation { get; set; }
 }

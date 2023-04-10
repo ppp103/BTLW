@@ -28,7 +28,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         }
 
         // GET: Admin/TacGias/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(int id)
         {
             if (id == null || _context.TacGia == null)
             {
@@ -68,7 +68,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         }
 
         // GET: Admin/TacGias/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(int id)
         {
             if (id == null || _context.TacGia == null)
             {
@@ -88,7 +88,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MaTg,TenTg")] TacGia tacGia)
+        public async Task<IActionResult> Edit(int id, [Bind("MaTg,TenTg")] TacGia tacGia)
         {
             if (id != tacGia.MaTg)
             {
@@ -119,7 +119,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         }
 
         // GET: Admin/TacGias/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(int id)
         {
             if (id == null || _context.TacGia == null)
             {
@@ -139,7 +139,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         // POST: Admin/TacGias/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.TacGia == null)
             {
@@ -155,7 +155,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool TacGiaExists(string id)
+        private bool TacGiaExists(int id)
         {
           return (_context.TacGia?.Any(e => e.MaTg == id)).GetValueOrDefault();
         }

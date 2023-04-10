@@ -5,13 +5,13 @@ namespace QuanLyBanSach.Models;
 
 public partial class VanChuyen
 {
-    public string MaVc { get; set; } = null!;
+    public int MaVc { get; set; }
 
     public string? TenVc { get; set; }
 
     public string? TrangThaiVc { get; set; }
 
-    public string? MaDonHang { get; set; }
+    public int? MaDonHang { get; set; }
 
     public virtual DonHang? MaDonHangNavigation { get; set; }
 }

@@ -28,7 +28,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         }
 
         // GET: Admin/Admins/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(int id)
         {
             if (id == null || _context.Admins == null)
             {
@@ -88,7 +88,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MaAd,MatKhau,TenDangNhap,HoTenAd")] Admins admins)
+        public async Task<IActionResult> Edit(int id, [Bind("MaAd,MatKhau,TenDangNhap,HoTenAd")] Admins admins)
         {
             if (id != admins.MaAd)
             {
@@ -119,7 +119,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         }
 
         // GET: Admin/Admins/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(int id)
         {
             if (id == null || _context.Admins == null)
             {
@@ -139,7 +139,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         // POST: Admin/Admins/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.Admins == null)
             {
@@ -155,7 +155,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool AdminsExists(string id)
+        private bool AdminsExists(int id)
         {
           return (_context.Admins?.Any(e => e.MaAd == id)).GetValueOrDefault();
         }

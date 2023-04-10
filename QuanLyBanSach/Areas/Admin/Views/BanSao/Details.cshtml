@@ -1,0 +1,30 @@
+﻿@model QuanLyBanSach.Models.BanSaoSach
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Chi tiết</h1>
+
+<div>
+    <h4>Bản sao sách</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Tình trạng bản sao
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TinhTrangBs)
+        </dd>
+        <dt class = "col-sm-2">
+            Mã sách
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaSachNavigation.MaSach)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary btn-tone" asp-action="Index">Quay lại</a>
+</div>

@@ -28,7 +28,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         }
 
         // GET: Admin/NguoiDungs/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(int id)
         {
             if (id == null || _context.NguoiDungs == null)
             {
@@ -68,7 +68,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         }
 
         // GET: Admin/NguoiDungs/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(int id)
         {
             if (id == null || _context.NguoiDungs == null)
             {
@@ -88,7 +88,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MaNd,HoTenNd,Email,MatKhau,DienThoai,TaiKhoan,TrangThaiNd,Anh,NgayTao,DiaChi")] NguoiDung nguoiDung)
+        public async Task<IActionResult> Edit(int id, [Bind("MaNd,HoTenNd,Email,MatKhau,DienThoai,TaiKhoan,TrangThaiNd,Anh,NgayTao,DiaChi")] NguoiDung nguoiDung)
         {
             if (id != nguoiDung.MaNd)
             {
@@ -119,7 +119,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         }
 
         // GET: Admin/NguoiDungs/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(int id)
         {
             if (id == null || _context.NguoiDungs == null)
             {
@@ -139,7 +139,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         // POST: Admin/NguoiDungs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.NguoiDungs == null)
             {
@@ -155,7 +155,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool NguoiDungExists(string id)
+        private bool NguoiDungExists(int id)
         {
           return (_context.NguoiDungs?.Any(e => e.MaNd == id)).GetValueOrDefault();
         }
