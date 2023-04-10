@@ -110,8 +110,9 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                     sach.TenSach = Utilities.ToTitleCase(sach.TenSach);
                     if (fThumb != null)
                     {
-                        string extension = Path.GetExtension(fThumb.FileName);
-                        string image = Utilities.SEOUrl(sach.TenSach) + extension;
+                        //string extension = Path.GetExtension(fThumb.FileName);
+                        //string image = Utilities.SEOUrl(sach.TenSach) + extension;
+                        string image = fThumb.FileName;
                         sach.Anh = await Utilities.UploadFile(fThumb, @"books", image.ToLower());
                     }
                     if (string.IsNullOrEmpty(sach.Anh)) sach.Anh = "default.jpg";
@@ -183,13 +184,13 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                 try
                 {
                     sach.TenSach = Utilities.ToTitleCase(sach.TenSach);
-                    if (string.IsNullOrEmpty(sach.Anh)) sach.Anh = "img-01.jpg";
+                    if (string.IsNullOrEmpty(sach.Anh)) sach.Anh = "";
 
                     if (fThumb != null)
                     {
-                        string extension = Path.GetExtension(fThumb.FileName);
-                        string image = Utilities.SEOUrl(sach.TenSach) + extension;
-                        //string image = "img-01";
+                        //string extension = Path.GetExtension(fThumb.FileName);
+                        //string image = Utilities.SEOUrl(sach.TenSach) + extension;
+                        string image = fThumb.FileName;
                         sach.Anh = await Utilities.UploadFile(fThumb, @"books", image.ToLower());
                     }
 
@@ -221,6 +222,9 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             ViewData["MaDm"] = new SelectList(_context.DanhMucSaches, "MaDm", "TenDm", sach.MaDm);
             ViewData["MaNxb"] = new SelectList(_context.NhaXuatBans, "MaNxb", "TenNxb", sach.MaNxb);
             ViewData["MaTg"] = new SelectList(_context.TacGia, "MaTg", "TenTg", sach.MaTg);
+
+            Sach sachCanSua = _context.Saches.SingleOrDefault(s => s.MaSach == id);
+            sach.Anh = sachCanSua.Anh;
 
             return View(sach);
         }
