@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreHero.ToastNotification.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -13,12 +14,13 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
     public class DonHangsController : Controller
     {
         private readonly QlbanSachContext _context;
+        public INotyfService _notyfService { get; }
 
-        public DonHangsController(QlbanSachContext context)
+        public DonHangsController(QlbanSachContext context, INotyfService notyfService)
         {
             _context = context;
+            _notyfService = notyfService;
         }
-
         // GET: Admin/DonHangs
         public async Task<IActionResult> Index()
         {
@@ -42,6 +44,9 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                 return NotFound();
             }
 
+            var chiTietDonHangs = _context.ChiTietDonHangs.Include(x => x.MaSachNavigation).Where(ctDonHang => ctDonHang.MaDonHang == id).ToList();
+            ViewBag.chiTietDonHangs = chiTietDonHangs;
+
             return View(donHang);
         }
 
@@ -63,9 +68,10 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             {
                 _context.Add(donHang);
                 await _context.SaveChangesAsync();
+                _notyfService.Success("Tạo thành công");
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaNd"] = new SelectList(_context.NguoiDungs, "MaNd", "MaNd", donHang.MaNd);
+            ViewData["MaNd"] = new SelectList(_context.NguoiDungs, "MaNd", "HoTenNd", donHang.MaNd);
             return View(donHang);
         }
 
@@ -82,7 +88,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["MaNd"] = new SelectList(_context.NguoiDungs, "MaNd", "MaNd", donHang.MaNd);
+            ViewData["MaNd"] = new SelectList(_context.NguoiDungs, "MaNd", "HoTenNd", donHang.MaNd);
             return View(donHang);
         }
 
@@ -104,6 +110,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                 {
                     _context.Update(donHang);
                     await _context.SaveChangesAsync();
+                    _notyfService.Success("Sửa thành công");
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -157,6 +164,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             }
             
             await _context.SaveChangesAsync();
+            _notyfService.Success("Xóa thành công");
             return RedirectToAction(nameof(Index));
         }
 
