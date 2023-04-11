@@ -12,6 +12,7 @@ namespace QuanLyBanSach.Models.Authentication
                 context.Result = new RedirectToRouteResult(
                     new RouteValueDictionary
                 {
+                    {"Area", "" },
                     { "Controller", "Access" },
                     { "Action", "Login" }
                 });
