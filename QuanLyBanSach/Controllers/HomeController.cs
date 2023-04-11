@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using QuanLyBanSach.Extension;
 using QuanLyBanSach.Models;
+using QuanLyBanSach.Models.Authentication;
 using QuanLyBanSach.ModelViews;
 using System.Diagnostics;
 using System.Linq;
@@ -21,8 +22,8 @@ namespace QuanLyBanSach.Controllers
 		{
 			_logger = logger;
 		}
-
-		public IActionResult Index()
+        [Authentication]
+        public IActionResult Index()
 		{
 			var sachbanchay = db.Saches.Where(x => x.MaDm == 1).ToList();
 			ViewBag.sachbanchay = sachbanchay;
@@ -40,7 +41,8 @@ namespace QuanLyBanSach.Controllers
 
 			return View(tensach);
 		}
-		public IActionResult HienThiSanPham(int? page)
+        [Authentication]
+        public IActionResult HienThiSanPham(int? page)
 		{
 			var masach = db.Saches.ToList();
             var matg = db.TacGia.ToList();
@@ -55,9 +57,13 @@ namespace QuanLyBanSach.Controllers
             return View(lst);
 
         }
-		public IActionResult Contact() { return View(); }
-		
-		public IActionResult HienThiTheoDanhMuc(int madm)
+		public IActionResult Contact() 
+		{
+			return View(); 
+		}
+
+        [Authentication]
+        public IActionResult HienThiTheoDanhMuc(int madm)
 		{
 			var masach = db.Saches.Where(x => x.MaDm == madm).ToList();
 			var matg = db.TacGia.ToList();
@@ -66,7 +72,8 @@ namespace QuanLyBanSach.Controllers
 			ViewBag.madm = dm;
 			return View(masach);
         }
-		public IActionResult ChiTietSanPham(int sac)
+        [Authentication]
+        public IActionResult ChiTietSanPham(int sac)
 		{
 			var ctsach = db.Saches.SingleOrDefault(x => x.MaSach == sac);
 			var matg = db.TacGia.ToList();
@@ -87,18 +94,8 @@ namespace QuanLyBanSach.Controllers
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
 		}
-
-		public IActionResult Login()
-		{
-			return View();
-		}
-
-		public IActionResult SignUp()
-		{
-			return View();
-		}
-
-		public IActionResult Cart()
+        [Authentication]
+        public IActionResult Cart()
 		{
 			var cart = HttpContext.Session.Get<List<CartItem>>("GioHang");
 			return View(cart);

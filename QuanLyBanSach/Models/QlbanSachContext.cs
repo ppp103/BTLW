@@ -15,7 +15,7 @@ public partial class QlbanSachContext : DbContext
     {
     }
 
-    public virtual DbSet<Admins> Admins { get; set; }
+    public virtual DbSet<Admin> Admins { get; set; }
 
     public virtual DbSet<BanSaoSach> BanSaoSaches { get; set; }
 
@@ -31,7 +31,7 @@ public partial class QlbanSachContext : DbContext
 
     public virtual DbSet<Sach> Saches { get; set; }
 
-    public virtual DbSet<TacGia> TacGia { get; set; }
+    public virtual DbSet<TacGium> TacGia { get; set; }
 
     public virtual DbSet<ThanhToan> ThanhToans { get; set; }
 
@@ -39,13 +39,13 @@ public partial class QlbanSachContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-4OUJ3TA\\SQLEXPRESS;Initial Catalog=QLBanSach;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+        => optionsBuilder.UseSqlServer("Data Source=KEMANHDAY\\SQLEXPRESS;Initial Catalog=QLBanSach;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Admins>(entity =>
+        modelBuilder.Entity<Admin>(entity =>
         {
-            entity.HasKey(e => e.MaAd).HasName("PK__Admin__27247E46C73724D6");
+            entity.HasKey(e => e.MaAd).HasName("PK__Admin__27247E46A8CD382A");
 
             entity.ToTable("Admin");
 
@@ -59,7 +59,7 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<BanSaoSach>(entity =>
         {
-            entity.HasKey(e => e.MaBanSao).HasName("PK__BanSaoSa__488BCC429AB941B2");
+            entity.HasKey(e => e.MaBanSao).HasName("PK__BanSaoSa__488BCC42136650BC");
 
             entity.ToTable("BanSaoSach");
 
@@ -75,7 +75,7 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<ChiTietDonHang>(entity =>
         {
-            entity.HasKey(e => new { e.MaCtdonHang, e.MaSach }).HasName("PK__ChiTietD__72D7FC2EE4800CB7");
+            entity.HasKey(e => new { e.MaCtdonHang, e.MaSach }).HasName("PK__ChiTietD__72D7FC2E94F8F629");
 
             entity.ToTable("ChiTietDonHang");
 
@@ -96,7 +96,7 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<DanhMucSach>(entity =>
         {
-            entity.HasKey(e => e.MaDm).HasName("PK__DanhMucS__2725866EC22A356E");
+            entity.HasKey(e => e.MaDm).HasName("PK__DanhMucS__2725866E9281F4AB");
 
             entity.ToTable("DanhMucSach");
 
@@ -108,7 +108,7 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<DonHang>(entity =>
         {
-            entity.HasKey(e => e.MaDonHang).HasName("PK__DonHang__129584AD4A0E3FBF");
+            entity.HasKey(e => e.MaDonHang).HasName("PK__DonHang__129584AD35A0C13D");
 
             entity.ToTable("DonHang");
 
@@ -134,7 +134,7 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<NguoiDung>(entity =>
         {
-            entity.HasKey(e => e.MaNd).HasName("PK__NguoiDun__2725D724DC6BF8B4");
+            entity.HasKey(e => e.MaNd).HasName("PK__NguoiDun__2725D7242B082CAC");
 
             entity.ToTable("NguoiDung");
 
@@ -156,7 +156,7 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<NhaXuatBan>(entity =>
         {
-            entity.HasKey(e => e.MaNxb).HasName("PK__NhaXuatB__3A19482C35D5C7C1");
+            entity.HasKey(e => e.MaNxb).HasName("PK__NhaXuatB__3A19482C8E026724");
 
             entity.ToTable("NhaXuatBan");
 
@@ -168,7 +168,7 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<Sach>(entity =>
         {
-            entity.HasKey(e => e.MaSach).HasName("PK__Sach__B235742DB9D6755E");
+            entity.HasKey(e => e.MaSach).HasName("PK__Sach__B235742DBE93A80B");
 
             entity.ToTable("Sach");
 
@@ -195,9 +195,9 @@ public partial class QlbanSachContext : DbContext
                 .HasConstraintName("FK__Sach__MaTG__47DBAE45");
         });
 
-        modelBuilder.Entity<TacGia>(entity =>
+        modelBuilder.Entity<TacGium>(entity =>
         {
-            entity.HasKey(e => e.MaTg).HasName("PK__TacGia__27250074052D0EF3");
+            entity.HasKey(e => e.MaTg).HasName("PK__TacGia__27250074248642CC");
 
             entity.Property(e => e.MaTg).HasColumnName("MaTG");
             entity.Property(e => e.Anh).HasMaxLength(50);
@@ -208,7 +208,7 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<ThanhToan>(entity =>
         {
-            entity.HasKey(e => e.MaTt).HasName("PK__ThanhToa__27250079788467C6");
+            entity.HasKey(e => e.MaTt).HasName("PK__ThanhToa__27250079F12F3839");
 
             entity.ToTable("ThanhToan");
 
@@ -227,7 +227,7 @@ public partial class QlbanSachContext : DbContext
 
         modelBuilder.Entity<VanChuyen>(entity =>
         {
-            entity.HasKey(e => e.MaVc).HasName("PK__VanChuye__272510295BC21E35");
+            entity.HasKey(e => e.MaVc).HasName("PK__VanChuye__27251029CE51F3F7");
 
             entity.ToTable("VanChuyen");
 
