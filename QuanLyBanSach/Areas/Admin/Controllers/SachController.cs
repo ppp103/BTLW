@@ -268,6 +268,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                     _context.Saches.Remove(sach);
                 }
 
+                _notyfService.Success("Xóa thành công");
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)

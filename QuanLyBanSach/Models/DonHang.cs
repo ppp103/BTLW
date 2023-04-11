@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace QuanLyBanSach.Models;
 
@@ -9,8 +10,10 @@ public partial class DonHang
 
     public string? DiaDiemGh { get; set; }
 
+    [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}")]
     public DateTime? NgayDat { get; set; }
 
+    [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}")]
     public DateTime? NgayGiao { get; set; }
 
     public decimal? TongTien { get; set; }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreHero.ToastNotification.Abstractions;
 using Azure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -16,10 +17,13 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
     public class BanSaoController : Controller
     {
         private readonly QlbanSachContext _context;
+        public INotyfService _notyfService { get; }
 
-        public BanSaoController(QlbanSachContext context)
+        public BanSaoController(QlbanSachContext context, INotyfService notyfService)
         {
             _context = context;
+            _notyfService = notyfService;
+
         }
 
         // GET: Admin/BanSao
@@ -56,7 +60,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         // GET: Admin/BanSao/Create
         public IActionResult Create()
         {
-            ViewData["MaSach"] = new SelectList(_context.Saches, "MaSach", "MaSach");
+            ViewData["MaSach"] = new SelectList(_context.Saches, "MaSach", "TenSach");
             return View();
         }
 
@@ -70,10 +74,11 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 _context.Add(banSaoSach);
+                _notyfService.Success("Tạo thành công");
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaSach"] = new SelectList(_context.Saches, "MaSach", "MaSach", banSaoSach.MaSach);
+            ViewData["MaSach"] = new SelectList(_context.Saches, "MaSach", "TenSach", banSaoSach.MaSach);
             return View(banSaoSach);
         }
 
@@ -112,6 +117,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                 {
                     _context.Update(banSaoSach);
                     await _context.SaveChangesAsync();
+                    _notyfService.Success("Sửa thành công");
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -165,6 +171,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             }
             
             await _context.SaveChangesAsync();
+            _notyfService.Success("Xóa thành công");
             return RedirectToAction(nameof(Index));
         }
 

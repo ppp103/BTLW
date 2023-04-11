@@ -14,7 +14,10 @@
     <thead>
         <tr>
             <th>
-               Địa Điểm Giao Hàng
+                Mã Đơn
+            </th>
+            <th>
+               Địa Chỉ
             </th>
             <th>
                Ngày Đặt
@@ -29,14 +32,17 @@
                Tên Khách Hàng
             </th>
             <th>
-                Trạng Thái Đơn Hàng
+                Trạng Thái 
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+    @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaDonHang)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DiaDiemGh)
             </td>
@@ -47,7 +53,7 @@
                 @Html.DisplayFor(modelItem => item.NgayGiao)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TongTien)
+                @item.TongTien.Value.ToString("#,##0")
             </td>
            
             <td>
@@ -63,6 +69,6 @@
                     <a class="btn btn-secondary btn-tone m-r-5" asp-action="Delete" asp-route-id="@item.MaDonHang">Xóa</a>
             </td>
         </tr>
-}
+    }
     </tbody>
 </table>

@@ -3,8 +3,9 @@
 @{
     ViewData["Title"] = "Details";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    List<ChiTietDonHang> chiTietDonHangs = ViewBag.chiTietDonHangs;
 }
-
+@*
 <h1>Chi Tiết Đơn Hàng</h1>
 
 <div>
@@ -64,4 +65,93 @@
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.MaDonHang">Chỉnh Sửa Đơn Hàng</a> |
     <a asp-action="Index">Quay Lại Trang Danh Sách Đơn Hàng</a>
+</div>
+*@
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div id="invoice" class="p-h-30">
+                <div class="m-t-15 lh-2">
+                    <div class="inline-block">
+                        <img class="img-fluid" src="~/Admin/assets/images/logo/logo.png" alt="">
+                        <address class="p-l-10">
+                            <span class="font-weight-semibold text-dark">Enlink, Inc.</span><br>
+                            <span>9498 Cầu Giấy</span><br>
+                            <span>Hà Nội</span><br>
+                            <span class="text-dark" title="Phone">Số điện thoại:</span>
+                            <span>0374552192</span>
+                        </address>
+                    </div>
+                    <div class="float-right">
+                        <h2>Chi tiết đơn hàng</h2>
+                    </div>
+                </div>
+                <div class="row m-t-20 lh-2">
+                    <div class="col-sm-9">
+                        <h3 class="p-l-10 m-t-10">Tên khách hàng: @Model.TenKh</h3>
+                        <address class="p-l-10 m-t-10">
+                            <span>Địa chỉ: @Model.DiaDiemGh</span><br>
+                        </address>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="m-t-80">
+                            <div class="text-dark text-uppercase d-inline-block">
+                                <span class="font-weight-semibold text-dark">Mã đơn hàng :</span>
+                            </div>
+                            <div class="float-right">#@Model.MaDonHang</div>
+                        </div>
+                        <div class="text-dark text-uppercase d-inline-block">
+                            <span class="font-weight-semibold text-dark">Ngày đặt: </span>
+                        </div>
+                        <div class="float-right">@Model.NgayDat.Value.ToString("dd-MM-yyyy")</div>
+                    </div>
+                </div>
+                <div class="m-t-20">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Mã sách</th>
+                                    <th>Tên sách</th>
+                                    <th>Số lượng</th>
+                                    <th>Giá (VNĐ)</th>
+                                    <th>Thành tiền (VNĐ)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var chiTiet in chiTietDonHangs)
+                                {
+                                    <tr>
+                                        <th>@chiTiet.MaSach</th>
+                                        <td>@chiTiet.MaSachNavigation.TenSach</td>
+                                        <td>@chiTiet.SoLuong</td>
+                                        <td>@chiTiet.MaSachNavigation.GiaBan.Value.ToString("#,##0")</td>
+                                        <td>@chiTiet.ThanhTien.Value.ToString("#,##0")</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row m-t-30 lh-1-8">
+                        <div class="col-sm-12">
+                            <div class="float-right text-right">
+                                <h3><span class="font-weight-semibold text-dark">Tổng tiền :</span> @chiTietDonHangs.Sum(x=>x.ThanhTien).Value.ToString("#,##0") VNĐ</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-v-20">
+                        <div class="col-sm-6">
+                            <img class="img-fluid text-opacity m-t-5" width="100" src="~/Admin/assets/images/logo/logo.png" alt="">
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <small><span class="font-weight-semibold text-dark">Số điện thoại: </span>0374552192</small>
+                            <br>
+                            <small>support@themenate.com</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
