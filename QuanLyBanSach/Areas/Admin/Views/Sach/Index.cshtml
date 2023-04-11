@@ -4,96 +4,96 @@
 @model X.PagedList.IPagedList<Sach>
 
 @{
-    ViewData["Title"] = "Index";
-    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+	ViewData["Title"] = "Index";
+	Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
 
-                <div class="main-content p-t-20">
-                    <div class="page-header">
-                        <h2 class="header-title">Danh sách</h2>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row m-b-30">
-                                <div class="col-lg-8">
-                                    <div class="d-md-flex">
-                                        <div class="m-b-10 m-r-15">
-                                            <select class="custom-select" id="txtMaDm" name="txtMaDm" asp-items="ViewBag.DanhMuc" style="min-width: 180px;">
-                                                <option selected>Chọn danh mục</option>
-                                                <option value="0">Chọn tất cả</option>
-                                            </select>
-                                        </div>
-@*                                        <div class="m-b-10">
-                                            <select class="custom-select" style="min-width: 180px;">
-                                                <option selected>Status</option>
-                                                <option value="all">All</option>
-                                                <option value="inStock">In Stock </option>
-                                                <option value="outOfStock">Out of Stock</option>
-                                            </select>
-                                        </div>*@
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 text-right">
-                                    <a asp-action="Create" class="btn btn-primary">
-                                        <i class="anticon anticon-plus-circle m-r-5"></i>
-                                        <span>Thêm sách</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table table-hover e-commerce-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Mã sách</th>
-                                            <th>Sách</th>
-                                            <th>Danh mục</th>
-                                            <th>Giá (VNĐ)</th>
-                                            <th>Số lượng</th>
-                                            <th>Mô tả</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    @foreach(var sach in Model)
-                                    {
-                                    <tr>
-                                            <td>
-                                                @sach.MaSach
-                                            </td>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <img class="img-fluid rounded" src="@Url.Content("../images/books/" + @sach.Anh)" style="max-width: 60px" alt="">
-                                                    <h6 class="m-b-0 m-l-10">@sach.TenSach</h6>
-                                                </div>
-                                            </td>
-                                            <td>@sach.MaDmNavigation.TenDm</td>
-                                            <td>@sach.GiaBan.Value.ToString("#,##0")</td>
-                                            <td>@sach.SoLuongCon</td>
-                                            <td>
-                                                @Html.Raw(sach.MoTa)
-                                            </td>
-                                            <td class="text-right">
-                                                <a asp-action="Edit" asp-route-id="@sach.MaSach" class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
-                                                    <i class="anticon anticon-edit"></i>
-                                                </a>
-                                                <a asp-action="Delete" asp-route-id="@sach.MaSach" class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                    <i class="anticon anticon-delete"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    }
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Content Wrapper END -->
+<div class="main-content p-t-20">
+	<div class="page-header">
+		<h2 class="header-title">Danh sách</h2>
+	</div>
+	<div class="card">
+		<div class="card-body">
+			<div class="row m-b-30">
+				<div class="col-lg-8">
+					<div class="d-md-flex">
+						<div class="m-b-10 m-r-15">
+							<select class="custom-select" id="txtMaDm" name="txtMaDm" asp-items="ViewBag.DanhMuc" style="min-width: 180px;">
+								<option selected>Chọn danh mục</option>
+								<option value="0">Chọn tất cả</option>
+							</select>
+						</div>
+						@*                                        <div class="m-b-10">
+						<select class="custom-select" style="min-width: 180px;">
+						<option selected>Status</option>
+						<option value="all">All</option>
+						<option value="inStock">In Stock </option>
+						<option value="outOfStock">Out of Stock</option>
+						</select>
+						</div>*@
+					</div>
+				</div>
+				<div class="col-lg-4 text-right">
+					<a asp-action="Create" class="btn btn-primary">
+						<i class="anticon anticon-plus-circle m-r-5"></i>
+						<span>Thêm sách</span>
+					</a>
+				</div>
+			</div>
+			<div class="table-responsive">
+				<table class="table table-hover e-commerce-table">
+					<thead>
+						<tr>
+							<th>Mã sách</th>
+							<th>Sách</th>
+							<th>Danh mục</th>
+							<th>Giá (VNĐ)</th>
+							<th>Số lượng</th>
+							<th>Mô tả</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var sach in Model)
+						{
+							<tr>
+								<td>
+									@sach.MaSach
+								</td>
+								<td>
+									<div class="d-flex align-items-center">
+										<img class="img-fluid rounded" src="@Url.Content("../images/books/" + @sach.Anh)" style="max-width: 60px" alt="">
+										<h6 class="m-b-0 m-l-10">@sach.TenSach</h6>
+									</div>
+								</td>
+								<td>@sach.MaDmNavigation.TenDm</td>
+								<td>@sach.GiaBan.Value.ToString("#,##0")</td>
+								<td>@sach.SoLuongCon</td>
+								<td>
+									@Html.Raw(sach.MoTa)
+								</td>
+								<td class="text-right">
+									<a asp-action="Edit" asp-route-id="@sach.MaSach" class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
+										<i class="anticon anticon-edit"></i>
+									</a>
+									<a asp-action="Delete" asp-route-id="@sach.MaSach" class="btn btn-icon btn-hover btn-sm btn-rounded">
+										<i class="anticon anticon-delete"></i>
+									</a>
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Content Wrapper END -->
 <div class="container" style="display:flex; justify-content:center;">
-    @Html.PagedListPager(Model,page => Url.Action("Index", new {MaDm = ViewBag.MaDm, page=page}),new X.PagedList.Web.Common.PagedListRenderOptions(){
-    LiElementClasses = new List<String> {"page-item"},
-    PageClasses = new List<String> {"page-link"}
-    })
+	@Html.PagedListPager(Model,page => Url.Action("Index", new {MaDm = ViewBag.MaDm, page=page}),new X.PagedList.Web.Common.PagedListRenderOptions(){
+	LiElementClasses = new List<String> {"page-item"},
+	PageClasses = new List<String> {"page-link"}
+	})
 </div>
 @*
 @section Scripts{
@@ -127,33 +127,33 @@
 
 *@
 @section Scripts{
-    <script>
-        $(document).ready(function () {
-            $("#txtMaDm").change(function () {
-                var maDm = $(this).children(":selected").attr("value");
-                //catID = parseFloat(catID);
-                $('#txtMaDm option').removeAttr('selected');
-                $("#txtMaDm > [value=" + maDm + "]").attr("selected", "true");
-                $.ajax({
-                    url: '/Admin/Sach/Filter',
-                    datatype: "json",
-                    type: "GET",
-                    data: {
-                        MaDm:maDm
-                    },
-                    async: true,
-                    success: function (results) {
-                        if (results.status == "success") {
-                            window.location.href = results.redirectUrl;
-                        }
-                    },
-                    error: function (xhr) {
-                        alert('error');
-                    }
-                });
-            });
-        });
-    </script>
+	<script>
+		$(document).ready(function () {
+			$("#txtMaDm").change(function () {
+				var maDm = $(this).children(":selected").attr("value");
+				//catID = parseFloat(catID);
+				$('#txtMaDm option').removeAttr('selected');
+				$("#txtMaDm > [value=" + maDm + "]").attr("selected", "true");
+				$.ajax({
+					url: '/Admin/Sach/Filter',
+					datatype: "json",
+					type: "GET",
+					data: {
+						MaDm: maDm
+					},
+					async: true,
+					success: function (results) {
+						if (results.status == "success") {
+							window.location.href = results.redirectUrl;
+						}
+					},
+					error: function (xhr) {
+						alert('error');
+					}
+				});
+			});
+		});
+	</script>
 
 }
 @*<p>

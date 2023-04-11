@@ -55,11 +55,11 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             return View(models);
         }
 
-        public IActionResult Filter(int? page, string MaDm = "")
+        public IActionResult Filter(int? page, int MaDm = 0)
         {
             var pageNumber = page == null || page < 0 ? 1 : page.Value;
             var url = $"/Admin/Sach?MaDm={MaDm}";
-            if (MaDm == 0.ToString())
+            if (MaDm == 0)
             {
                 url = $"/Admin/Sach";
             }

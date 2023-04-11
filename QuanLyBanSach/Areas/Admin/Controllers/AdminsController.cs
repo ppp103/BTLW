@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreHero.ToastNotification.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -13,10 +14,12 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
     public class AdminsController : Controller
     {
         private readonly QlbanSachContext _context;
+        public INotyfService _notyfService { get; }
 
-        public AdminsController(QlbanSachContext context)
+        public AdminsController(QlbanSachContext context, INotyfService notyfService)
         {
             _context = context;
+            _notyfService = notyfService;
         }
 
         // GET: Admin/Admins
@@ -62,13 +65,15 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             {
                 _context.Add(admins);
                 await _context.SaveChangesAsync();
+                _notyfService.Success("Tạo thành công");
+
                 return RedirectToAction(nameof(Index));
             }
             return View(admins);
         }
 
         // GET: Admin/Admins/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(int id)
         {
             if (id == null || _context.Admins == null)
             {
@@ -101,6 +106,8 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                 {
                     _context.Update(admins);
                     await _context.SaveChangesAsync();
+                    _notyfService.Success("Sửa thành công");
+
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -149,8 +156,9 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             if (admins != null)
             {
                 _context.Admins.Remove(admins);
+                _notyfService.Success("Xóa thành công");
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

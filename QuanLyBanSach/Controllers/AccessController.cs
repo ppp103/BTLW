@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AspNetCoreHero.ToastNotification.Abstractions;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using QuanLyBanSach.Models;
 
 namespace QuanLyBanSach.Controllers
@@ -6,9 +8,16 @@ namespace QuanLyBanSach.Controllers
     public class AccessController : Controller
     {
         QlbanSachContext db = new QlbanSachContext();
+		public INotyfService _notyfService { get; }
 
-        // Dang nhap
-        [HttpGet]
+		public AccessController(QlbanSachContext context, INotyfService notyfService)
+		{
+			db = context;
+			_notyfService = notyfService;
+		}
+
+		// Dang nhap
+		[HttpGet]
         public IActionResult Login()
         {
             if (HttpContext.Session.GetString("TaiKhoan") == null)
@@ -35,7 +44,7 @@ namespace QuanLyBanSach.Controllers
                 }
                 else
                 {
-                    ViewBag.Error = "Thông tin đăng nhập không hợp lệ.";
+                    _notyfService.Error("Thông tin đăng nhập không hợp lệ");
                     return View(nguoiDung);
                 }
             }
@@ -62,7 +71,8 @@ namespace QuanLyBanSach.Controllers
                 var u = db.NguoiDungs.Where(x => x.TaiKhoan.Equals(nguoiDung.TaiKhoan)).FirstOrDefault();
                 if (u != null)
                 {
-                    ModelState.AddModelError("TaiKhoan", "Tài khoản đã được sử dụng.");
+                    ModelState.AddModelError("TaiKhoan", "Tài khoản đã được sử dụng");
+                    _notyfService.Error("Tài khoản đã được sử dụng");
                     return View(nguoiDung);
                 }
 

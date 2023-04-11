@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreHero.ToastNotification.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -13,10 +14,12 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
     public class DanhMucSachesController : Controller
     {
         private readonly QlbanSachContext _context;
+        public INotyfService _notyfService { get; }
 
-        public DanhMucSachesController(QlbanSachContext context)
+        public DanhMucSachesController(QlbanSachContext context, INotyfService notyfService)
         {
             _context = context;
+            _notyfService = notyfService;
         }
 
         // GET: Admin/DanhMucSaches
@@ -62,6 +65,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             {
                 _context.Add(danhMucSach);
                 await _context.SaveChangesAsync();
+                _notyfService.Success("Tạo thành công");
                 return RedirectToAction(nameof(Index));
             }
             return View(danhMucSach);
@@ -101,6 +105,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                 {
                     _context.Update(danhMucSach);
                     await _context.SaveChangesAsync();
+                    _notyfService.Success("Sửa thành công");
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -149,8 +154,9 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
             if (danhMucSach != null)
             {
                 _context.DanhMucSaches.Remove(danhMucSach);
+                _notyfService.Success("Xóa thành công");
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

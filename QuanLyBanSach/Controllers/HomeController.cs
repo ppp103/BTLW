@@ -39,6 +39,12 @@ namespace QuanLyBanSach.Controllers
 			var nxb = db.NhaXuatBans.ToList();
 			ViewBag.nxb = nxb;
 
+			var user = HttpContext.Session.GetString("TaiKhoan");
+			ViewBag.user = user;
+
+			var taiKhoan = db.NguoiDungs.SingleOrDefault(x => x.TaiKhoan == user);
+			ViewBag.taiKhoan = taiKhoan;
+
 			return View(tensach);
 		}
         [Authentication]

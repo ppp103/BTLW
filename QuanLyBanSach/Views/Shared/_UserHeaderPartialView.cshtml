@@ -1,5 +1,7 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-
+@{
+	QuanLyBanSach.Models.NguoiDung account = ViewBag.taiKhoan; 
+}
 <header id="tg-header" class="tg-header tg-haslayout">
 	<div class="tg-topbar">
 		<div class="container">
@@ -45,10 +47,27 @@
 							</li>
 						</ul>
 					</div>
-					<div class="tg-userlogin">
-						<a asp-controller="Access" asp-action="Logout">Đăng xuất |</a>
-						<a asp-controller="Access" asp-action="SignUp">Đăng ký</a>
-					</div>
+					@if(ViewBag.user != null)
+					{
+@*						<div class="tg-userlogin">
+							<a asp-controller="Access">Người dùng</a>
+						</div>
+*@
+						<div class="tg-userlogin" style="display:flex;">
+							<figure><a href="javascript:void(0);"><img style="width:30px; height:30px;" src="@Url.Content("../User/images/team/" + account.Anh)" alt="image description"></a></figure>
+							<span>Hi, @ViewBag.user</span>
+							<div style="margin-left:10px;">
+								<a asp-controller="Access" asp-action="Logout">Đăng xuất</a>
+							</div>
+						</div>
+					}
+					else
+					{
+						<div class="tg-userlogin">
+							<a asp-controller="Access" asp-action="Logout">Đăng nhập |</a>
+							<a asp-controller="Access" asp-action="SignUp">Đăng ký</a>
+						</div>
+					}
 				</div>
 			</div>
 		</div>
