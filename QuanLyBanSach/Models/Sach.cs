@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace QuanLyBanSach.Models;
 
@@ -18,7 +17,6 @@ public partial class Sach
 
     public string? Anh { get; set; }
 
-    [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}")]
     public DateTime? NgayCapNhat { get; set; }
 
     public int? SoLuongCon { get; set; }
@@ -37,5 +35,5 @@ public partial class Sach
 
     public virtual NhaXuatBan? MaNxbNavigation { get; set; }
 
-    public virtual TacGium? MaTgNavigation { get; set; }
+    public virtual TacGia? MaTgNavigation { get; set; }
 }
