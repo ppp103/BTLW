@@ -7,14 +7,14 @@ namespace QuanLyBanSach.Models.Authentication
     {
         public override void OnActionExecuting(ActionExecutingContext context)
         {
-            if (context.HttpContext.Session.GetString("TaiKhoan") == null)
+            if (context.HttpContext.Session.GetString("Admin") == null)
             {
                 context.Result = new RedirectToRouteResult(
                     new RouteValueDictionary
                 {
                     {"Area", "" },
-                    { "Controller", "Access" },
-                    { "Action", "Login" }
+                    { "Controller", "Home" },
+                    { "Action", "Index" }
                 });
             }
         }

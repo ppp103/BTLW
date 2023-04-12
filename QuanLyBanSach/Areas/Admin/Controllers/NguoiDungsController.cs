@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using QuanLyBanSach.Models;
+using QuanLyBanSach.Models.Authentication;
 
 namespace QuanLyBanSach.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class NguoiDungsController : Controller
+    [Authentication]
+	public class NguoiDungsController : Controller
     {
         private readonly QlbanSachContext _context;
         public INotyfService _notyfService { get; }
@@ -64,12 +66,27 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(nguoiDung);
-                await _context.SaveChangesAsync();
-                _notyfService.Success("Tạo thành công");
-                return RedirectToAction(nameof(Index));
-            }
-            return View(nguoiDung);
+                if (_context.NguoiDungs.SingleOrDefault(nd => nd.TaiKhoan == nguoiDung.TaiKhoan) != null)
+                {
+                    _notyfService.Error("Tên tài khoản đã tồn tại");
+                    return View(nguoiDung);
+                }
+
+                if (_context.NguoiDungs.SingleOrDefault(nd => nd.Email == nguoiDung.Email) != null)
+                {
+					_notyfService.Error("Email đã được sử dụng");
+					return View(nguoiDung);
+				}
+
+				nguoiDung.NgayTao = DateTime.Now;
+				nguoiDung.TrangThaiNd = "online";
+				_context.Add(nguoiDung);
+				await _context.SaveChangesAsync();
+				_notyfService.Success("Tạo thành công");
+				return RedirectToAction(nameof(Index));
+
+			}
+			return View(nguoiDung);
         }
 
         // GET: Admin/NguoiDungs/Edit/5

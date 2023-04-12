@@ -22,7 +22,6 @@ namespace QuanLyBanSach.Controllers
 		{
 			_logger = logger;
 		}
-        [Authentication]
         public IActionResult Index()
 		{
 			var sachbanchay = db.Saches.Where(x => x.MaDm == 1).ToList();
@@ -41,13 +40,16 @@ namespace QuanLyBanSach.Controllers
 
 			var user = HttpContext.Session.GetString("TaiKhoan");
 			ViewBag.user = user;
-
 			var taiKhoan = db.NguoiDungs.SingleOrDefault(x => x.TaiKhoan == user);
 			ViewBag.taiKhoan = taiKhoan;
 
+			var adminAcc = HttpContext.Session.GetString("Admin");
+			var admin = db.Admins.SingleOrDefault(x => x.TenDangNhap == adminAcc);
+			ViewBag.admin = admin;
+
 			return View(tensach);
 		}
-        [Authentication]
+
         public IActionResult HienThiSanPham(int? page)
 		{
 			var masach = db.Saches.ToList();
@@ -60,6 +62,11 @@ namespace QuanLyBanSach.Controllers
 			ViewBag.masach = masach;
 			ViewBag.matg = matg;
             ViewBag.madm = madm;
+
+            var user = HttpContext.Session.GetString("TaiKhoan");
+            var taiKhoan = db.NguoiDungs.SingleOrDefault(x => x.TaiKhoan == user);
+            ViewBag.taiKhoan = taiKhoan;
+
             return View(lst);
 
         }
@@ -68,7 +75,6 @@ namespace QuanLyBanSach.Controllers
 			return View(); 
 		}
 
-        [Authentication]
         public IActionResult HienThiTheoDanhMuc(int madm)
 		{
 			var masach = db.Saches.Where(x => x.MaDm == madm).ToList();
@@ -76,9 +82,13 @@ namespace QuanLyBanSach.Controllers
 			var dm = db.DanhMucSaches.ToList();
 			ViewBag.matg = matg;
 			ViewBag.madm = dm;
-			return View(masach);
+
+            var user = HttpContext.Session.GetString("TaiKhoan");
+            var taiKhoan = db.NguoiDungs.SingleOrDefault(x => x.TaiKhoan == user);
+            ViewBag.taiKhoan = taiKhoan;
+
+            return View(masach);
         }
-        [Authentication]
         public IActionResult ChiTietSanPham(int sac)
 		{
 			var ctsach = db.Saches.SingleOrDefault(x => x.MaSach == sac);
@@ -88,7 +98,12 @@ namespace QuanLyBanSach.Controllers
 			ViewBag.matg = matg;
 			ViewBag.madm = dm;
 			ViewBag.masach = masach;
-			return View(ctsach);
+
+            var user = HttpContext.Session.GetString("TaiKhoan");
+            var taiKhoan = db.NguoiDungs.SingleOrDefault(x => x.TaiKhoan == user);
+            ViewBag.taiKhoan = taiKhoan;
+
+            return View(ctsach);
 		}
 		public IActionResult Privacy()
 		{
@@ -100,7 +115,6 @@ namespace QuanLyBanSach.Controllers
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
 		}
-        [Authentication]
         public IActionResult Cart()
 		{
 			var cart = HttpContext.Session.Get<List<CartItem>>("GioHang");

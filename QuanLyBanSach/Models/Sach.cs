@@ -9,7 +9,7 @@ public partial class Sach
     public int MaSach { get; set; }
 
     [Display(Name = "tên sách")]
-    [Required(ErrorMessage = "Vui lòng nhập giá trị cho {0}")]
+    [Required(ErrorMessage = "Vui lòng nhập giá trị cho {0}")] 
     public string? TenSach { get; set; }
 
     [Display(Name = "giá bán")]

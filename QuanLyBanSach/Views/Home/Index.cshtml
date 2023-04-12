@@ -116,7 +116,7 @@
 										<span class="tg-bookprice">
 											<ins>@x.GiaBan.Value.ToString("#,##0") VNĐ</ins>
 										</span>
-										<a class="tg-btn tg-btnstyletwo add-to-cart" href="javascript:void(0);">
+										<a class="tg-btn tg-btnstyletwo add-to-cart" data-maSach="@x.MaSach" href="javascript:void(0);">
 											<i class="fa fa-shopping-basket"></i>
 											<em>Thêm vào giỏ</em>
 										</a>
@@ -154,7 +154,7 @@
 								<span class="tg-bookprice">
 									<ins>230,180 VNĐ</ins>
 								</span>
-								<a class="tg-btn tg-btnstyletwo tg-active" href="javascript:void(0);">
+								<a class="tg-btn tg-btnstyletwo tg-active add-to-cart" href="javascript:void(0);">
 									<i class="fa fa-shopping-basket"></i>
 									<em>Thêm vào giỏ</em>
 								</a>
@@ -200,13 +200,13 @@
 											</div>
 											<a class="tg-btnaddtowishlist" href="javascript:void(0);">
 												<i class="icon-heart"></i>
-												<span>add to wishlist</span>
+												<span>Yêu thích</span>
 											</a>
 										</figure>
 										<div class="tg-postbookcontent">
 											<ul class="tg-bookscategories">
-												<li><a href="javascript:void(0);">Adventure</a></li>
-												<li><a href="javascript:void(0);">Fun</a></li>
+												<li><a href="javascript:void(0);">Phiêu lưu</a></li>
+												<li><a href="javascript:void(0);">Hài hước</a></li>
 											</ul>
 											<div class="tg-booktitle">
 												<h3><a href="javascript:void(0);">@x.TenSach</a></h3>
@@ -315,7 +315,7 @@
 									<h3><a href="javascript:void(0);">@sp.TenSach</a></h3>
 								</div>
 									<span class="tg-bookwriter">Bởi: <a href="javascript:void(0);">@sp.MaTgNavigation.TenTg</a></span>
-								<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
+									<a class="tg-btn tg-btnstyletwo add-to-cart" data-maSach="@sp.MaSach" href="javascript:void(0);">
 									<i class="fa fa-shopping-basket"></i>
 									<em>Thêm vào giỏ</em>
 								</a>
@@ -450,7 +450,7 @@
 		$(document).ready(function () {
 			$(function () {
 				$(".add-to-cart").click(function () {
-					var maSach = $('#MaSach').val();
+					var maSach = $(this).attr("data-maSach");
 					var soLuong = 1;
 					if (soLuong == 0) return;
 					$.ajax({

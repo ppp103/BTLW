@@ -125,7 +125,8 @@
 				$(".remove-cart").click(function () {
 					confirm("Bạn muốn xóa sản phẩm này không ?");
 					if(confirm){
-						var maSach = $(this).attr("data-maSach");
+						const maSach = $(this).attr("data-maSach");
+
 						$.ajax({
 							url: "api/cart/remove",
 							type: "POST",

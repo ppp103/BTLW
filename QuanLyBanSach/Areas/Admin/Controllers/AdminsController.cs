@@ -7,10 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using QuanLyBanSach.Models;
+using QuanLyBanSach.Models.Authentication;
 
 namespace QuanLyBanSach.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authentication]
     public class AdminsController : Controller
     {
         private readonly QlbanSachContext _context;

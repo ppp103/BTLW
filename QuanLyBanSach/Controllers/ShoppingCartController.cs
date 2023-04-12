@@ -51,9 +51,8 @@ namespace QuanLyBanSach.Controllers
                 }
                 else // chưa có -> tạo 1 cartItem mới
                 {
-                    // tìm sách
                     Sach s = _context.Saches.SingleOrDefault(s => s.MaSach == maSach);
-                    // thêm cartItem
+
                     item = new CartItem
                     {
                         soLuong = soLuong.HasValue ? soLuong.Value : 1,
@@ -64,7 +63,6 @@ namespace QuanLyBanSach.Controllers
 
                 // update session
                 HttpContext.Session.Set<List<CartItem>>("GioHang", cart);
-                _notyfService.Success("Thêm thành công");
                 return Json(new { success = true });
             }
             catch
@@ -124,6 +122,10 @@ namespace QuanLyBanSach.Controllers
 
         public IActionResult Index()
         {
+            var user = HttpContext.Session.GetString("TaiKhoan");
+            var taiKhoan = _context.NguoiDungs.SingleOrDefault(x => x.TaiKhoan == user);
+            ViewBag.taiKhoan = taiKhoan;
+
             return View(GioHang);
         }
     }

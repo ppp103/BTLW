@@ -13,11 +13,13 @@ using QuanLyBanSach.Models;
 using X.PagedList;
 using System.Linq.Expressions;
 using Microsoft.Data.SqlClient;
+using QuanLyBanSach.Models.Authentication;
 
 namespace QuanLyBanSach.Areas.Admin.Controllers
 {
+    [Authentication]
     [Area("Admin")]
-    public class SachController : Controller
+	public class SachController : Controller
     {
         private readonly QlbanSachContext _context;
         public INotyfService _notyfService { get; }
@@ -268,7 +270,6 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                     _context.Saches.Remove(sach);
                 }
 
-                _notyfService.Success("Xóa thành công");
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)

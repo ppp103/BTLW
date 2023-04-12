@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using QuanLyBanSach.Models;
+using QuanLyBanSach.Models.Authentication;
 
 namespace QuanLyBanSach.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class DanhMucSachesController : Controller
+	[Authentication]
+	public class DanhMucSachesController : Controller
     {
         private readonly QlbanSachContext _context;
         public INotyfService _notyfService { get; }

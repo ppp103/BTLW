@@ -20,23 +20,35 @@ namespace QuanLyBanSach.Controllers
 		[HttpGet]
         public IActionResult Login()
         {
-            if (HttpContext.Session.GetString("TaiKhoan") == null)
+            if (HttpContext.Session.GetString("Admin") == null || HttpContext.Session.GetString("TaiKhoan") == null)
             {
                 return View();
             }
             else
             {
-                return RedirectToAction("Index", "Home");
-            }
+				return RedirectToAction("Index", "Home");
+			}
         }
 
         [HttpPost]
         public IActionResult Login(NguoiDung nguoiDung)
         {
+            if(HttpContext.Session.GetString("Admin") == null)
+            {
+                var admin = db.Admins.Where(x => x.TenDangNhap.Equals(nguoiDung.TaiKhoan) && 
+                                            x.MatKhau.Equals(nguoiDung.MatKhau)).FirstOrDefault();
+                if(admin != null)
+                {
+                    HttpContext.Session.SetString("Admin", admin.TenDangNhap.ToString());
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+
             if (HttpContext.Session.GetString("TaiKhoan") == null)
             {
                 var u = db.NguoiDungs.Where(x => x.TaiKhoan.Equals(nguoiDung.TaiKhoan)
                 && x.MatKhau.Equals(nguoiDung.MatKhau)).FirstOrDefault();
+
                 if (u != null)
                 {
                     HttpContext.Session.SetString("TaiKhoan", u.TaiKhoan.ToString());
@@ -44,7 +56,6 @@ namespace QuanLyBanSach.Controllers
                 }
                 else
                 {
-                    _notyfService.Error("Thông tin đăng nhập không hợp lệ");
                     return View(nguoiDung);
                 }
             }
@@ -72,7 +83,6 @@ namespace QuanLyBanSach.Controllers
                 if (u != null)
                 {
                     ModelState.AddModelError("TaiKhoan", "Tài khoản đã được sử dụng");
-                    _notyfService.Error("Tài khoản đã được sử dụng");
                     return View(nguoiDung);
                 }
 

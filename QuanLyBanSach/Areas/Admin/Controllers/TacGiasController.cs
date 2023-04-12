@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using QuanLyBanSach.Models;
+using QuanLyBanSach.Models.Authentication;
 
 namespace QuanLyBanSach.Areas.Admin.Controllers
 {
+    [Authentication]
     [Area("Admin")]
-    public class TacGiasController : Controller
+	public class TacGiasController : Controller
     {
         private readonly QlbanSachContext _context;
 

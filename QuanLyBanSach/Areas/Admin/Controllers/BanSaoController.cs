@@ -9,12 +9,14 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using QuanLyBanSach.Models;
+using QuanLyBanSach.Models.Authentication;
 using X.PagedList;
 
 namespace QuanLyBanSach.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class BanSaoController : Controller
+	[Authentication]
+	public class BanSaoController : Controller
     {
         private readonly QlbanSachContext _context;
         public INotyfService _notyfService { get; }

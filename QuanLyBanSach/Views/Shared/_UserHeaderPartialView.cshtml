@@ -1,6 +1,7 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-	QuanLyBanSach.Models.NguoiDung account = ViewBag.taiKhoan; 
+	QuanLyBanSach.Models.NguoiDung account = ViewBag.taiKhoan;
+	QuanLyBanSach.Models.Admins admin = ViewBag.admin;
 }
 <header id="tg-header" class="tg-header tg-haslayout">
 	<div class="tg-topbar">
@@ -47,15 +48,20 @@
 							</li>
 						</ul>
 					</div>
-					@if(ViewBag.user != null)
+					@if (account != null)
 					{
-@*						<div class="tg-userlogin">
-							<a asp-controller="Access">Người dùng</a>
-						</div>
-*@
 						<div class="tg-userlogin" style="display:flex;">
 							<figure><a href="javascript:void(0);"><img style="width:30px; height:30px;" src="@Url.Content("../User/images/team/" + account.Anh)" alt="image description"></a></figure>
-							<span>Hi, @ViewBag.user</span>
+							<span>Hi, @account.TaiKhoan</span>
+							<div style="margin-left:10px;">
+								<a asp-controller="Access" asp-action="Logout">Đăng xuất</a>
+							</div>
+						</div>
+					} else if (admin != null)
+					{
+						<div class="tg-userlogin" style="display:flex;">
+							<figure><a href="javascript:void(0);"><img style="width:30px; height:30px;" src="@Url.Content("../User/images/users/img-01.jpg")" alt="image description"></a></figure>
+							<span>Hi, @admin.TenDangNhap</span>
 							<div style="margin-left:10px;">
 								<a asp-controller="Access" asp-action="Logout">Đăng xuất</a>
 							</div>
@@ -64,7 +70,7 @@
 					else
 					{
 						<div class="tg-userlogin">
-							<a asp-controller="Access" asp-action="Logout">Đăng nhập |</a>
+							<a asp-controller="Access" asp-action="Login">Đăng nhập |</a>
 							<a asp-controller="Access" asp-action="SignUp">Đăng ký</a>
 						</div>
 					}

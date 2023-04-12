@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using QuanLyBanSach.Models;
+using QuanLyBanSach.Models.Authentication;
 
 namespace QuanLyBanSach.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class DonHangsController : Controller
+	[Authentication]
+	public class DonHangsController : Controller
     {
         private readonly QlbanSachContext _context;
         public INotyfService _notyfService { get; }
@@ -109,8 +111,8 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                 try
                 {
                     _context.Update(donHang);
-                    await _context.SaveChangesAsync();
                     _notyfService.Success("Sửa thành công");
+                    await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -163,8 +165,8 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                 _context.DonHangs.Remove(donHang);
             }
             
-            await _context.SaveChangesAsync();
             _notyfService.Success("Xóa thành công");
+            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
