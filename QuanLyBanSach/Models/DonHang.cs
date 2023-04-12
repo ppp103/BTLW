@@ -11,16 +11,21 @@ public partial class DonHang
     public string? DiaDiemGh { get; set; }
 
     [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}")]
-
     public DateTime? NgayDat { get; set; }
-    [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}")]
 
+    [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}")]
     public DateTime? NgayGiao { get; set; }
 
+    [Display(Name = "tổng tiền")]
+    [Required(ErrorMessage = "Vui lòng nhập {0}")]
     public decimal? TongTien { get; set; }
 
+    [Display(Name = "ghi chú")]
+    [Required(ErrorMessage = "Vui lòng nhập {0}")]
     public string? GhiChu { get; set; }
 
+    [Display(Name = "tên khách hàng")]
+    [Required(ErrorMessage = "Vui lòng nhập {0}")]
     public string? TenKh { get; set; }
 
     public string? TrangThaiDh { get; set; }

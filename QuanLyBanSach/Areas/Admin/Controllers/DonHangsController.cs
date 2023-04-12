@@ -127,7 +127,7 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaNd"] = new SelectList(_context.NguoiDungs, "MaNd", "MaNd", donHang.MaNd);
+            ViewData["MaNd"] = new SelectList(_context.NguoiDungs, "MaNd", "HoTenNd", donHang.MaNd);
             return View(donHang);
         }
 

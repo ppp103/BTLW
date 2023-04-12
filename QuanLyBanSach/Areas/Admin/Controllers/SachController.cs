@@ -227,7 +227,6 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
 
             Sach sachCanSua = _context.Saches.SingleOrDefault(s => s.MaSach == id);
             sach.Anh = sachCanSua.Anh;
-
             return View(sach);
         }
 
@@ -271,6 +270,8 @@ namespace QuanLyBanSach.Areas.Admin.Controllers
                 }
 
                 await _context.SaveChangesAsync();
+                _notyfService.Success("Xóa thành công");
+                return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {
