@@ -18,7 +18,6 @@ namespace QuanLyBanSach.Controllers
 
 
         public HomeController(ILogger<HomeController> logger)
-
 		{
 			_logger = logger;
 		}
@@ -67,7 +66,12 @@ namespace QuanLyBanSach.Controllers
             var taiKhoan = db.NguoiDungs.SingleOrDefault(x => x.TaiKhoan == user);
             ViewBag.taiKhoan = taiKhoan;
 
-            return View(lst);
+			var adminAcc = HttpContext.Session.GetString("Admin");
+			var admin = db.Admins.SingleOrDefault(x => x.TenDangNhap == adminAcc);
+			ViewBag.admin = admin;
+
+
+			return View(lst);
 
         }
 		public IActionResult Contact() 
@@ -87,7 +91,11 @@ namespace QuanLyBanSach.Controllers
             var taiKhoan = db.NguoiDungs.SingleOrDefault(x => x.TaiKhoan == user);
             ViewBag.taiKhoan = taiKhoan;
 
-            return View(masach);
+			var adminAcc = HttpContext.Session.GetString("Admin");
+			var admin = db.Admins.SingleOrDefault(x => x.TenDangNhap == adminAcc);
+			ViewBag.admin = admin;
+
+			return View(masach);
         }
         public IActionResult ChiTietSanPham(int sac)
 		{
@@ -103,7 +111,11 @@ namespace QuanLyBanSach.Controllers
             var taiKhoan = db.NguoiDungs.SingleOrDefault(x => x.TaiKhoan == user);
             ViewBag.taiKhoan = taiKhoan;
 
-            return View(ctsach);
+			var adminAcc = HttpContext.Session.GetString("Admin");
+			var admin = db.Admins.SingleOrDefault(x => x.TenDangNhap == adminAcc);
+			ViewBag.admin = admin;
+
+			return View(ctsach);
 		}
 		public IActionResult Privacy()
 		{

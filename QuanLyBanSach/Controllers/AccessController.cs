@@ -20,7 +20,15 @@ namespace QuanLyBanSach.Controllers
 		[HttpGet]
         public IActionResult Login()
         {
-            if (HttpContext.Session.GetString("Admin") == null || HttpContext.Session.GetString("TaiKhoan") == null)
+			var user = HttpContext.Session.GetString("TaiKhoan");
+			var taiKhoan = db.NguoiDungs.SingleOrDefault(x => x.TaiKhoan == user);
+			ViewBag.taiKhoan = taiKhoan;
+
+			var adminAcc = HttpContext.Session.GetString("Admin");
+			var admin = db.Admins.SingleOrDefault(x => x.TenDangNhap == adminAcc);
+			ViewBag.admin = admin;
+
+			if (HttpContext.Session.GetString("Admin") == null || HttpContext.Session.GetString("TaiKhoan") == null)
             {
                 return View();
             }
@@ -33,13 +41,13 @@ namespace QuanLyBanSach.Controllers
         [HttpPost]
         public IActionResult Login(NguoiDung nguoiDung)
         {
-            if(HttpContext.Session.GetString("Admin") == null)
+			if (HttpContext.Session.GetString("Admin") == null)
             {
-                var admin = db.Admins.Where(x => x.TenDangNhap.Equals(nguoiDung.TaiKhoan) && 
+                var admin2 = db.Admins.Where(x => x.TenDangNhap.Equals(nguoiDung.TaiKhoan) && 
                                             x.MatKhau.Equals(nguoiDung.MatKhau)).FirstOrDefault();
-                if(admin != null)
+                if(admin2 != null)
                 {
-                    HttpContext.Session.SetString("Admin", admin.TenDangNhap.ToString());
+                    HttpContext.Session.SetString("Admin", admin2.TenDangNhap.ToString());
                     return RedirectToAction("Index", "Home");
                 }
             }
@@ -103,7 +111,8 @@ namespace QuanLyBanSach.Controllers
         {
             HttpContext.Session.Clear();
             HttpContext.Session.Remove("TaiKhoan");
-            return RedirectToAction("Login", "Access");
+			HttpContext.Session.Remove("Admin");
+			return RedirectToAction("Login", "Access");
         }
     }
 }
