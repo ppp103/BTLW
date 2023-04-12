@@ -115,7 +115,6 @@
 				var gia = Number($(this).attr("data-price"));
 				var soLuong = Number($(this).val());
 				var thanhTien = gia * soLuong;
-				alert(thanhTien);
 
 				$(`.tong-tien-${MaSach}`).html(`<span class="tong-tien" class="price" data-price="${gia}">${new Intl.NumberFormat().format(thanhTien)} VNĐ</span>`)
 				
@@ -128,7 +127,7 @@
 						const maSach = $(this).attr("data-maSach");
 
 						$.ajax({
-							url: "api/cart/remove",
+							url: "https://localhost:7287/api/cart/remove",
 							type: "POST",
 							dataType: "JSON",
 							data: { maSach: maSach },
