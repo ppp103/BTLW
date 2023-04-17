@@ -19,5 +19,5 @@ public partial class ChiTietDonHang
 
     public virtual DonHang? MaDonHangNavigation { get; set; }
 
-    public virtual Sach MaSachNavigation { get; set; } = null!;
+    public virtual Sach? MaSachNavigation { get; set; }
 }

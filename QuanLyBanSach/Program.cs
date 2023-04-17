@@ -9,6 +9,10 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddNotyf(config => { config.DurationInSeconds = 3; config.IsDismissable = true; config.Position = NotyfPosition.TopRight; });
 builder.Services.AddDbContext<QlbanSachContext>(options =>
 	options.UseSqlServer(builder.Configuration.GetConnectionString("QlBanSachConnectionString")));
+builder.Services.AddCors(p => p.AddPolicy("MyCors", build =>
+{
+	build.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+}));
 builder.Services.AddSession();
 var app = builder.Build();
 
@@ -21,6 +25,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("MyCors");
 app.UseStaticFiles();
 
 app.UseRouting();

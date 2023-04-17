@@ -6,7 +6,7 @@ using QuanLyBanSach.Models;
 namespace QuanLyBanSach.Controllers
 {
     public class AccessController : Controller
-    {
+    { 
         QlbanSachContext db = new QlbanSachContext();
 		public INotyfService _notyfService { get; }
 

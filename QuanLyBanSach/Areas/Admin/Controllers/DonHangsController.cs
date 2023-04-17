@@ -12,7 +12,6 @@ using QuanLyBanSach.Models.Authentication;
 namespace QuanLyBanSach.Areas.Admin.Controllers
 {
     [Area("Admin")]
-	[Authentication]
 	public class DonHangsController : Controller
     {
         private readonly QlbanSachContext _context;

@@ -10,6 +10,7 @@
 <p>
     <a class="btn btn-sm btn-outline-info" asp-action="Create">Thêm mới</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
@@ -67,6 +68,7 @@
                     <a class="btn btn-info btn-tone m-r-5"  asp-action="Edit" asp-route-id="@item.MaDonHang">Sửa</a>
                     <a class="btn btn-primary btn-tone m-r-5"  asp-action="Details" asp-route-id="@item.MaDonHang">Chi tiết</a>
                     <a class="btn btn-secondary btn-tone m-r-5" asp-action="Delete" asp-route-id="@item.MaDonHang">Xóa</a>
+                    <a class="btn btn-secondary btn-tone m-r-5" asp-controller="ChiTietDonHangs" asp-action="Create" asp-route-id="@item.MaDonHang">Them</a>
             </td>
         </tr>
     }
