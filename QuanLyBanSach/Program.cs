@@ -5,7 +5,8 @@ using QuanLyBanSach.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+//builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 builder.Services.AddNotyf(config => { config.DurationInSeconds = 3; config.IsDismissable = true; config.Position = NotyfPosition.TopRight; });
 builder.Services.AddDbContext<QlbanSachContext>(options =>
 	options.UseSqlServer(builder.Configuration.GetConnectionString("QlBanSachConnectionString")));

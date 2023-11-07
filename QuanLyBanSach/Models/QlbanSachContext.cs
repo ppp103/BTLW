@@ -31,7 +31,7 @@ public partial class QlbanSachContext : DbContext
 
     public virtual DbSet<Sach> Saches { get; set; }
 
-    public virtual DbSet<TacGium> TacGia { get; set; }
+    public virtual DbSet<TacGia> TacGia { get; set; }
 
     public virtual DbSet<ThanhToan> ThanhToans { get; set; }
 
@@ -195,7 +195,7 @@ public partial class QlbanSachContext : DbContext
                 .HasConstraintName("FK__Sach__MaTG__47DBAE45");
         });
 
-        modelBuilder.Entity<TacGium>(entity =>
+        modelBuilder.Entity<TacGia>(entity =>
         {
             entity.HasKey(e => e.MaTg).HasName("PK__TacGia__27250074B39EBECD");
 
